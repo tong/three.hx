@@ -1,0 +1,3 @@
+package three;
+
+interface Mapping {}
