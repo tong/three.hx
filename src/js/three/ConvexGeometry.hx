@@ -2,5 +2,5 @@ package three;
 
 @:native("THREE.ConvexGeometry")
 extern class ConvexGeometry extends Geometry {
-    public function new(vertices:Array<Vector3>) : Void;
+    function new(vertices:Array<Vector3>) : Void;
 }

@@ -4,19 +4,19 @@ package three;
 // so that 3D curve classes can inherit its method signatures.
 
 extern class Curve3 extends Curve {
-    public function new() : Void;
+    function new() : Void;
     @:overload(function(t:Float) : Vector3 {})
-    override public function getPoint(t:Float) : Vector2;
+    override function getPoint(t:Float) : Vector2;
     @:overload(function(u:Float) : Vector3 {})
-    override public function getPointAt(u:Float) : Vector2;
+    override function getPointAt(u:Float) : Vector2;
     @:overload(function(divisions:Int) : Array<Vector3> {})
-    override public function getPoints(divisions:Int) : Array<Vector2>;
+    override function getPoints(divisions:Int) : Array<Vector2>;
     @:overload(function(divisions:Int) : Array<Vector3> {})
-    override public function getSpacedPoints(divisions:Int) : Array<Vector2>;
+    override function getSpacedPoints(divisions:Int) : Array<Vector2>;
     @:overload(function(t:Float) : Vector3 {})
-    override public function getNormalVector(t:Float) : Vector2;
+    override function getNormalVector(t:Float) : Vector2;
     @:overload(function(t:Float) : Vector3 {})
-    override public function getTangent(t:Float) : Vector2;
+    override function getTangent(t:Float) : Vector2;
     @:overload(function(u:Float) : Vector3 {})
-    override public function getTangentAt(u:Float) : Vector2;
+    override function getTangentAt(u:Float) : Vector2;
 }

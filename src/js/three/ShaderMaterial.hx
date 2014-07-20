@@ -2,19 +2,19 @@ package three;
 
 @:native("THREE.ShaderMaterial")
 extern class ShaderMaterial extends Material {
-    public var fragmentShader : String;
-    public var vertexShader : String;
-    public var uniforms : Dynamic;
-    public var defines : Dynamic;
-    public var attributes : Dynamic;
-    public var shading : Int; // SmoothShading
-    public var wireframe : Bool; // false
-    public var wireframeLinewidth : Float; // 1
-    public var fog : Bool; // false
-    public var lights : Bool; // false
-    public var vertexColors : Bool; // NoColors
-    public var skinning : Bool; // false
-    public var morphTargets : Bool; // false
-    public var morphNormals : Bool; // false
-    public function new(?parameters:Dynamic) : Void;
+    var fragmentShader : String;
+    var vertexShader : String;
+    var uniforms : Dynamic;
+    var defines : Dynamic;
+    var attributes : Dynamic;
+    var shading : Int; // SmoothShading
+    var wireframe : Bool; // false
+    var wireframeLinewidth : Float; // 1
+    var fog : Bool; // false
+    var lights : Bool; // false
+    var vertexColors : Bool; // NoColors
+    var skinning : Bool; // false
+    var morphTargets : Bool; // false
+    var morphNormals : Bool; // false
+    function new(?parameters:Dynamic) : Void;
 }

@@ -2,7 +2,7 @@ package three;
 
 @:native("THREE.Gyroscope")
 extern class Gyroscope extends Object3D {
-    public function new() : Void;
+    function new() : Void;
     // overrides public function updateMatrixWorld(force:Bool) : Void;
 
     //TODO: not sure if I need to represent these here

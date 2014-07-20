@@ -2,28 +2,29 @@ package three;
 
 @:native("THREE.SpotLight")
 extern class SpotLight extends Light {
-    public var intensity : Float; // 1
-    public var target : Object3D;
-    public var distance : Float; // 0
-    public var angle : Float; // Math.PI / 2
-    public var exponent : Float; // 10
+    
+    var intensity : Float; // 1
+    var target : Object3D;
+    var distance : Float; // 0
+    var angle : Float; // Math.PI / 2
+    var exponent : Float; // 10
 
-    // public var castShadow : Bool; // false
-    public var onlyShadow : Bool; // false
+    // var castShadow : Bool; // false
+    var onlyShadow : Bool; // false
 
-    public var shadowCameraNear : Float; // 50
-    public var shadowCameraFar : Float; // 5000
-    public var shadowCameraFov : Float; // 50
-    public var shadowCameraVisible : Bool; // false
-    public var shadowBias : Float; // 0
-    public var shadowDarkness : Float; // 0.5
-    public var shadowMapWidth : Float; // 512
-    public var shadowMapHeight : Float; // 512
+    var shadowCameraNear : Float; // 50
+    var shadowCameraFar : Float; // 5000
+    var shadowCameraFov : Float; // 50
+    var shadowCameraVisible : Bool; // false
+    var shadowBias : Float; // 0
+    var shadowDarkness : Float; // 0.5
+    var shadowMapWidth : Float; // 512
+    var shadowMapHeight : Float; // 512
 
-    public var shadowMap : Dynamic; // ???
-    public var shadowMapSize : Dynamic; // ???
-    public var shadowCamera : Dynamic; // ???
-    public var shadowMatrix : Dynamic; // ???
+    var shadowMap : Dynamic; // ???
+    var shadowMapSize : Dynamic; // ???
+    var shadowCamera : Dynamic; // ???
+    var shadowMatrix : Dynamic; // ???
 
-    public function new(hexColor:Int, ?intensity:Float, ?distance:Float, ?castShadow:Bool) : Void;
+    function new(hexColor:Int, ?intensity:Float, ?distance:Float, ?castShadow:Bool) : Void;
 }

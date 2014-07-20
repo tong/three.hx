@@ -2,27 +2,27 @@ package three;
 
 @:native("THREE.MeshLambertMaterial")
 extern class MeshLambertMaterial extends Material {
-    public var color : Color; // new Color(0xffffff)
-    public var ambient : Color; // new Color(0xffffff)
-    public var emissive : Color; // new Color(0x000000)
-    public var wrapAround : Bool; // false
-    public var wrapRGB : Vector3; // (1,1,1)
-    public var map : Texture;
-    public var lightMap : Texture;
-    public var specularMap : Texture;
-    public var envMap : Texture; // TextureCube?
-    public var combine : Int; // MultiplyOperation
-    public var reflectivity : Float; // 1
-    public var refractionRatio : Float; // 0.98
-    public var fog : Bool; // true
-    public var shading : Int; // SmoothShading
-    public var wireframe : Bool; // false
-    public var wireframeLinewidth : Float; // 1
-    public var wireframeLinecap : String; // 'round'
-    public var wireframeLinejoin : String; // 'round'
-    public var vertexColors : Bool; // NoColors
-    public var skinning : Bool; // false
-    public var morphTargets : Bool; // false
-    public var morphNormals : Bool; // false
-    public function new(?parameters:Dynamic) : Void;
+    var color : Color; // new Color(0xffffff)
+    var ambient : Color; // new Color(0xffffff)
+    var emissive : Color; // new Color(0x000000)
+    var wrapAround : Bool; // false
+    var wrapRGB : Vector3; // (1,1,1)
+    var map : Texture;
+    var lightMap : Texture;
+    var specularMap : Texture;
+    var envMap : Texture; // TextureCube?
+    var combine : Int; // MultiplyOperation
+    var reflectivity : Float; // 1
+    var refractionRatio : Float; // 0.98
+    var fog : Bool; // true
+    var shading : Int; // SmoothShading
+    var wireframe : Bool; // false
+    var wireframeLinewidth : Float; // 1
+    var wireframeLinecap : String; // 'round'
+    var wireframeLinejoin : String; // 'round'
+    var vertexColors : Bool; // NoColors
+    var skinning : Bool; // false
+    var morphTargets : Bool; // false
+    var morphNormals : Bool; // false
+    function new(?parameters:Dynamic) : Void;
 }

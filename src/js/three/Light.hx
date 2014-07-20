@@ -2,7 +2,7 @@ package three;
 
 @:native("THREE.Light")
 extern class Light extends Object3D {
-    public var color : Color;
-    public function new(hexColor:Int) : Void;
-    // override public function clone(?light:Light) : Light;
+    var color : Color;
+    function new(hexColor:Int) : Void;
+    // override function clone(?light:Light) : Light;
 }

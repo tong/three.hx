@@ -2,9 +2,9 @@ package three;
 
 @:native("THREE.RenderableVertex")
 extern class RenderableVertex {
-    public var positionWorld : Vector3;
-    public var positionScreen : Vector4;
-    public var visible : Bool; // true
-    public function new() : Void;
-    public function copy(v:RenderableVertex) : Void;
+    var positionWorld : Vector3;
+    var positionScreen : Vector4;
+    var visible : Bool; // true
+    function new() : Void;
+    function copy(v:RenderableVertex) : Void;
 }

@@ -2,18 +2,18 @@ package three;
 
 @:native("THREE.KeyFrameAnimation")
 extern class KeyFrameAnimation {
-    public var root : Dynamic; // TODO (Mesh?)
-    public var data : Dynamic; // AnimationHandler.get(data)
-    public var hierarchy : Array<Dynamic>; // AnimationHandler.parse(root)
-    public var currentTime : Float; // 0
-    public var timeScale : Float; // 0.001
-    public var isPlaying : Bool; // false
-    public var isPaused : Bool;
-    public var loop : Bool; // true
-    public var JITCompile : Bool; // true
-    public function new(root:Dynamic, data:Dynamic, ?jitCompile:Bool) : Void;
-    public function play(?loop:Bool, ?startTimeMS:Float) : Void;
-    public function pause() : Void;
-    public function stop() : Void;
-    public function update(deltaTimeMS:Float) : Void;
+    var root : Dynamic; // TODO (Mesh?)
+    var data : Dynamic; // AnimationHandler.get(data)
+    var hierarchy : Array<Dynamic>; // AnimationHandler.parse(root)
+    var currentTime : Float; // 0
+    var timeScale : Float; // 0.001
+    var isPlaying : Bool; // false
+    var isPaused : Bool;
+    var loop : Bool; // true
+    var JITCompile : Bool; // true
+    function new(root:Dynamic, data:Dynamic, ?jitCompile:Bool) : Void;
+    function play(?loop:Bool, ?startTimeMS:Float) : Void;
+    function pause() : Void;
+    function stop() : Void;
+    function update(deltaTimeMS:Float) : Void;
 }

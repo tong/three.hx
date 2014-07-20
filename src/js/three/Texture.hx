@@ -2,27 +2,27 @@ package three;
 
 @:native("THREE.Texture")
 extern class Texture extends EventDispatcher {
-    public var id : Int;
-    public var name : String;
-    public var image : Dynamic; // TODO: find real type { data:Dynamic, width:Int, height:Int }
-    public var mipmaps : Array<Dynamic>; // TODO: more specific type?
-    public var mapping : Mapping;
-    public var wrapS : Int; // ClampToEdgeWrapping
-    public var wrapT : Int; // ClampToEdgeWrapping
-    public var magFilter : Int; // LinearFilter
-    public var minFilter : Int; // LinearMipMapLinearFilter
-    public var anisotropy : Int; // 1
-    public var format : Int; // RGBAFormat
-    public var type : Int; // UnsignedByteType
-    public var offset : Vector2; // (0,0)
-    public var repeat : Vector2; // (1,1)
-    public var generateMipmaps : Bool; // true
-    public var premultiplyAlpha : Bool; // false
-    public var flipY : Bool; // true
-    public var unpackAlignment : Int; // 4
-    public var needsUpdate : Bool;
-    public var onUpdate : Void -> Void; // TODO: WTF?
-    public function new(image:Dynamic, ?mapping:Mapping, ?wrapS:Int, ?wrapT:Int, ?magFilter:Int, ?minFilter:Int, ?format:Int, ?type:Int, ?anisotropy:Int) : Void;
-    public function clone() : Texture;
-    public function dispose() : Void;
+    var id : Int;
+    var name : String;
+    var image : Dynamic; // TODO: find real type { data:Dynamic, width:Int, height:Int }
+    var mipmaps : Array<Dynamic>; // TODO: more specific type?
+    var mapping : Mapping;
+    var wrapS : Int; // ClampToEdgeWrapping
+    var wrapT : Int; // ClampToEdgeWrapping
+    var magFilter : Int; // LinearFilter
+    var minFilter : Int; // LinearMipMapLinearFilter
+    var anisotropy : Int; // 1
+    var format : Int; // RGBAFormat
+    var type : Int; // UnsignedByteType
+    var offset : Vector2; // (0,0)
+    var repeat : Vector2; // (1,1)
+    var generateMipmaps : Bool; // true
+    var premultiplyAlpha : Bool; // false
+    var flipY : Bool; // true
+    var unpackAlignment : Int; // 4
+    var needsUpdate : Bool;
+    var onUpdate : Void -> Void; // TODO: WTF?
+    function new(image:Dynamic, ?mapping:Mapping, ?wrapS:Int, ?wrapT:Int, ?magFilter:Int, ?minFilter:Int, ?format:Int, ?type:Int, ?anisotropy:Int) : Void;
+    function clone() : Texture;
+    function dispose() : Void;
 }

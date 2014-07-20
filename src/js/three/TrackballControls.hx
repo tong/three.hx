@@ -2,51 +2,44 @@ package three;
 
 import js.html.Element;
 
-/**
- * ...
- * @author AS3Boyan
- */
 @:native("THREE.TrackballControls")
-extern class TrackballControls
-{
-	public var object:Dynamic;
-	public var domElement:Element;
-	public var enabled:Bool;
-	public var screen:Dynamic;
+extern class TrackballControls {
 
-	public var rotateSpeed:Float;
-	public var zoomSpeed:Float;
-	public var panSpeed:Float;
+	var object:Dynamic;
+	var domElement:Element;
+	var enabled:Bool;
+	var screen:Dynamic;
 
-	public var noRotate:Bool;
-	public var noZoom:Bool;
-	public var noPan:Bool;
-	public var noRoll:Bool;
+	var rotateSpeed:Float;
+	var zoomSpeed:Float;
+	var panSpeed:Float;
 
-	public var staticMoving:Bool;
-	public var dynamicDampingFactor:Float;
+	var noRotate:Bool;
+	var noZoom:Bool;
+	var noPan:Bool;
+	var noRoll:Bool;
 
-	public var minDistance:Float;
-	public var maxDistance:Float;
+	var staticMoving:Bool;
+	var dynamicDampingFactor:Float;
 
-	public var keys:Dynamic;
+	var minDistance:Float;
+	var maxDistance:Float;
 
-	public var target:js.three.Vector3;
+	var keys:Dynamic;
 
-	public function new(camera:js.three.Camera, rendererDomElement:Element)
-	{
+	var target:js.three.Vector3;
 
-	}
+	function new(camera:js.three.Camera, rendererDomElement:Element) : Void;
 
-	public function update():Void;
-	public function reset():Void;
+	function update():Void;
+	function reset():Void;
 
-	public function handleResize():Void;
-	public function handleEvent(event:Dynamic):Void;
-	public function getMouseOnScreen(pageX:Float, pageY:Float, vector:Dynamic):Dynamic;
-	public function getMouseProjectionOnBall(pageX:Float, pageY:Float, projection:Dynamic):Dynamic;
-	public function zoomCamera():Void;
-	public function panCamera():Void;
-	public function checkDistances():Void;
+	function handleResize():Void;
+	function handleEvent(event:Dynamic):Void;
+	function getMouseOnScreen(pageX:Float, pageY:Float, vector:Dynamic):Dynamic;
+	function getMouseProjectionOnBall(pageX:Float, pageY:Float, projection:Dynamic):Dynamic;
+	function zoomCamera():Void;
+	function panCamera():Void;
+	function checkDistances():Void;
 
 }

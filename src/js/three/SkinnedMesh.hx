@@ -2,13 +2,13 @@ package three;
 
 @:native("THREE.SkinnedMesh")
 extern class SkinnedMesh extends Mesh {
-    public var useVertexTexture : Bool; // true
-    public var identityMatrix : Matrix4;
-    public var bones : Array<Bone>;
-    public var bonesMatrices : Array<Float>;
-    public function new(geometry:Geometry, ?material:Material, ?useVertexTexture:Bool) : Void;
-    public function addBone(bone:Bone) : Bone;
-    //override public function updateMatrixWorld(force:Bool) : Void;
-    public function pose() : Void;
-    // override public function clone(?object:SkinnedMesh) : SkinnedMesh;
+    var useVertexTexture : Bool; // true
+    var identityMatrix : Matrix4;
+    var bones : Array<Bone>;
+    var bonesMatrices : Array<Float>;
+    function new(geometry:Geometry, ?material:Material, ?useVertexTexture:Bool) : Void;
+    function addBone(bone:Bone) : Bone;
+    //override function updateMatrixWorld(force:Bool) : Void;
+    function pose() : Void;
+    // override function clone(?object:SkinnedMesh) : SkinnedMesh;
 }

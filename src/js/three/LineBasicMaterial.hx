@@ -2,11 +2,11 @@ package three;
 
 @:native("THREE.LineBasicMaterial")
 extern class LineBasicMaterial extends Material {
-    public var color : Color; // new Color(0xffffff)
-    public var linewidth : Float; // 1
-    public var linecap : String; // 'round'
-    public var linejoin : String; // 'round'
-    public var vertexColors : Bool; // false
-    public var fog : Bool; // true
-    public function new(?parameters:Dynamic) : Void;
+    var color : Color; // new Color(0xffffff)
+    var linewidth : Float; // 1
+    var linecap : String; // 'round'
+    var linejoin : String; // 'round'
+    var vertexColors : Bool; // false
+    var fog : Bool; // true
+    function new(?parameters:Dynamic) : Void;
 }

@@ -2,8 +2,8 @@ package three;
 
 @:native("THREE.MeshNormalMaterial")
 extern class MeshNormalMaterial extends Material {
-    public var shading : Int; // FlatShading
-    public var wireframe : Bool; // false
-    public var wireframeLinewidth : Float; // 1
-    public function new(?parameters:Dynamic) : Void;
+    var shading : Int; // FlatShading
+    var wireframe : Bool; // false
+    var wireframeLinewidth : Float; // 1
+    function new(?parameters:Dynamic) : Void;
 }

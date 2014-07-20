@@ -25,13 +25,13 @@ typedef SceneLoaderProgress = {
 
 @:native("THREE.SceneLoader")
 extern class SceneLoader {
-    public var onLoadStart : Void -> Void;
-    public var onLoadProgress : Void -> Void;
-    public var onLoadComplete : Void -> Void;
-    public var callbackSync : SceneLoaderResult -> Void;
-    public var callbackProgress : SceneLoaderProgress -> SceneLoaderResult -> Void;
-    public function new() : Void;
-    public function load(url:String, callbackFinished:SceneLoaderResult->Void) : Void;
-    public function addGeometryHandler(timeID:Dynamic, loaderClass:Dynamic) : Void;
-    public function addHierarchyHandler(timeID:Dynamic, loaderClass:Dynamic) : Void;
+    var onLoadStart : Void -> Void;
+    var onLoadProgress : Void -> Void;
+    var onLoadComplete : Void -> Void;
+    var callbackSync : SceneLoaderResult -> Void;
+    var callbackProgress : SceneLoaderProgress -> SceneLoaderResult -> Void;
+    function new() : Void;
+    function load(url:String, callbackFinished:SceneLoaderResult->Void) : Void;
+    function addGeometryHandler(timeID:Dynamic, loaderClass:Dynamic) : Void;
+    function addHierarchyHandler(timeID:Dynamic, loaderClass:Dynamic) : Void;
 }

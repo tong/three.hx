@@ -2,10 +2,10 @@ package three;
 
 @:native("THREE.UV")
 extern class UV {
-    public var u : Float;
-    public var v : Float;
-    public function new(?u:Float, ?v:Float) : Void;
-    public function set(u:Float, v:Float) : UV;
-    public function copy(uv:UV) : UV;
-    public function clone() : UV;
+    var u : Float;
+    var v : Float;
+    function new(?u:Float, ?v:Float) : Void;
+    function set(u:Float, v:Float) : UV;
+    function copy(uv:UV) : UV;
+    function clone() : UV;
 }
