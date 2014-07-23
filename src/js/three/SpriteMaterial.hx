@@ -2,27 +2,27 @@ package three;
 
 @:native("THREE.SpriteMaterial")
 extern class SpriteMaterial extends Material {
-    var color : Color; // new Color(0xffffff)
     var map : Texture;
-    var useScreenCoordinates : Bool; // true
+    var uvScale : Vector2;
+    var sizeAttenuation : Bool;
+    var color : Color;
+    var uvOffset : Vector2;
+    var fog : Bool;
+    var useScreenCoordinates : Bool;
+    var scaleByViewport : Bool;
     // var depthTest : Bool; // false
-    var sizeAttenuation : Bool; // false
-    var scaleByViewport : Bool; // false
     var alignment : Vector2; // SpriteAlignment.center.clone()
-    var fog : Bool; // true
-    var uvOffset : Vector2; // (0,0)
-    var uvScale : Vector2; // (1,1)
-    function new(?parameters:Dynamic) : Void;
+    function new( ?parameters : Dynamic ) : Void;
 }
 
 class SpriteAlign {
-    static var topLeft = new Vector2(1, -1);
-    static var topCenter = new Vector2(0, -1);
-    static var topRight = new Vector2(-1, -1);
-    static var centerLeft = new Vector2(1, 0);
-    static var center = new Vector2(0, 0);
-    static var centerRight = new Vector2(-1, 0);
-    static var bottomLeft = new Vector2(1, 1);
-    static var bottomCenter = new Vector2(0, 1);
-    static var bottomRight = new Vector2(-1, 1);
+    public static var topLeft = new Vector2(1, -1);
+    public static var topCenter = new Vector2(0, -1);
+    public static var topRight = new Vector2(-1, -1);
+    public static var centerLeft = new Vector2(1, 0);
+    public static var center = new Vector2(0, 0);
+    public static var centerRight = new Vector2(-1, 0);
+    public static var bottomLeft = new Vector2(1, 1);
+    public static var bottomCenter = new Vector2(0, 1);
+    public static var bottomRight = new Vector2(-1, 1);
 }

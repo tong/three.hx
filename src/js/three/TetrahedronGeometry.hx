@@ -1,4 +1,4 @@
-package js.three;
+package three;
 
 @:native("THREE.TetrahedronGeometry")
 extern class TetrahedronGeometry extends PolyhedronGeometry {

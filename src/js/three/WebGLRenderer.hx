@@ -56,7 +56,7 @@ extern class WebGLRenderer implements Renderer {
     function enableScissorTest(enable:Bool) : Void;
 
     function setClearColorHex(hexColor:Int, opacity:Float) : Void;
-    function setClearColor(color:Color, opacity:Float) : Void;
+    function setClearColor(color:Color, ?opacity:Float) : Void;
     function getClearColor() : Color;
     function getClearAlpha() : Float;
     function clear(?color:Bool, ?depth:Bool, ?stencil:Bool) : Void;
@@ -73,7 +73,9 @@ extern class WebGLRenderer implements Renderer {
 
     function renderBufferImmediate(object:Object3D, program:Dynamic, material:Material) : Void;
     function renderBufferDirect(camera:Camera, lights:Array<Light>, fog:Fog, material:Material, geometry:Geometry, object:Object3D) : Void;
-    function render( scene : Scene, camera : Camera, ?renderTarget : WebGLRenderTarget, ?forceClear : Bool ) : Void;
+    @:overload(function( scene:Scene, camera:Camera, ?renderTarget:WebGLRenderTarget, ?forceClear:Bool ):Void{})
+    function render( scene : Scene, camera : Camera ) : Void;
+//    function render( scene : Scene, camera : Camera, ?renderTarget : WebGLRenderTarget, ?forceClear : Bool ) : Void;
     function renderImmediateObject(camera:Camera, lights:Array<Light>, fog:Fog, material:Material, geometry:Geometry, object:Object3D) : Void;
 
     function initWebGLObjects(scene:Scene) : Void;
