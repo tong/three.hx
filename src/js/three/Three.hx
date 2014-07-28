@@ -14,11 +14,11 @@ class Three {
     private static function __init__() : Void untyped {
         #if !noEmbedJS
             #if debug
-                haxe.macro.Compiler.includeFile("vendor/three.js/three.js");
+                haxe.macro.Compiler.includeFile("res/three.js");
             #else
-                haxe.macro.Compiler.includeFile("vendor/three.js/three.min.js");
+                haxe.macro.Compiler.includeFile("res/three.min.js");
             #end
-			haxe.macro.Compiler.includeFile("vendor/three.js/TrackballControls.js");
+			haxe.macro.Compiler.includeFile("res/TrackballControls.js");
         #end
     }
 

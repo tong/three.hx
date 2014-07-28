@@ -1,9 +1,10 @@
 package three;
 
 @:native("THREE.FogExp2")
-extern class FogExp2 /* extends Fog ?? */{
-    var name : String;
-    var color : Color;
+//extern class FogExp2 /* extends Fog ?? */{
+extern class FogExp2 extends Fog {
+   // var name : String;
+    //var color : Color;
     var density : Float; // 0.00025
-    function new(hex:Int, ?density:Float) : Void;
+    function new( hex : Int, ?density : Float ) : Void;
 }

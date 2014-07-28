@@ -6,5 +6,5 @@ extern class Fog {
     var color : Color;
     var near : Float; // 1
     var far : Float; // 1000
-    function new(hex:Int, ?near:Float, ?far:Float) : Void;
+    function new( hex : Int, ?near : Float, ?far : Float ) : Void;
 }
