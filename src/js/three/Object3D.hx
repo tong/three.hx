@@ -15,7 +15,7 @@ extern class Object3D {
     var renderDepth : Float; // null
     var rotationAutoUpdate : Bool; // true
     var matrix : Matrix4;
-    //var matrixWorld : Matrix4; // undocumented
+    var matrixWorld : Matrix4; // undocumented
     var matrixRotationWorld : Matrix4;
     var matrixAutoUpdate : Bool; // true
     var matrixWorldNeedsUpdate : Bool; // true

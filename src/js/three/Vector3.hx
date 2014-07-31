@@ -41,6 +41,7 @@ extern class Vector3 {
     function lerp(v:Vector3, alpha:Float) : Vector3; // this
     function cross(v:Vector3) : Vector3; // this
     function crossVectors(a:Vector3, b:Vector3) : Vector3; // this
+    function setFromMatrixPosition( m : Matrix4 ) : Vector3;
     function angleTo(v:Vector3) : Float;
     function distanceTo(v:Vector3) : Float;
     function distanceToSquared(v:Vector3) : Float;
