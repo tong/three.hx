@@ -10,7 +10,8 @@ extern class Quaternion {
     function set(x:Float, y:Float, z:Float, w:Float) : Quaternion; // this
     function copy(q:Quaternion) : Quaternion; // this
     // order = 'YXZ', 'ZXY', 'ZYX', 'YZX', 'XZY', default='XYZ'
-    function setFromEuler(v:Vector3, ?order:String) : Quaternion; // this
+    //function setFromEuler(v:Vector3, ?order:String) : Quaternion; // this
+    function setFromEuler( e : Euler ) : Quaternion;
     function setFromAxisAngle(axis:Vector3, angle:Float) : Quaternion; // this
     function setFromRotationMatrix(m:Matrix3) : Quaternion; // this
     function inverse() : Quaternion; // this

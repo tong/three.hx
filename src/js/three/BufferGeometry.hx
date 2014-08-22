@@ -12,8 +12,10 @@ extern class BufferGeometry {
     var morphTargets : Array<{name:String, vertices:Array<Vertex>}>; // "for compatibility"
     function new() : Void;
     function applyMatrix(matrix:Matrix3) : Void;
+    function computeVertexNormals() : Void;
+    function computeTangents() : Void;
     function computeBoundingBox() : Void;
     function computeBoundingSphere() : Void;
-    function computeVertexNormals() : Void;
     function dispose() : Void;
+    function normalizeNormals() : Void;
 }

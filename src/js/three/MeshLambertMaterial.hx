@@ -2,27 +2,29 @@ package three;
 
 @:native("THREE.MeshLambertMaterial")
 extern class MeshLambertMaterial extends Material {
-    var color : Color; // new Color(0xffffff)
-    var ambient : Color; // new Color(0xffffff)
-    var emissive : Color; // new Color(0x000000)
-    var wrapAround : Bool; // false
-    var wrapRGB : Vector3; // (1,1,1)
+
+    var color : Color;
+    var ambient : Color;
+    var emissive : Color;
+    var wrapAround : Bool;
+    var wrapRGB : Vector3;
     var map : Texture;
     var lightMap : Texture;
     var specularMap : Texture;
-    var envMap : Texture; // TextureCube?
-    var combine : Int; // MultiplyOperation
-    var reflectivity : Float; // 1
-    var refractionRatio : Float; // 0.98
-    var fog : Bool; // true
-    var shading : Int; // SmoothShading
-    var wireframe : Bool; // false
-    var wireframeLinewidth : Float; // 1
-    var wireframeLinecap : String; // 'round'
-    var wireframeLinejoin : String; // 'round'
-    var vertexColors : Bool; // NoColors
-    var skinning : Bool; // false
-    var morphTargets : Bool; // false
-    var morphNormals : Bool; // false
-    function new(?parameters:Dynamic) : Void;
+    var envMap : Texture;
+    var combine : Int;
+    var reflectivity : Float;
+    var refractionRatio : Float;
+    var fog : Bool;
+    var shading : Int;
+    var wireframe : Bool;
+    var wireframeLinewidth : Float;
+    var wireframeLinecap : String;
+    var wireframeLinejoin : String;
+    var vertexColors : Bool;
+    var skinning : Bool;
+    var morphTargets : Bool;
+    var morphNormals : Bool;
+
+    function new( ?parameters : Dynamic ) : Void;
 }

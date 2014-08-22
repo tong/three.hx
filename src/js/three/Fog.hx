@@ -1,7 +1,7 @@
 package three;
 
 @:native("THREE.Fog")
-extern class Fog {
+extern class Fog implements IFog {
     var name : String;
     var color : Color;
     var near : Float; // 1

@@ -1,25 +1,42 @@
 package three;
 
+//TODO move out of three package
+
+/*
+@:enum abstract Side(Int) {
+    var FrontSide = 0;
+    var BackSide = 1;
+    var DoubleSide = 2;
+}
+
+@:enum abstract CullFace(Int) {
+    var None = 0;
+    var Back = 1;
+    var Front = 2;
+    var FrontBack = 3;
+}
+*/
+
 //@:keep
 class Three {
 
-    public static inline function requestAnimationFrame(f:js.html.RequestAnimationFrameCallback) : Int {
-        return untyped js.Browser.window.requestAnimationFrame(f);
-    }
-
-    public static inline function cancelAnimationFrame(f:Void->Void) {
-        untyped js.Browser.window.cancelAnimationFrame(id);
-    }
-
-    private static function __init__() : Void untyped {
+    static function __init__() : Void untyped {
         #if !noEmbedJS
             #if debug
-                haxe.macro.Compiler.includeFile("res/three.js");
+            haxe.macro.Compiler.includeFile("res/three.js");
             #else
-                haxe.macro.Compiler.includeFile("res/three.min.js");
+            haxe.macro.Compiler.includeFile("res/three.min.js");
             #end
 			haxe.macro.Compiler.includeFile("res/TrackballControls.js");
         #end
+    }
+
+    public static inline function requestAnimationFrame( f : js.html.RequestAnimationFrameCallback ) : Int {
+        return untyped window.requestAnimationFrame(f);
+    }
+
+    public static inline function cancelAnimationFrame( f : Void->Void ) {
+        untyped window.cancelAnimationFrame(id);
     }
 
     // GL STATE CONSTANTS

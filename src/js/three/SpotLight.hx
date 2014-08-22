@@ -26,5 +26,5 @@ extern class SpotLight extends Light {
     var shadowCamera : Dynamic; // ???
     var shadowMatrix : Dynamic; // ???
 
-    function new( hexColor : Int, ?intensity : Float, ?distance : Float, ?castShadow : Bool ) : Void;
+    function new( hexColor : Int, ?intensity : Float, ?distance : Float, ?angle : Float, ?exponent : Float ) : Void;
 }
