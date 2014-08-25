@@ -4,7 +4,7 @@ package three;
 extern class Box2 {
     var min : Vector3; // (Infinity, Infinity)
     var max : Vector3; // (-Infinity, -Infinity)
-    function new(?min:Vector2, ?max:Vector2) : Void;
+    function new( ?min : Vector2, ?max : Vector2 ) : Void;
     function set(min:Vector2, max:Vector2) : Box2; // this
     function setFromPoints(points:Array<Vector2>) : Box2; // this
     function setFromCenterAndSize(center:Vector2, size:Vector2) : Box2; // this
