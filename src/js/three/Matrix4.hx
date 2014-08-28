@@ -3,14 +3,14 @@ package three;
 @:native("THREE.Matrix4")
 extern class Matrix4 {
     var elements : Array<Float>;
-    function new(?n11:Float, ?n12:Float, ?n13:Float, ?n14:Float,
-                        ?n21:Float, ?n22:Float, ?n23:Float, ?n24:Float,
-                        ?n31:Float, ?n32:Float, ?n33:Float, ?n34:Float,
-                        ?n41:Float, ?n42:Float, ?n43:Float, ?n44:Float) : Void;
-    function set(n11:Float, n12:Float, n13:Float, n14:Float,
-                        n21:Float, n22:Float, n23:Float, n24:Float,
-                        n31:Float, n32:Float, n33:Float, n34:Float,
-                        n41:Float, n42:Float, n43:Float, n44:Float) : Matrix4; // this
+    function new( ?n11:Float, ?n12:Float, ?n13:Float, ?n14:Float,
+                  ?n21:Float, ?n22:Float, ?n23:Float, ?n24:Float,
+                  ?n31:Float, ?n32:Float, ?n33:Float, ?n34:Float,
+                  ?n41:Float, ?n42:Float, ?n43:Float, ?n44:Float) : Void;
+    function set( n11:Float, n12:Float, n13:Float, n14:Float,
+                  n21:Float, n22:Float, n23:Float, n24:Float,
+                  n31:Float, n32:Float, n33:Float, n34:Float,
+                  n41:Float, n42:Float, n43:Float, n44:Float) : Matrix4;
     function identity() : Matrix4; // this
     function copy(m:Matrix4) : Matrix4; // this
     // order = 'YXZ', 'ZXY', 'ZYX', 'YZX', 'XZY', default='XYZ'

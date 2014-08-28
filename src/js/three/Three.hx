@@ -1,33 +1,52 @@
 package three;
 
-//TODO move out of three package
-
-/*
-@:enum abstract Side(Int) {
-    var FrontSide = 0;
-    var BackSide = 1;
-    var DoubleSide = 2;
-}
-
 @:enum abstract CullFace(Int) {
     var None = 0;
     var Back = 1;
     var Front = 2;
     var FrontBack = 3;
 }
-*/
+
+@:enum abstract FrontFaceDirection(Int) {
+    var CW = 0;
+    var CCW = 1;
+}
+
+@:enum abstract ShadowMapType(Int) {
+    var BasicShadowMap = 0;
+    var PCFShadowMap = 1;
+    var PCFSoftShadowMap = 2;
+}
+
+@:enum abstract Side(Int) {
+    var FrontSide = 0;
+    var BackSide = 1;
+    var DoubleSide = 2;
+}
+
+@:enum abstract Shading(Int) {
+    var NoShading = 0;
+    var FlatShading = 1;
+    var SmoothShading = 2;
+}
+
+@:enum abstract Colors(Int) {
+    var NoColors = 0;
+    var FaceColors = 1;
+    var VertexColors = 2;
+}
 
 //@:keep
 class Three {
 
-    static function __init__() : Void untyped {
+    static function __init__() : Void {
         #if !noEmbedJS
             #if debug
             haxe.macro.Compiler.includeFile("res/three.js");
             #else
             haxe.macro.Compiler.includeFile("res/three.min.js");
             #end
-			haxe.macro.Compiler.includeFile("res/TrackballControls.js");
+			//haxe.macro.Compiler.includeFile("res/TrackballControls.js");
         #end
     }
 
@@ -41,39 +60,39 @@ class Three {
 
     // GL STATE CONSTANTS
 
-    public static inline var CullFaceNone = 0;
-    public static inline var CullFaceBack = 1;
-    public static inline var CullFaceFront = 2;
-    public static inline var CullFaceFrontBack = 3;
+    //public static inline var CullFaceNone = 0;
+    //public static inline var CullFaceBack = 1;
+    //public static inline var CullFaceFront = 2;
+    //public static inline var CullFaceFrontBack = 3;
 
-    public static inline var FrontFaceDirectionCW = 0;
-    public static inline var FrontFaceDirectionCCW = 1;
+    //public static inline var FrontFaceDirectionCW = 0;
+    //public static inline var FrontFaceDirectionCCW = 1;
 
     // SHADOWING TYPES
 
-    public static inline var BasicShadowMap = 0;
-    public static inline var PCFShadowMap = 1;
-    public static inline var PCFSoftShadowMap = 2;
+    //public static inline var BasicShadowMap = 0;
+    //public static inline var PCFShadowMap = 1;
+    //public static inline var PCFSoftShadowMap = 2;
 
     // MATERIAL CONSTANTS
 
     // side
 
-    public static inline var FrontSide = 0;
-    public static inline var BackSide = 1;
-    public static inline var DoubleSide = 2;
+    //public static inline var FrontSide = 0;
+    //public static inline var BackSide = 1;
+    //public static inline var DoubleSide = 2;
 
     // shading
 
-    public static inline var NoShading = 0;
-    public static inline var FlatShading = 1;
-    public static inline var SmoothShading = 2;
+    //public static inline var NoShading = 0;
+    //public static inline var FlatShading = 1;
+    //public static inline var SmoothShading = 2;
 
     // colors
 
-    public static inline var NoColors = 0;
-    public static inline var FaceColors = 1;
-    public static inline var VertexColors = 2;
+    //public static inline var NoColors = 0;
+    //public static inline var FaceColors = 1;
+    //public static inline var VertexColors = 2;
 
     // blending modes
 
