@@ -22,7 +22,7 @@ extern class Texture extends EventDispatcher {
     var unpackAlignment : Int; // 4
     var needsUpdate : Bool;
     var onUpdate : Void -> Void; // TODO: WTF?
-    function new(image:Dynamic, ?mapping:Mapping, ?wrapS:Int, ?wrapT:Int, ?magFilter:Int, ?minFilter:Int, ?format:Int, ?type:Int, ?anisotropy:Int) : Void;
+    function new( ?image:Dynamic, ?mapping:Mapping, ?wrapS:Int, ?wrapT:Int, ?magFilter:Int, ?minFilter:Int, ?format:Int, ?type:Int, ?anisotropy:Int) : Void;
     function clone() : Texture;
     function dispose() : Void;
 }

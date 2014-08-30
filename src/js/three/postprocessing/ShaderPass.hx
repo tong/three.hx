@@ -9,5 +9,7 @@ extern class ShaderPass {
 	var clear : Bool;
 	var camera : Camera;
 	var scene : Scene;
+	var quad : Mesh;
 	function new( shader : Dynamic, ?textureID : String ) : Void;
+	//function render( renderer : Renderer, writeBuffer, readBuffer, delta ) : Void;
 }
