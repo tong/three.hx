@@ -1,7 +1,7 @@
 
 import js.Browser.document;
 import js.Browser.window;
-import three.Three;
+import Three;
 import three.*;
 
 class App {

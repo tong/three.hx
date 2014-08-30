@@ -68,11 +68,13 @@ extern class WebGLShaders {
     static var linear_to_gamma_fragment : String;
 }
 
+/*
 @:native("THREE.UniformsUtils")
 extern class UniformsUtils {
     static function merge(a:Array<UniformsUtils>) : Dynamic ;
     static function clone(a:Dynamic) : Dynamic;
 }
+*/
 
 @:native("THREE.UniformsLib")
 extern class UniformsLib {

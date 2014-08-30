@@ -1,4 +1,4 @@
-package three;
+package three.controls;
 
 import js.html.Element;
 
@@ -27,9 +27,9 @@ extern class TrackballControls {
 
 	var keys:Dynamic;
 
-	var target:js.three.Vector3;
+	var target:Vector3;
 
-	function new(camera:js.three.Camera, rendererDomElement:Element) : Void;
+	function new(camera:Camera, rendererDomElement:Element) : Void;
 
 	function update():Void;
 	function reset():Void;

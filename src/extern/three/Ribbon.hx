@@ -1,4 +1,4 @@
-package js.three;
+package three;
 
 @:native("THREE.Ribbon")
 extern class Ribbon extends Object3D {

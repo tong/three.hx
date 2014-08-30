@@ -1,6 +1,6 @@
 package three;
 
-import three.Three;
+import Three;
 
 @:native("THREE.WebGLRenderer")
 extern class WebGLRenderer implements Renderer {
