@@ -45,7 +45,6 @@ class Three {
             #else
             haxe.macro.Compiler.includeFile("res/three.min.js");
             #end
-    		//haxe.macro.Compiler.includeFile("res/TrackballControls.js");
         #end
     }
     

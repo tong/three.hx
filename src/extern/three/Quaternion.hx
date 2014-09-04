@@ -21,6 +21,7 @@ extern class Quaternion {
     function normalize() : Quaternion; // this
     function multiply(q:Quaternion) : Quaternion; // this
     function multiplyQuaternion(a:Quaternion, b:Quaternion) : Quaternion; // this
+    function multiplyVector3(v:Vector3) : Quaternion; // this
     // multiplyVector3 is deprecated
     function slerp(qb:Quaternion, t:Float) : Quaternion; // this
     function equals(q:Quaternion) : Bool;
