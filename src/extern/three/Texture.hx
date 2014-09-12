@@ -1,5 +1,7 @@
 package three;
 
+import Three;
+
 @:native("THREE.Texture")
 extern class Texture extends EventDispatcher {
     var id : Int;
@@ -7,12 +9,12 @@ extern class Texture extends EventDispatcher {
     var image : Dynamic; // TODO: find real type { data:Dynamic, width:Int, height:Int }
     var mipmaps : Array<Dynamic>; // TODO: more specific type?
     var mapping : Mapping;
-    var wrapS : Int; // ClampToEdgeWrapping
-    var wrapT : Int; // ClampToEdgeWrapping
-    var magFilter : Int; // LinearFilter
-    var minFilter : Int; // LinearMipMapLinearFilter
+    var wrapS : WrappingMode; // ClampToEdgeWrapping
+    var wrapT : WrappingMode; // ClampToEdgeWrapping
+    var magFilter : Filter; // LinearFilter
+    var minFilter : Filter; // LinearMipMapLinearFilter
     var anisotropy : Int; // 1
-    var format : Int; // RGBAFormat
+    var format : PixelFormat; // RGBAFormat
     var type : Int; // UnsignedByteType
     var offset : Vector2; // (0,0)
     var repeat : Vector2; // (1,1)
