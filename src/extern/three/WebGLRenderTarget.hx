@@ -17,7 +17,7 @@ extern class WebGLRenderTarget extends EventDispatcher {
     var stencilBuffer : Bool; // true
     var generateMipmaps : Bool; // true
     var shareDepthFrom : Dynamic; // TODO: what is this?
-    function new(width:Float, height:Float, ?options:Dynamic) : Void;
+    function new( width:Float, height:Float, ?options:Dynamic ) : Void;
     function clone() : WebGLRenderTarget;
     function dispose() : Void;
 }

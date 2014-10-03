@@ -2,11 +2,18 @@ package three;
 
 import Three;
 
+@:enum abstract RenderPrecision(String) {
+    var highp = "highp";
+    var mediump = "mediump";
+    var lowp = "lowp";
+}
+
 @:native("THREE.WebGLRenderer")
 extern class WebGLRenderer implements Renderer {
 
     var domElement : js.html.Element;
     var context : js.html.webgl.RenderingContext;
+    var devicePixelRatio : Float;
 
     var autoClear : Bool; // true
     var autoClearColor : Bool; // true
@@ -50,7 +57,7 @@ extern class WebGLRenderer implements Renderer {
     function supportsStandardDerivatives() : Bool;
     function supportsCompressedTextureS3TC() : Bool;
     function getMaxAnisotropy() : Int;
-    function getPrecision() : String;
+    function getPrecision() : RenderPrecision;
 
     function setSize(width:Int, height:Int) : Void;
     function setViewport(x:Float, y:Float, width:Float, height:Float) : Void;
