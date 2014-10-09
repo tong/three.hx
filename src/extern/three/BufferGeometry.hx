@@ -11,6 +11,7 @@ extern class BufferGeometry {
     var hasTangents : Bool; // false
     var morphTargets : Array<{name:String, vertices:Array<Vertex>}>; // "for compatibility"
     function new() : Void;
+    function addAttribute( name : String, attribute : BufferAttribute ) : Void;
     function applyMatrix(matrix:Matrix3) : Void;
     function computeVertexNormals() : Void;
     function computeTangents() : Void;

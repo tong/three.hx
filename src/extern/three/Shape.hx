@@ -2,9 +2,10 @@ package three;
 
 @:native("THREE.Shape")
 extern class Shape extends Path {
-    var holes : Array<Vector2>;
+    var holes : Array<Dynamic>;
+    //var holes : Array<Vector2>;
     function new() : Void;
-    function extrude(options:Dynamic) : ExtrudeGeometry;
+    function extrude( options : Dynamic ) : ExtrudeGeometry;
     function makeGeometry(options:Dynamic) : ShapeGeometry;
     function getPointsHoles(divisions:Int) : Array<Vector2>;
     function getSpacedPointsHoles(divisions:Int) : Array<Vector2>;

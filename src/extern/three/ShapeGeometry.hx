@@ -2,5 +2,6 @@ package three;
 
 @:native("THREE.ShapeGeometry")
 extern class ShapeGeometry extends Geometry {
-    function new(shapes:Array<Shape>, options:Dynamic) : Void;
+	@:overload(function( shape : Shape, ?options : Dynamic ):Void{})
+    function new( shapes : Array<Shape>, ?options : Dynamic ) : Void;
 }
