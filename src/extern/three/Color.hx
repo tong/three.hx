@@ -2,14 +2,12 @@ package three;
 
 @:native("THREE.Color")
 extern class Color {
-
 	var r : Float;
 	var g : Float;
 	var b : Float;
-	
+	@:overload(function(r:Int,g:Int,b:Int) : Void {})
 	@:overload(function(?value:String) : Void {})
 	function new(?value:Int) : Void;
-	
 	@:overload(function(value:String) : Void {})
 	function set( value : Int ) : Void;
 	function setHex( hex : Int ) : Color;
@@ -36,4 +34,4 @@ extern class Color {
 	function clone() : Color;
 }
 
-// Color.js also defines THREE.ColorKeywords
+// THREE.ColorKeywords is defines in (not extern) three.ColorKeywords
