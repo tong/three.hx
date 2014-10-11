@@ -4,7 +4,7 @@ package three;
 extern class FogExp2 implements IFog /* extends Fog ?? */{
 //extern class FogExp2 extends Fog {
 	
-	// var name : String;
+	var name : String;
 	var color : Color;
 	var density : Float; // 0.00025
 

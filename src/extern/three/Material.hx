@@ -1,5 +1,7 @@
 package three;
 
+import Three;
+
 @:native("THREE.Material")
 extern class Material extends EventDispatcher {
    
@@ -8,12 +10,12 @@ extern class Material extends EventDispatcher {
 
     var name : String;
 
-    var side : Int; // FrontSide
+    var side : Side; // FrontSide
 
     var opacity : Float; // 1
     var transparent : Bool; // false
    
-    var blending : Int; // NormalBlending
+    var blending : BlendMode; // NormalBlending
     
     var blendSrc : Int; // SrcAlphaFactor
     var blendDst : Int; // SrcAlphaFactor

@@ -4,7 +4,7 @@ package three;
 extern class ShaderMaterial<TUniforms> extends Material {
 	var fragmentShader : String;
 	var vertexShader : String;
-	var uniforms : TUniforms; //Dynamic;
+	var uniforms : TUniforms;
 	var defines : Dynamic;
 	var attributes : Dynamic;
 	var shading : Int; // SmoothShading
@@ -16,5 +16,5 @@ extern class ShaderMaterial<TUniforms> extends Material {
 	var skinning : Bool; // false
 	var morphTargets : Bool; // false
 	var morphNormals : Bool; // false
-	function new(?parameters:Dynamic) : Void;
+	function new( ?parameters : Dynamic ) : Void;
 }
