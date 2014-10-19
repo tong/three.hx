@@ -4,6 +4,7 @@ package three;
 extern class Geometry {
 
     var id : Int;
+    var uuid : String;
     var name : String;
     var vertices : Array<Vertex>;
     var colors : Array<Color>;

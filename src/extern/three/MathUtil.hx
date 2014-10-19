@@ -2,6 +2,7 @@ package three;
 
 @:native("THREE.Math")
 extern class MathUtil {
+	static function generateUUID() : String;
 	static function clamp(x:Float, a:Float, b:Float) : Float;
 	static function clampBottom(x:Float, a:Float) : Float;
 	static function mapLinear(x:Float, a1:Float, a2:Float, b1:Float, b2:Float) : Float;

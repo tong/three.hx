@@ -54,4 +54,6 @@ extern class Matrix4 {
     function clone() : Matrix4;
     function compose(position:Vector3, quaternion:Quaternion, scale:Vector3) : Matrix4; // this
     function decompose(?position:Vector3, ?quaternion:Quaternion, ?scale:Vector3) : Array<Dynamic>; // [translation, rotation, scale]
+    function fromArray( array : Array<Int> ) : Matrix4;
+    function toArray() : Array<Int>;
 }
