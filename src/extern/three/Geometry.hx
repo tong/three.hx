@@ -31,6 +31,7 @@ extern class Geometry {
     function new() : Void;
 
     function applyMatrix(matrix:Matrix4) : Void;
+    function fromBufferGeometry( geometry : Geometry ) : Void;
     function computeCentroids() : Void;
     function computeFaceNormals() : Void;
     function computeVertexNormals() : Void;

@@ -25,6 +25,8 @@ extern class Vector3 {
     function applyMatrix4(m:Matrix4) : Vector3; // this
     function applyProjection(m:Matrix3) : Vector3; // this
     function applyQuaternion(q:Quaternion) : Vector3; // this
+    function project() : Vector3;
+    function unproject() : Vector3;
     function transformDirection(m:Matrix4) : Vector3; // this
     function divide(v:Vector3) : Vector3; // this
     function divideScalar(s:Float) : Vector3; // this
@@ -51,7 +53,8 @@ extern class Vector3 {
     function getScaleFromMatrix(m:Matrix4) : Vector3; // this
     function getColumnFromMatrix(index:Int, matrix:Matrix4) : Vector3; // this
     function equals(v:Vector3) : Bool;
-    function toArray() : Array<Float>;
+    function fromArray( array : Array<Float>, ?offset : Int ) : Vector3;
+    function toArray( ?array : Array<Float>, ?offset : Int ) : Array<Float>;
     function clone() : Vector3;
     function applyEuler(v:Vector3, eulerOrder:String) : Vector3; // this
     function applyAxisAngle(axis:Vector3, angle:Float) : Vector3; // this

@@ -3,6 +3,7 @@ package three;
 @:native("THREE.PerspectiveCamera")
 extern class PerspectiveCamera extends Camera {
     var fov : Float; // 50
+    var zoom : Float; // 1
     var aspect : Float; // 1
     var near : Float; // 0.1
     var far : Float; // 2000

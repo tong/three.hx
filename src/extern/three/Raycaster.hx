@@ -3,7 +3,8 @@ package three;
 typedef RayIntersect = {
     var distance : Float;
     var point : Vector3;
-    var face : Face;
+    var face : Face3;
+    var faceIndex : Int;
     var object : Object3D;
 };
 

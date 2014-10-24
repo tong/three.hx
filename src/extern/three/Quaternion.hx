@@ -18,6 +18,7 @@ extern class Quaternion {
     function conjugate() : Quaternion; // this
     function lengthSq() : Float;
     function length() : Float;
+    function fromArray( array : Array<Float> ) : Quaternion;
     function normalize() : Quaternion; // this
     function multiply(q:Quaternion) : Quaternion; // this
     function multiplyQuaternion(a:Quaternion, b:Quaternion) : Quaternion; // this
@@ -25,6 +26,7 @@ extern class Quaternion {
     // multiplyVector3 is deprecated
     function slerp(qb:Quaternion, t:Float) : Quaternion; // this
     function equals(q:Quaternion) : Bool;
+    function toArray() : Array<Float>;
     function clone() : Quaternion;
     // "Same field name can't be use for both static and instance : slerp"
     // static function slerp(qa:Quaternion, qb:Quaternion, qm:Quaternion, t:Float) : Quaternion ; // qm

@@ -37,6 +37,7 @@ extern class Vector4 {
     function setLength(l:Float) : Vector4; // this
     function lerp(v:Vector4, alpha:Float) : Vector4; // this
     function equals(v:Vector4) : Bool;
-    function toArray() : Array<Float>;
+    function fromArray( array : Array<Float>, ?offset : Int ) : Vector4;
+    function toArray( ?array : Array<Float>, ?offset : Int ) : Array<Float>;
     function clone() : Vector4;
 }

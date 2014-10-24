@@ -1,4 +1,4 @@
 
 THREE.HX
 ========
-Haxe/Javascript three.js:68 types
+Haxe/Javascript three.js:69 types

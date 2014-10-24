@@ -88,7 +88,8 @@ extern class WebGLRenderer implements Renderer {
     function renderImmediateObject(camera:Camera, lights:Array<Light>, fog:Fog, material:Material, geometry:Geometry, object:Object3D) : Void;
 
     function initWebGLObjects(scene:Scene) : Void;
-    function initMaterial( material:Material, lights:Array<Light>, fog:IFog, ?object:Object3D ) : Void;
+    //function initMaterial( material:Material, lights:Array<Light>, fog:IFog, ?object:Object3D ) : Void;
+    function uploadTexture( texture : Texture ) : Void;
 
     function setFaceCulling(cullFace:Int, frontFaceDirection:Int) : Void;
     function setMaterialFaces(material:Material) : Void;

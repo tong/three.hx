@@ -29,11 +29,9 @@ extern class TrackballControls {
 
 	var target:Vector3;
 
-	function new(camera:Camera, rendererDomElement:Element) : Void;
-
+	function new( camera:Camera, ?rendererDomElement:Element ) : Void;
 	function update():Void;
 	function reset():Void;
-
 	function handleResize():Void;
 	function handleEvent(event:Dynamic):Void;
 	function getMouseOnScreen(pageX:Float, pageY:Float, vector:Dynamic):Dynamic;
@@ -41,5 +39,4 @@ extern class TrackballControls {
 	function zoomCamera():Void;
 	function panCamera():Void;
 	function checkDistances():Void;
-
 }

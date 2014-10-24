@@ -10,5 +10,6 @@ extern class Mesh extends Object3D {
     
     function updateMorphTargets() : Void;
     function getMorphTargetIndexByName( name : String ) : Int;
+    //function raycast( raycaster : Raycaster, intersects : Array<Dynamic> ) : Void;
     // override public function clone(?object:Mesh) : Mesh;
 }

@@ -14,6 +14,7 @@ extern class Object3D {
     var scale : Vector3; // (1,1,1)
     var renderDepth : Float; // null
     var rotationAutoUpdate : Bool; // true
+    var userData : Dynamic;
     var matrix : Matrix4;
     var matrixWorld : Matrix4; // undocumented
     var matrixRotationWorld : Matrix4;
@@ -38,10 +39,21 @@ extern class Object3D {
     function lookAt(vector:Vector3) : Void;
     function add(object:Object3D) : Void;
     function remove(object:Object3D) : Void;
+    //function getChildByName( name : String, ) : // depricated
+    function getObjectById( id : String ) : Object3D; 
+    function getObjectByName( name : String ) : Object3D; 
+    function getWorldPosition( ?optionalTarget : Vector3 ) : Vector3;
+    function getWorldQuaternion() : Quaternion;
+    function getWorldRotation() : Euler;
+    function getWorldScale() : Vector3;
+    function getWorldDirection() : Vector3;
+    //function raycast() : Void;
     function traverse(callback:Object3D->Void) : Void;
+    function traverseVisible(callback:Object3D->Void) : Void;
     function getChildByName(name:String, ?recursive:Bool=false) : Object3D;
     function getDescendants(?array:Array<Object3D>) : Array<Object3D>;
     function updateMatrix() : Void;
     function updateMatrixWorld(force:Bool=false) : Void;
+    function toJSON() : Dynamic;
     function clone() : Object3D;
 }
