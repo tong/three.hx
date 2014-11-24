@@ -11,7 +11,7 @@ import Three;
 @:native("THREE.WebGLRenderer")
 extern class WebGLRenderer implements Renderer {
 
-    var domElement : js.html.Element;
+    var domElement : js.html.CanvasElement;
     var context : js.html.webgl.RenderingContext;
     var devicePixelRatio : Float;
 

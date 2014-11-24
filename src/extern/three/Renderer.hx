@@ -2,7 +2,7 @@ package three;
 
 interface Renderer {
 
-	var domElement : js.html.Element;
+	var domElement : js.html.CanvasElement;
 	var autoClear : Bool;
 
 	function setSize( width : Int, height : Int ) : Void;

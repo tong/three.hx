@@ -1,5 +1,55 @@
 package three;
 
+import Three;
+
+typedef MeshPhongMaterialParameters = {
+
+    @:optional var color : Int;
+    @:optional var ambient: Int;
+    @:optional var emissive: Int;
+    @:optional var specular: Int;
+    @:optional var shininess: Float;
+    @:optional var opacity: Float;
+
+    @:optional var map: Texture;
+ 
+    @:optional var lightMap:Texture;
+ 
+    @:optional var bumpMap : Texture;
+    @:optional var bumpScale: Float;
+  
+    @:optional var normalMap : Texture;
+    @:optional var normalScale : Vector2;
+
+    @:optional var specularMap : Texture;
+
+    @:optional var alphaMap : Texture;
+
+    @:optional var envMap: Dynamic; //CubeTexture; //TextureCube; //TODO TextureCube;
+    @:optional var combine : TextureConstant; // MultiplyOperation
+    @:optional var reflectivity : Float;
+    @:optional var refractionRatio: Float;
+
+    @:optional var shading: Shading;
+    @:optional var blending: BlendMode;
+    @:optional var depthTest: Bool;
+    @:optional var depthWrite: Bool;
+
+    @:optional var wireframe: Bool;
+    @:optional var wireframeLinewidth: Float;
+
+    @:optional var vertexColors: Colors;
+  
+    @:optional var skinning: Bool;
+    @:optional var morphTargets: Bool;
+    @:optional var morphNormals: Bool;
+
+    @:optional var fog: Bool;
+
+    @:optional var transparent: Bool;
+    @:optional var side: Three.Side;
+}
+
 @:native("THREE.MeshPhongMaterial")
 extern class MeshPhongMaterial extends Material {
     
@@ -50,5 +100,7 @@ extern class MeshPhongMaterial extends Material {
     var morphTargets : Bool; // false
     var morphNormals : Bool; // false
 
-    function new(?parameters:Dynamic) : Void;
+    function new( ?parameters : MeshPhongMaterialParameters ) : Void;
+
+    function clone() : MeshPhongMaterial;
 }

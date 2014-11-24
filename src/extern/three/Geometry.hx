@@ -27,17 +27,15 @@ extern class Geometry {
     var tangentsNeedUpdate : Bool; // false
     var colorsNeedUpdate : Bool; // false
     var lineDistancesNeedUpdate : Bool; // false
-    
     function new() : Void;
-
     function applyMatrix(matrix:Matrix4) : Void;
     function fromBufferGeometry( geometry : Geometry ) : Void;
-    function computeCentroids() : Void;
+    //function computeCentroids() : Void;
     function computeFaceNormals() : Void;
     function computeVertexNormals() : Void;
     function computeMorphNormals() : Void;
     function computeTangents() : Void;
-    function computeLineDistance() : Void;
+    function computeLineDistances() : Void;
     function computeBoundingBox() : Void;
     function computeBoundingSphere() : Void;
     function merge( geometry : Geometry, ?matrix : Matrix4, ?materialIndexOffset : Int ) : Void;

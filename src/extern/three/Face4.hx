@@ -13,5 +13,5 @@ extern class Face4 implements Face {
     var vertexTangents : Array<Vector3>;
     var materialIndex : Int;
     var centroid : Vector3;
-    function new(a:Float, b:Float, c:Float, d:Float, ?normal:Vector3, ?color:Color, materialIndex:Int) : Void;
+    function new( a:Float, b:Float, c:Float, d:Float, ?normal:Vector3, ?color:Color, ?materialIndex:Int ) : Void;
 }

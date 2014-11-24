@@ -6,7 +6,8 @@ extern class BufferAttribute {
 	var itemSize(default,null) : Int;
 	var length(default,null) : Int;
 	var needsUpdate : Bool;
-	function new( a : Array<Dynamic>, itemSize : Int ) : Void;
+	//function new( a : Array<Dynamic>, itemSize : Int ) : Void;
+	function new( a : js.html.ArrayBufferView, itemSize : Int ) : Void;
 	function copyAt( index1 : Int, attribute : BufferAttribute, index2 : Int ) : Void;
 	function set( value : Dynamic ) : Void;
 	function setX( index : Int, x : Dynamic ) : Void;
