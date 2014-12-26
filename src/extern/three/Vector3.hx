@@ -25,7 +25,7 @@ extern class Vector3 {
     function applyMatrix4(m:Matrix4) : Vector3; // this
     function applyProjection(m:Matrix3) : Vector3; // this
     function applyQuaternion(q:Quaternion) : Vector3; // this
-    function project() : Vector3;
+    function project( camera : Camera ) : Vector3;
     function unproject( camera : Camera ) : Vector3;
     function transformDirection(m:Matrix4) : Vector3; // this
     function divide(v:Vector3) : Vector3; // this
