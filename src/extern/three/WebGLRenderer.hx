@@ -51,6 +51,7 @@ extern class WebGLRenderer implements Renderer {
     function new( ?parameters : Dynamic ) : Void;
 
     function getContext() : js.html.webgl.RenderingContext;
+    function forceContextLoss() : Void;
 
     function supportsVertexTextures() : Bool;
     function supportsFloatTextures() : Bool;
