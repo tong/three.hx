@@ -9,7 +9,8 @@ extern class Object3D {
 	var parent : Object3D;
 	var children : Array<Object3D>;
 	var up : Vector3; // (0,1,0)
-	var position(default,null) : Vector3;
+	//var position(default,null) : Vector3;
+	var position : Vector3;
 	var rotation : Euler;
 	var eulerOrder : String; // 'XYZ'
 	var scale : Vector3; // (1,1,1)
@@ -54,7 +55,7 @@ extern class Object3D {
 	function getChildByName(name:String, ?recursive:Bool=false) : Object3D;
 	function getDescendants(?array:Array<Object3D>) : Array<Object3D>;
 	function updateMatrix() : Void;
-	function updateMatrixWorld(force:Bool=false) : Void;
+	function updateMatrixWorld(?force:Bool) : Void;
 	function toJSON() : Dynamic;
 	function clone() : Object3D;
 }

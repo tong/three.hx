@@ -1,8 +1,9 @@
 package three;
 
+import Three;
+
 @:native("THREE.MeshLambertMaterial")
 extern class MeshLambertMaterial extends Material {
-
     var color : Color;
     var ambient : Color;
     var emissive : Color;
@@ -16,7 +17,7 @@ extern class MeshLambertMaterial extends Material {
     var reflectivity : Float;
     var refractionRatio : Float;
     var fog : Bool;
-    var shading : Int;
+    var shading : Shading;
     var wireframe : Bool;
     var wireframeLinewidth : Float;
     var wireframeLinecap : String;
@@ -25,6 +26,5 @@ extern class MeshLambertMaterial extends Material {
     var skinning : Bool;
     var morphTargets : Bool;
     var morphNormals : Bool;
-
     function new( ?parameters : Dynamic ) : Void;
 }
