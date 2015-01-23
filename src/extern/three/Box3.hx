@@ -8,6 +8,7 @@ extern class Box3 {
     function set(min:Vector3, max:Vector3) : Box3; // this
     function setFromPoints(points:Array<Vector3>) : Box3; // this
     function setFromCenterAndSize(center:Vector3, size:Vector3) : Box3; // this
+    function setFromObject( obj : Object3D ) : Box3;
     function copy(box:Box3) : Box3; // this
     function makeEmpty() : Box3; // this
     function empty() : Bool;
