@@ -1,6 +1,6 @@
 package three;
 
-typedef BoxParameters = {
+typedef BoxGeometryParameters = {
 	var width: Float;
 	var height: Float;
 	var depth: Float;
@@ -11,6 +11,7 @@ typedef BoxParameters = {
 
 @:native("THREE.BoxGeometry")
 extern class BoxGeometry extends Geometry {
-	var parameters : BoxParameters;
-	function new( width : Float, height : Float, depth : Float, ?widthSegments : Float, ?heightSegments : Float, ?depthSegments : Float ) : Void;
+	var parameters(default,null) : BoxGeometryParameters;
+	function new( width : Float, height : Float, depth : Float,
+				  ?widthSegments : Float, ?heightSegments : Float, ?depthSegments : Float ) : Void;
 }

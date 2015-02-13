@@ -1,7 +1,7 @@
 package three;
 
 @:native("THREE.AudioListener")
-extern class Audio extends Object3D {
+extern class AudioListener extends Object3D {
 	function new() : Void;
-	function updateMatrixWorld() : Void;
+	//function updateMatrixWorld() : Void;
 }

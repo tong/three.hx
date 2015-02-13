@@ -9,6 +9,7 @@ typedef MeshPhongMaterialParameters = {
     @:optional var emissive: Int;
     @:optional var specular: Int;
     @:optional var shininess: Float;
+    @:optional var metal: Bool;
     @:optional var opacity: Float;
 
     @:optional var map: Texture;

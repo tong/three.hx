@@ -47,6 +47,7 @@ extern class Matrix4 {
     function makeRotationY(theta:Float) : Matrix4; // this
     function makeRotationZ(theta:Float) : Matrix4; // this
     function makeRotationAxis(axis:Vector3, angle:Float) : Matrix4; // this
+    function makeRotationFromEuler( v : Vector3 ) : Matrix4;
     function makeScale(x:Float, y:Float, z:Float) : Matrix4; // this
     function makeFrustum(left:Float, right:Float, bottom:Float, top:Float, near:Float, far:Float) : Matrix4; // this
     function makePerspective(fov:Float, aspect:Float, near:Float, far:Float) : Matrix4; // this

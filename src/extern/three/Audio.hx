@@ -7,5 +7,5 @@ extern class Audio extends Object3D {
 	function setLoop( value : Bool ) : Void;
 	function setRefDistance( value : Float ) : Void;
 	function setRolloffFactor( value : Float ) : Void;
-	function updateMatrixWorld() : Void;
+	//function updateMatrixWorld() : Void;
 }
