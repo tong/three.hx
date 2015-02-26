@@ -4,7 +4,7 @@ package three;
 extern class Shape extends Path {
     var holes : Array<Dynamic>;
     //var holes : Array<Vector2>;
-    function new() : Void;
+    function new( ?points : Array<Vector2> ) : Void; //?
     function extrude( options : Dynamic ) : ExtrudeGeometry;
     function makeGeometry(options:Dynamic) : ShapeGeometry;
     function getPointsHoles(divisions:Int) : Array<Vector2>;

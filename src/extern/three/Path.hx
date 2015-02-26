@@ -2,7 +2,7 @@ package three;
 
 @:native("THREE.Path")
 extern class Path extends CurvePath {
-    function new(?points:Array<Vector2>) : Void;
+    function new( ?points : Array<Vector2> ) : Void;
     function fromPoints(points:Array<Vector2>) : Void;
     function moveTo(x:Float, y:Float) : Void;
     function lineTo(x:Float, y:Float) : Void;

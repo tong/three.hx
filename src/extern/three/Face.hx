@@ -10,5 +10,5 @@ interface Face {
     var vertexColors : Array<Color>; // [ :Color, :Color, :Color ];
     var vertexTangents : Array<Vector3>;
     var materialIndex : Int;
-    var centroid : Vector3;
+    //var centroid : Vector3;
 }

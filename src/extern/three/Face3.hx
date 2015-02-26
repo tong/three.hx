@@ -11,7 +11,7 @@ extern class Face3 implements Face {
     var vertexColors : Array<Color>; // [ :Color, :Color, :Color ];
     var vertexTangents : Array<Vector3>;
     var materialIndex : Int;
-    var centroid : Vector3;
+    //var centroid : Vector3;
     function new(a:Float, b:Float, c:Float, ?normal:Vector3, ?color:Color, ?materialIndex:Int) : Void;
     function clone() : Face3;
 }
