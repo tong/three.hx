@@ -1,6 +1,6 @@
 package three;
 
 @:native("THREE.ParametricGeometry")
-extern class ParametricGeometry {
-    function new( func:Dynamic, slices:Int, stacks:Int, ?useTris:Bool ) : Void;
+extern class ParametricGeometry extends Geometry {
+	function new( func : Dynamic, slices : Int, stacks : Int ) : Void;
 }

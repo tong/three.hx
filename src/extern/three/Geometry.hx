@@ -18,7 +18,8 @@ extern class Geometry {
 	var boundingBox : Box3;
 	var boundingSphere : { radius:Float };
 	var hasTangents : Bool; // false
-	// public var dynamic : Bool; // true
+	@:native("dynamic")
+	var _dynamic : Bool; // true
 	var verticesNeedUpdate : Bool;
 	var elementsNeedUpdate : Bool; // false
 	var uvsNeedUpdate : Bool; // false
