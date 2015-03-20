@@ -13,9 +13,9 @@ extern class Animation {
     var interpolationType : Int; // AnimationHandler.LINEAR
     var points : Array<Array<Float>>;
     var target : Vector3;
-    function new(root:Mesh, name:String, ?interpoltionType:Int) : Void;
-    function play(loop:Bool, startTimeMS:Float) : Void;
+    function new( root : Mesh, name : String ) : Void;
+    function play( ?startTime : Float, ?weight : Float ) : Void;
     function pause() : Void;
     function stop() : Void;
-    function update(deltaTimeMS: Float) : Void;
+    function update( deltaTimeMS : Float ) : Void;
 }
