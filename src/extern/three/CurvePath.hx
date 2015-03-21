@@ -15,8 +15,8 @@ extern class CurvePath extends Curve {
     function getBoundingBox() : { minX:Float, minY:Float, maxX:Float, maxY:Float, centroid:Vector2 };
     // TODO: If any curves are 3D, getBoundingBox will also return minZ and maxZ, and centroid will be Vector3
 
-    function createPointsGeometry(divisions:Int) : Geometry;
-    function createSpacedPointsGeometry(divisions:Int) : Geometry;
+    function createPointsGeometry( ?divisions : Int ) : Geometry;
+    function createSpacedPointsGeometry( ?divisions : Int ) : Geometry;
     function createGeometry(points:Array<Vector2>) : Geometry; // TODO: Array can have Vector3, or both 2 and 3
 
     function addWrapPath(bendpath:Path) : Void;

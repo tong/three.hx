@@ -31,7 +31,7 @@ extern class WebGLRenderer implements Renderer {
     var shadowMapEnabled : Bool; // false
     var shadowMapAutoUpdate : Bool; // true
     var shadowMapType : ShadowMapType; //Int; // PCFShadowMap
-    var shadowMapCullFace : Int; // CullFaceFront
+    var shadowMapCullFace : CullFace; // CullFaceFront
     var shadowMapDebug : Bool; // false
     var shadowMapCascade : Bool; // false
 

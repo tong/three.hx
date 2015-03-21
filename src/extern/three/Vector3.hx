@@ -56,7 +56,8 @@ extern class Vector3 {
     function fromArray( array : Array<Float>, ?offset : Int ) : Vector3;
     function toArray( ?array : Array<Float>, ?offset : Int ) : Array<Float>;
     function clone() : Vector3;
-    function applyEuler(v:Vector3, eulerOrder:String) : Vector3; // this
+    //function applyEuler( v : Vector3, eulerOrder : String ) : Vector3;
+    function applyEuler( euler : Euler ) : Vector3;
     function applyAxisAngle(axis:Vector3, angle:Float) : Vector3; // this
     function projectOnVector(vector:Vector3) : Vector3; // this
     function projectOnPLane(planeNormal:Plane) : Vector3; // this

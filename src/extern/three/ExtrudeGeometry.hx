@@ -3,7 +3,7 @@ package three;
 typedef ExtrudeGeometryOptions = {
 	@:optional var curveSegments : Int;
 	@:optional var steps : Int;
-	@:optional var amount : Int;
+	@:optional var amount : Float;
 	@:optional var bevelEnabled : Bool;
 	@:optional var bevelThickness : Float;
 	@:optional var bevelSize : Float;

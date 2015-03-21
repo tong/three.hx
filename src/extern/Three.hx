@@ -135,6 +135,7 @@ class Three {
         #end
     }
     
+    /*
     public static inline function requestAnimationFrame( f : js.html.RequestAnimationFrameCallback ) : Int {
         return untyped window.requestAnimationFrame(f);
     }
@@ -142,6 +143,7 @@ class Three {
     public static inline function cancelAnimationFrame( f : Void->Void ) {
         untyped window.cancelAnimationFrame(id);
     }
+    */
     
     // GL STATE CONSTANTS
     
