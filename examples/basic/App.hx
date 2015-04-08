@@ -13,7 +13,7 @@ class App {
 
 	static function update() {
 		
-		Three.requestAnimationFrame( untyped update );
+		window.requestAnimationFrame( untyped update );
 		
 		mesh.rotation.x += 0.01;
 		mesh.rotation.y += 0.02;

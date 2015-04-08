@@ -1,6 +1,6 @@
 -js app.js
 -main App
--cp ../../src/extern
+-cp ../../src
 -debug
 -dce full
 -D noEmbedJS
