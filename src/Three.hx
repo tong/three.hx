@@ -110,16 +110,13 @@
     var RGBEFormat = 1021;
 }
 
-// DDS / ST3C Compressed texture formats
 @:enum abstract TextureFormat(Int) {
+    // DDS / ST3C Compressed texture formats
     var RGB_S3TC_DXT1_Format = 2001;
     var RGBA_S3TC_DXT1_Format = 2002;
     var RGBA_S3TC_DXT3_Format = 2003;
     var RGBA_S3TC_DXT5_Format = 2004;
-}
-
-// PVRTC compressed texture formats
-@:enum abstract TextureFormat(Int) {
+    // PVRTC compressed texture formats
     var RGB_PVRTC_4BPPV1_Format = 2100;
     var RGB_PVRTC_2BPPV1_Format = 2101;
     var RGBA_PVRTC_4BPPV1_Format = 2102;
