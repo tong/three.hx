@@ -59,6 +59,7 @@ extern class WebGLRenderer implements Renderer {
     function supportsCompressedTextureS3TC() : Bool;
     function getMaxAnisotropy() : Int;
     function getPrecision() : RenderPrecision;
+    function getPixelRatio() : Float;
 
     function setSize(width:Int, height:Int) : Void;
     function setViewport(x:Float, y:Float, width:Float, height:Float) : Void;
