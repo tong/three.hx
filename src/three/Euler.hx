@@ -12,6 +12,7 @@ extern class Euler {
 	function setFromRotationMatrix( m : Matrix4, ?order : String ) : Euler;
 	function setFromQuaternion( q : Quaternion, ?order : String ) : Euler;
 	function reorder( reorder : String ) : Euler;
+	function setFromVector3( v : Vector3, ?order : String ) : Euler;
 	function fromArray( a : Array<Float> ) : Euler;
 	function toArray() : Array<Float>;
 	function equals( euler : Euler ) : Bool;
