@@ -1,11 +1,30 @@
 package three;
 
+import js.html.CanvasElement;
 import Three;
 
 @:enum abstract RenderPrecision(String) {
     var highp = "highp";
     var mediump = "mediump";
     var lowp = "lowp";
+}
+
+typedef RenderInfo = {
+    memory:{ programs:Int, geometries:Int, textures:Int },
+    render:{ calls:Int, vertices:Int, faces:Int, points:Int }
+}
+
+typedef WebGLRendererParameters = {
+    ?canvas : CanvasElement,
+    ?context : js.html.webgl.RenderingContext,
+    ?precision : RenderPrecision,
+    ?alpha : Bool,
+    ?depth : Bool,
+    ?stencil : Bool,
+    ?antialias : Bool,
+    ?premultipliedAlpha : Bool,
+    ?preserveDrawingBuffer : Bool,
+    ?logarithmicDepthBuffer : Bool,
 }
 
 @:native("THREE.WebGLRenderer")
@@ -43,12 +62,15 @@ extern class WebGLRenderer implements Renderer {
     var renderPluginsPre : Array<Dynamic>; // TODO
     var renderPluginsPost : Array<Dynamic>; // TODO
 
+    var info : RenderInfo;
+    /*
     var info : {
         memory:{ programs:Int, geometries:Int, textures:Int },
         render:{ calls:Int, vertices:Int, faces:Int, points:Int }
     };
+*/
 
-    function new( ?parameters : Dynamic ) : Void;
+    function new( ?parameters : WebGLRendererParameters ) : Void;
 
     function getContext() : js.html.webgl.RenderingContext;
     function forceContextLoss() : Void;
