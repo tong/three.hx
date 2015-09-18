@@ -2,7 +2,6 @@ package three;
 
 @:native("THREE.Loader")
 extern class Loader {
-    var showStatus : Bool;
     var statusDomElement : js.html.Element;
     var onLoadStart : Void->Void;
     var onLoadProgress : Void->Void;

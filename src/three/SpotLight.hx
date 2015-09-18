@@ -2,10 +2,11 @@ package three;
 
 @:native("THREE.SpotLight")
 extern class SpotLight extends Light {
-    
+
     var intensity : Float; // 1
     var target : Object3D;
     var distance : Float; // 0
+    var decay : Float;
     var angle : Float; // Math.PI / 2
     var exponent : Float; // 10
 

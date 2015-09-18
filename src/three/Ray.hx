@@ -10,7 +10,9 @@ extern class Ray {
     function at(t:Float, ?optionalTarget:Ray) : Ray;
     function recast(t:Float) : Ray; // this
     function closestPointToPoint(point:Vector3, ?optionalTarget:Vector3) : Vector3;
-    function distanceToPoint(point:Vector3) : Float;
+    function distanceToPoint( point : Vector3 ) : Float;
+    function distanceSqToPoint( point : Vector3 ) : Float;
+    function distanceSqToSegment( v0 : Vector3, v1 : Vector3, optionalPointOnRay : Vector3, optionalPointOnSegment : Vector3 ) : Float;
     function isIntersectionSphere(sphere:Sphere) : Bool;
     function isIntersectionPlane(plane:Plane) : Bool;
     function distanceToPlane(plane:Plane) : Float;

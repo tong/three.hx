@@ -13,7 +13,6 @@ extern class Raycaster {
     var ray : Ray;
     var near : Float;
     var far : Float;
-    var precision : Float;
     var linePrecision : Float;
     function new( ?origin : Vector3, ?direction : Vector3, ?near : Float, ?far : Float ) : Void;
     function set( origin : Vector3, direction : Vector3 ) : Void;

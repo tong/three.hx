@@ -64,6 +64,17 @@
     var SrcAlphaSaturateFactor = 210;
 }
 
+@:enum abstract DepthModes(Int) {
+    var NeverDepth = 0;
+    var AlwaysDepth = 1;
+    var LessDepth = 2;
+    var LessEqualDepth = 3;
+    var EqualDepth = 4;
+    var GreaterEqualDepth = 5;
+    var GreaterDepth = 6;
+    var NotEqualDepth = 7;
+}
+
 @:enum abstract TextureConstant(Int) {
     var MultiplyOperation = 0;
     var MixOperation = 1;

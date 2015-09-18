@@ -15,6 +15,7 @@ extern class Euler {
 	function setFromVector3( v : Vector3, ?order : String ) : Euler;
 	function fromArray( a : Array<Float> ) : Euler;
 	function toArray() : Array<Float>;
+	function toVector3( ?optionalResult : Vector3 ) : Vector3;
 	function equals( euler : Euler ) : Bool;
 	function clone() : Euler;
 }

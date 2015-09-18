@@ -14,6 +14,10 @@ extern class Material extends EventDispatcher {
     var blendSrc : Int; // SrcAlphaFactor
     var blendDst : Int; // SrcAlphaFactor
     var blendEquation : Int; // AddEquation
+    var blendSrcAlpha : Float;
+    var blendDstAlpha : Float;
+    var blendEquationAlpha : Float;
+    var depthFunc : Int; // LessEqualDepth
     var depthTest : Bool; // true
     var depthWrite : Bool; // true
     var polygonOffset : Bool; // false

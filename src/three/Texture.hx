@@ -8,6 +8,7 @@ extern class Texture extends EventDispatcher {
 	var onUpdate : Void->Void;
 	var id : Int;
 	var name : String;
+	var sourceFile : String;
 	var image : Dynamic; // TODO: find real type { data:Dynamic, width:Int, height:Int }
 	var mipmaps : Array<Dynamic>; // TODO: more specific type?
 	var mapping : Mapping;
@@ -27,5 +28,7 @@ extern class Texture extends EventDispatcher {
 	var needsUpdate : Bool;
 	function new( ?image : Element, ?mapping : Mapping, ?wrapS : WrappingMode, ?wrapT : WrappingMode, ?magFilter : Filter, ?minFilter : Filter, ?format : Int, ?type : Int, ?anisotropy : Int ) : Void;
 	function clone() : Texture;
+	function toJSON( ?meta : Dynamic ) : Dynamic;
 	function dispose() : Void;
+	function transformUv( uv : UV ) : Void;
 }

@@ -1,2 +1,5 @@
 _*
 *.sublime-*
+data/*
+examples/*/app.js*
+haxedox.xml

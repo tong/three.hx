@@ -1,5 +1,7 @@
 package three;
 
+import Three;
+
 @:native("THREE.VideoTexture")
 extern class VideoTexture extends Texture {
 	function new( video : js.html.VideoElement,

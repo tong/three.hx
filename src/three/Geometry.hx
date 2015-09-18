@@ -28,19 +28,29 @@ extern class Geometry {
 	var colorsNeedUpdate : Bool; // false
 	var lineDistancesNeedUpdate : Bool; // false
 	function new() : Void;
-	function applyMatrix(matrix:Matrix4) : Void;
-	function fromBufferGeometry( geometry : Geometry ) : Void;
+	function applyMatrix( matrix : Matrix4 ) : Void;
+	function rotateX( angle : Float ) : Geometry;
+	function rotateY( angle : Float ) : Geometry;
+	function rotateZ( angle : Float ) : Geometry;
+	function translate( x : Float, y : Float, z : Float ) : Geometry;
+	function scale( x : Float, y : Float, z : Float ) : Geometry;
+	function lookAt( vector : Vector3 ) : Void;
+	function fromBufferGeometry( geometry : Geometry ) : Geometry;
+	function center() : Float;
+	function normalize() : Geometry;
 	//function computeCentroids() : Void;
 	function computeFaceNormals() : Void;
-	function computeVertexNormals() : Void;
+	function computeVertexNormals( ?areaWeighted : Bool ) : Void;
 	function computeMorphNormals() : Void;
-	function computeTangents() : Void;
+	//function computeTangents() : Void;
 	function computeLineDistances() : Void;
 	function computeBoundingBox() : Void;
 	function computeBoundingSphere() : Void;
 	function merge( geometry : Geometry, ?matrix : Matrix4, ?materialIndexOffset : Int ) : Void;
 	function mergeMesh( mesh : Mesh ) : Void;
 	function mergeVertices() : Void;
+	function toJSON() : Dynamic;
 	function clone() : Geometry;
+	function copy( source : Geometry ) : Geometry;
 	function dispose() : Void;
 }

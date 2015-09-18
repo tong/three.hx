@@ -1,7 +1,17 @@
 package three;
 
+typedef MetaObject = {
+	geometries : Dynamic,
+	materials : Dynamic,
+	textures : Dynamic,
+	images : Dynamic
+}
+
 @:native("THREE.Object3D")
 extern class Object3D {
+
+	static var DefaultUp : Vector3;
+	static var DefaultMatrixAutoUpdate : Bool;
 
 	var id : Int;
 	var name : String;
@@ -28,9 +38,10 @@ extern class Object3D {
 	var castShadow : Bool; // false
 	var receiveShadow : Bool; // false
 	var frustumCulled : Bool; // true
-	
+	var renderOrder : Int; // true
+
 	function new() : Void;
-	
+
 	function applyMatrix(matrix:Matrix4) : Void;
 	function translate(distance:Float, axis:Vector3) : Void;
 	function translateX(distance:Float) : Void;
@@ -42,8 +53,8 @@ extern class Object3D {
 	function add(object:Object3D) : Void;
 	function remove(object:Object3D) : Void;
 	//function getChildByName( name : String, ) : // depricated
-	function getObjectById( id : String ) : Object3D; 
-	function getObjectByName( name : String ) : Object3D; 
+	function getObjectById( id : String ) : Object3D;
+	function getObjectByName( name : String ) : Object3D;
 	function getWorldPosition( ?optionalTarget : Vector3 ) : Vector3;
 	function getWorldQuaternion() : Quaternion;
 	function getWorldRotation() : Euler;
@@ -52,10 +63,11 @@ extern class Object3D {
 	//function raycast() : Void;
 	function traverse(callback:Object3D->Void) : Void;
 	function traverseVisible(callback:Object3D->Void) : Void;
+	function traverseAncestors(callback:Object3D->Void) : Void;
 	function getChildByName(name:String, ?recursive:Bool=false) : Object3D;
 	function getDescendants(?array:Array<Object3D>) : Array<Object3D>;
 	function updateMatrix() : Void;
 	function updateMatrixWorld(?force:Bool) : Void;
-	function toJSON() : Dynamic;
+	function toJSON( ?meta : MetaObject ) : Dynamic;
 	function clone() : Object3D;
 }

@@ -34,30 +34,32 @@ extern class WebGLRenderer implements Renderer {
     var context : js.html.webgl.RenderingContext;
     var devicePixelRatio : Float;
 
-    var autoClear : Bool; // true
-    var autoClearColor : Bool; // true
-    var autoClearDepth : Bool; // true
-    var autoClearStencil : Bool; // true
+    var autoClear : Bool;
+    var autoClearColor : Bool;
+    var autoClearDepth : Bool;
+    var autoClearStencil : Bool;
 
-    var sortObjects : Bool; // true
-    var autoUpdateObjects : Bool; // true
-    var autoUpdateScene : Bool; // true
+    var sortObjects : Bool;
 
-    var gammaInput : Bool; // false
-    var gammaOutput : Bool; // false
-    var physicallyBasedShading : Bool; // false
+    var autoUpdateObjects : Bool;
+    var autoUpdateScene : Bool;
 
-    var shadowMapEnabled : Bool; // false
-    var shadowMapAutoUpdate : Bool; // true
-    var shadowMapType : ShadowMapType; //Int; // PCFShadowMap
-    var shadowMapCullFace : CullFace; // CullFaceFront
-    var shadowMapDebug : Bool; // false
-    var shadowMapCascade : Bool; // false
+    var gammaFactor : Float;
+    var gammaInput : Bool;
+    var gammaOutput : Bool;
+    //var physicallyBasedShading : Bool;
 
     var maxMorphTargets : Int; // 8
     var maxMorphNormals : Int; // 4
 
-    var autoScaleCubemaps : Bool; // true
+    var autoScaleCubemaps : Bool;
+
+    var shadowMapEnabled : Bool;
+    var shadowMapAutoUpdate : Bool;
+    var shadowMapType : ShadowMapType; //Int; // PCFShadowMap
+    var shadowMapCullFace : CullFace; // CullFaceFront
+    var shadowMapDebug : Bool;
+    var shadowMapCascade : Bool;
 
     var renderPluginsPre : Array<Dynamic>; // TODO
     var renderPluginsPost : Array<Dynamic>; // TODO
@@ -69,20 +71,26 @@ extern class WebGLRenderer implements Renderer {
         render:{ calls:Int, vertices:Int, faces:Int, points:Int }
     };
 */
+    var extensions : WebGLExtensions;
 
     function new( ?parameters : WebGLRendererParameters ) : Void;
 
     function getContext() : js.html.webgl.RenderingContext;
+    function getContextAttributes() : js.html.webgl.ContextAttributes;
     function forceContextLoss() : Void;
 
     function supportsVertexTextures() : Bool;
-    function supportsFloatTextures() : Bool;
-    function supportsStandardDerivatives() : Bool;
-    function supportsCompressedTextureS3TC() : Bool;
+    //function supportsFloatTextures() : Bool;
+    //function supportsStandardDerivatives() : Bool;
+    //function supportsCompressedTextureS3TC() : Bool;
+    //function supportsCompressedTextureS3TC() : Bool;
+
     function getMaxAnisotropy() : Int;
     function getPrecision() : RenderPrecision;
     function getPixelRatio() : Float;
+    function setPixelRatio( value : Float ) : Void;
 
+    function getSize() : { width : Float, height : Float };
     function setSize(width:Int, height:Int) : Void;
     function setViewport(x:Float, y:Float, width:Float, height:Float) : Void;
     function setScissor(x:Float, y:Float, width:Float, height:Float) : Void;
@@ -94,6 +102,7 @@ extern class WebGLRenderer implements Renderer {
     function getClearAlpha() : Float;
     function clear(?color:Bool, ?depth:Bool, ?stencil:Bool) : Void;
     function clearTarget(renderTarget:WebGLRenderTarget, ?color:Bool, ?depth:Bool, ?stencil:Bool) : Void;
+    function dispose() : Void;
 
     function addPostPlugin(plugin:Dynamic) : Void; // TODO
     function addPrePlugin(plugin:Dynamic) : Void; // TODO
@@ -122,4 +131,5 @@ extern class WebGLRenderer implements Renderer {
     function setBlending(blending:Int, ?blendEquation:Int, ?blendSrc:Int, ?blendDst:Int) : Void;
     function setTexture(texture:Texture, slot:Int) : Void;
     function setRenderTarget(?renderTarget:WebGLRenderTarget) : Void;
+    function readRenderTargetPixels( renderTarget : WebGLRenderTarget, x : Int, y : Int, width : Int, height : Int, buffer : Dynamic ) : Void;
 }

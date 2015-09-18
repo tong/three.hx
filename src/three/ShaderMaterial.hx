@@ -36,7 +36,6 @@ extern class ShaderMaterial<TUniforms> extends Material {
 	var vertexShader : String;
 	var fragmentShader : String;
 	var defines : Dynamic;
-	var attributes : Dynamic;
 	var shading : Int; // SmoothShading
 	var linewidth : Float;
 	var wireframe : Bool; // false
