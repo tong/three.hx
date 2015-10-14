@@ -1,0 +1,9 @@
+-js three.js
+--no-output
+-cp src
+--macro include('three')
+-xml haxedox.xml
+-D noEmbedJS
+
+#--next
+#-cmd haxelib run dox -i . -o doc --title "three.hx"
