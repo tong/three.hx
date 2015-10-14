@@ -1,41 +1,41 @@
 
-@:enum abstract CullFace(Int) {
+@:enum abstract CullFace(Int) from Int to Int {
     var None = 0;
     var Back = 1;
     var Front = 2;
     var FrontBack = 3;
 }
 
-@:enum abstract FrontFaceDirection(Int) {
+@:enum abstract FrontFaceDirection(Int) from Int to Int {
     var CW = 0;
     var CCW = 1;
 }
 
-@:enum abstract ShadowMapType(Int) {
+@:enum abstract ShadowMapType(Int) from Int to Int {
     var BasicShadowMap = 0;
     var PCFShadowMap = 1;
     var PCFSoftShadowMap = 2;
 }
 
-@:enum abstract Side(Int) {
+@:enum abstract Side(Int) from Int to Int {
     var FrontSide = 0;
     var BackSide = 1;
     var DoubleSide = 2;
 }
 
-@:enum abstract Shading(Int) {
+@:enum abstract Shading(Int) from Int to Int {
     var NoShading = 0;
     var FlatShading = 1;
     var SmoothShading = 2;
 }
 
-@:enum abstract Colors(Int) {
+@:enum abstract Colors(Int) from Int to Int {
     var NoColors = 0;
     var FaceColors = 1;
     var VertexColors = 2;
 }
 
-@:enum abstract BlendMode(Int) {
+@:enum abstract BlendMode(Int) from Int to Int {
     var NoBlending = 0;
     var NormalBlending = 1;
     var AdditiveBlending = 2;
@@ -44,13 +44,13 @@
     var CustomBlending = 5;
 }
 
-@:enum abstract BlendingEquation(Int) {
+@:enum abstract BlendingEquation(Int) from Int to Int {
     var AddEquation = 100;
     var SubtractEquation = 101;
     var ReverseSubtractEquation = 102;
 }
 
-@:enum abstract BlendingDestinationFactor(Int) {
+@:enum abstract BlendingDestinationFactor(Int) from Int to Int {
     var ZeroFactor = 200;
     var OneFactor = 201;
     var SrcColorFactor = 202;
@@ -64,7 +64,7 @@
     var SrcAlphaSaturateFactor = 210;
 }
 
-@:enum abstract DepthModes(Int) {
+@:enum abstract DepthModes(Int) from Int to Int {
     var NeverDepth = 0;
     var AlwaysDepth = 1;
     var LessDepth = 2;
@@ -75,19 +75,19 @@
     var NotEqualDepth = 7;
 }
 
-@:enum abstract TextureConstant(Int) {
+@:enum abstract TextureConstant(Int) from Int to Int {
     var MultiplyOperation = 0;
     var MixOperation = 1;
     var AddOperation = 2;
 }
 
-@:enum abstract WrappingMode(Int) {
+@:enum abstract WrappingMode(Int) from Int to Int {
     var RepeatWrapping = 1000;
     var ClampToEdgeWrapping = 1001;
     var MirroredRepeatWrapping = 1002;
 }
 
-@:enum abstract Filter(Int) {
+@:enum abstract Filter(Int) from Int to Int {
     var NearestFilter = 1003;
     var NearestMipMapNearestFilter = 1004;
     var NearestMipMapLinearFilter = 1005;
@@ -96,7 +96,7 @@
     var LinearMipMapLinearFilter = 1008;
 }
 
-@:enum abstract DataType(Int) {
+@:enum abstract DataType(Int) from Int to Int {
     var UnsignedByteType = 1009;
     var ByteType = 1010;
     var ShortType = 1011;
@@ -106,13 +106,13 @@
     var FloatType = 1015;
 }
 
-@:enum abstract PixelType(Int) {
+@:enum abstract PixelType(Int) from Int to Int {
     var UnsignedShort4444Type = 1016;
     var UnsignedShort5551Type = 1017;
     var UnsignedShort565Type = 1018;
 }
 
-@:enum abstract PixelFormat(Int) {
+@:enum abstract PixelFormat(Int) from Int to Int {
     var AlphaFormat = 1019;
     var RGBFormat = 1020;
     var RGBAFormat = 1021;
@@ -121,7 +121,7 @@
     var RGBEFormat = 1021;
 }
 
-@:enum abstract TextureFormat(Int) {
+@:enum abstract TextureFormat(Int) from Int to Int {
     // DDS / ST3C Compressed texture formats
     var RGB_S3TC_DXT1_Format = 2001;
     var RGBA_S3TC_DXT1_Format = 2002;
@@ -135,13 +135,14 @@
 }
 
 // From src/objects/Line.js
-@:enum abstract LineType(Int) {
+@:enum abstract LineType(Int) from Int to Int {
     var LineStrip = 0;
     var LinePieces = 1;
 }
 
 class Three {
 
+    /*
     static function __init__() : Void {
         #if !noEmbedJS
             #if debug
@@ -151,4 +152,5 @@ class Three {
             #end
         #end
     }
+    */
 }
