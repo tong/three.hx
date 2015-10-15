@@ -29,7 +29,8 @@ extern class Material extends EventDispatcher {
     var needsUpdate : Bool;
     function new() : Void;
     function setValues( ?values : Dynamic ) : Void;
-    //function clone( ?material : Material ) : Material;
+    function clone() : Material;
+    //function copy<T:Material>( material : T ) : T;
     function dispose() : Void;
     function toJSON() : Dynamic;
 }

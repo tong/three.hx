@@ -1,9 +1,10 @@
 package three;
 
 import js.html.CanvasElement;
+import js.html.webgl.RenderingContext;
 import Three;
 
-@:enum abstract RenderPrecision(String) {
+@:enum abstract RenderPrecision(String) from String to String{
     var highp = "highp";
     var mediump = "mediump";
     var lowp = "lowp";
@@ -30,8 +31,8 @@ typedef WebGLRendererParameters = {
 @:native("THREE.WebGLRenderer")
 extern class WebGLRenderer implements Renderer {
 
-    var domElement : js.html.CanvasElement;
-    var context : js.html.webgl.RenderingContext;
+    var domElement : CanvasElement;
+    var context : RenderingContext;
     var devicePixelRatio : Float;
 
     var autoClear : Bool;
