@@ -1,4 +1,4 @@
 
 # Three.hx
 
-Haxe/Javascript three.js:72 type definitions
+Haxe/Javascript three.js:73 type definitions

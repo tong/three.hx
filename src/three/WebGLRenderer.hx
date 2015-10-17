@@ -11,8 +11,9 @@ import Three;
 }
 
 typedef RenderInfo = {
-    memory:{ programs:Int, geometries:Int, textures:Int },
-    render:{ calls:Int, vertices:Int, faces:Int, points:Int }
+    render : { calls:Int, vertices:Int, faces:Int, points:Int },
+    memory : { programs:Int, geometries:Int, textures:Int },
+    programs : Dynamic
 }
 
 typedef WebGLRendererParameters = {

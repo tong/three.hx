@@ -17,6 +17,7 @@ extern class Object3D {
 	var name : String;
 	var type(default,null) : String;
 	var parent : Object3D;
+	var channels : Channels;
 	var children : Array<Object3D>;
 	var up : Vector3; // (0,1,0)
 	//var position(default,null) : Vector3;

@@ -11,14 +11,14 @@ class App {
 	static var camera : Camera;
 	static var mesh : Mesh;
 
-	static function update() {
-		
-		window.requestAnimationFrame( untyped update );
-		
+	static function update( ?time : Float ) {
+
+		window.requestAnimationFrame( update );
+
 		mesh.rotation.x += 0.01;
 		mesh.rotation.y += 0.02;
 		mesh.rotation.z += 0.02;
-		
+
 		renderer.render( scene, camera );
 	}
 
@@ -59,5 +59,4 @@ class App {
 			update();
 		}
 	}
-
 }

@@ -13,5 +13,3 @@ extern class Shape extends Path {
     function extractPoints(divisions:Int) : { shape:Array<Vector2>, holes:Array<Vector2> };
     function extractAllSpacedPoints(divisions:Int) : { shape:Array<Vector2>, holes:Array<Vector2> };
 }
-
-// src/extras/core/Shape.js also contains THREE.Shape.Utils

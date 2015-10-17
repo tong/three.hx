@@ -2,10 +2,10 @@ package three;
 
 @:native("THREE.Vector3")
 extern class Vector3 {
-    var x : Float; // 0
-    var y : Float; // 0
-    var z : Float; // 0
-    function new(?x:Float, ?y:Float, ?z:Float) : Void;
+    var x : Float;
+    var y : Float;
+    var z : Float;
+    function new( ?x : Float, ?y : Float, ?z : Float ) : Void;
     function set(x:Float, y:Float, z:Float) : Vector3;
     function setX(x:Float) : Vector3;
     function setY(y:Float) : Vector3;
@@ -14,9 +14,9 @@ extern class Vector3 {
     function getComponent(index:Int) : Float;
     function copy(v:Vector3) : Vector3;
     function add(v:Vector3) : Vector3;
+    function addScalar(s:Float) : Vector3;
     function addVectors( a : Vector3, b : Vector3 ) : Vector3;
     function addScaledVector( v : Vector3, s : Float ) : Vector3;
-    function addScalar(s:Float) : Vector3;
     function sub(v:Vector3) : Vector3;
     function subScalar( s : Float ) : Vector3;
     function subVectors(a:Vector3, b:Vector3) : Vector3;
@@ -35,6 +35,12 @@ extern class Vector3 {
     function min(v:Vector3) : Vector3;
     function max(v:Vector3) : Vector3;
     function clamp(min:Vector3, max:Vector3) : Vector3;
+    function clampScalar( min : Vector3, max : Vector3 ) : Vector3;
+    function clampLength( min : Vector3, max : Vector3 ) : Vector3;
+    function floor() : Vector3;
+    function ceil() : Vector3;
+    function round() : Vector3;
+    function roundToZero() : Vector3;
     function negate() : Vector3;
     function dot(v:Vector3) : Float;
     function lengthSq() : Float;
@@ -46,19 +52,6 @@ extern class Vector3 {
     function lerpVectors( v1 : Vector3, v2 : Vector3, alpha : Float ) : Vector3;
     function cross(v:Vector3) : Vector3;
     function crossVectors(a:Vector3, b:Vector3) : Vector3;
-    function setFromMatrixPosition( m : Matrix4 ) : Vector3;
-    function angleTo(v:Vector3) : Float;
-    function distanceTo(v:Vector3) : Float;
-    function distanceToSquared(v:Vector3) : Float;
-    function setEulerFromRotationMatrix(m:Matrix3, order:String) : Vector3;
-    function setEulerFromQuaternion(q:Quaternion, order:String) : Vector3;
-    function getPositionFromMatrix(m:Matrix4) : Vector3;
-    function getScaleFromMatrix(m:Matrix4) : Vector3;
-    function getColumnFromMatrix(index:Int, matrix:Matrix4) : Vector3;
-    function equals(v:Vector3) : Bool;
-    function fromArray( array : Array<Float>, ?offset : Int ) : Vector3;
-    function toArray( ?array : Array<Float>, ?offset : Int ) : Array<Float>;
-    function fromAttribute( attribute : Dynamic, index : Int, ?offset : Float ) : Vector3;
     function clone() : Vector3;
     //function applyEuler( v : Vector3, eulerOrder : String ) : Vector3;
     function applyEuler( euler : Euler ) : Vector3;
@@ -66,4 +59,19 @@ extern class Vector3 {
     function projectOnVector(vector:Vector3) : Vector3;
     function projectOnPLane(planeNormal:Plane) : Vector3;
     function reflect(vector:Vector3) : Vector3;
+    function angleTo(v:Vector3) : Float;
+    function distanceTo(v:Vector3) : Float;
+    function distanceToSquared(v:Vector3) : Float;
+    //function setEulerFromRotationMatrix(m:Matrix3, order:String) : Vector3;
+    //function setEulerFromQuaternion(q:Quaternion, order:String) : Vector3;
+    function getPositionFromMatrix(m:Matrix4) : Vector3;
+    function getScaleFromMatrix(m:Matrix4) : Vector3;
+    function getColumnFromMatrix(index:Int, matrix:Matrix4) : Vector3;
+    function setFromMatrixPosition( m : Matrix4 ) : Vector3;
+    function setFromMatrixScale( m : Matrix4 ) : Vector3;
+    function setFromMatrixColumn( index : Int, m : Matrix4 ) : Vector3;
+    function equals(v:Vector3) : Bool;
+    function fromArray( array : Array<Float>, ?offset : Int ) : Vector3;
+    function toArray( ?array : Array<Float>, ?offset : Int ) : Array<Float>;
+    function fromAttribute( attribute : Dynamic, index : Int, ?offset : Float ) : Vector3;
 }

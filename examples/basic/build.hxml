@@ -3,4 +3,3 @@
 -cp ../../src
 -debug
 -dce full
--D noEmbedJS

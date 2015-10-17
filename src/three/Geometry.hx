@@ -12,7 +12,6 @@ extern class Geometry {
 	var faceUvs : Array<Array<UV>>;
 	var faceVertexUvs : Array<Array<UV>>;
 	var morphTargets : Array<{name:String, vertices:Array<Vertex>}>;
-	var morphColors : Array<Color>;
 	var skinWeights : Array<Vector4>;
 	var skinIndices : Array<Vector4>;
 	var boundingBox : Box3;
@@ -49,6 +48,7 @@ extern class Geometry {
 	function merge( geometry : Geometry, ?matrix : Matrix4, ?materialIndexOffset : Int ) : Void;
 	function mergeMesh( mesh : Mesh ) : Void;
 	function mergeVertices() : Void;
+	function sortFacesByMaterialIndex() : Void;
 	function toJSON() : Dynamic;
 	function clone() : Geometry;
 	function copy( source : Geometry ) : Geometry;

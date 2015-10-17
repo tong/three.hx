@@ -1,5 +1,7 @@
 package three;
 
+import three.Object3D;
+
 /*
 @:enum abstract LightType(String) {
 	var AmbientLight = "AmbientLight";
@@ -15,5 +17,6 @@ extern class Light extends Object3D {
 	var color : Color;
 	//var type(default,null) : LightType;
 	function new( color : Int ) : Void;
-	// override function clone(?light:Light) : Light;
+	function copy( source : Light ) : Light;
+	override function toJSON( ?meta : MetaObject ) : Dynamic;
 }

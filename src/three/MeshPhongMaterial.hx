@@ -113,5 +113,5 @@ extern class MeshPhongMaterial extends Material {
 
     function new( ?parameters : MeshPhongMaterialParameters ) : Void;
 
-    function clone() : MeshPhongMaterial;
+    override function clone() : MeshPhongMaterial;
 }
