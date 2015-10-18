@@ -6,8 +6,10 @@ extern class DirectionalLight extends Light {
     var target : Object3D;
     var intensity : Float; // 1
     // var castShadow : Bool; // false
-    var onlyShadow : Bool; // false
+    //var onlyShadow : Bool; // false
+    var shadow : LightShadow;
 
+    /*
     var shadowCameraNear : Float; // 50
     var shadowCameraFar : Float; // 5000
     var shadowCameraLeft : Float; // -500
@@ -19,6 +21,7 @@ extern class DirectionalLight extends Light {
     var shadowDarkness : Float; // 0.5
     var shadowMapWidth : Float; // 512
     var shadowMapHeight : Float; // 512
+    */
 
     var shadowCascade : Bool; // false
     var shadowCascadeOffset : Vector3; // (0,0,-1000)

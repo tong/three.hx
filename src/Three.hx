@@ -140,17 +140,4 @@
     var LinePieces = 1;
 }
 
-class Three {
-
-    /*
-    static function __init__() : Void {
-        #if !noEmbedJS
-            #if debug
-            haxe.macro.Compiler.includeFile("res/three.js");
-            #else
-            haxe.macro.Compiler.includeFile("res/three.min.js");
-            #end
-        #end
-    }
-    */
-}
+class Three {}

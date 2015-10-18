@@ -56,23 +56,13 @@ extern class WebGLRenderer implements Renderer {
 
     var autoScaleCubemaps : Bool;
 
-    var shadowMapEnabled : Bool;
-    var shadowMapAutoUpdate : Bool;
-    var shadowMapType : ShadowMapType; //Int; // PCFShadowMap
-    var shadowMapCullFace : CullFace; // CullFaceFront
-    var shadowMapDebug : Bool;
-    var shadowMapCascade : Bool;
+    var shadowMap : WebGLShadowMap;
 
     var renderPluginsPre : Array<Dynamic>; // TODO
     var renderPluginsPost : Array<Dynamic>; // TODO
 
     var info : RenderInfo;
-    /*
-    var info : {
-        memory:{ programs:Int, geometries:Int, textures:Int },
-        render:{ calls:Int, vertices:Int, faces:Int, points:Int }
-    };
-*/
+
     var extensions : WebGLExtensions;
 
     function new( ?parameters : WebGLRendererParameters ) : Void;
