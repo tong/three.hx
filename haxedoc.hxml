@@ -2,7 +2,7 @@
 --no-output
 -cp src
 --macro include('three')
--xml haxedox.xml
+-xml haxedoc.xml
 -D noEmbedJS
 
 #--next
