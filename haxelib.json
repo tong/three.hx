@@ -1,0 +1,11 @@
+{
+    "name": "three.hx",
+    "version": "74.0.0",
+    "description": "Threejs type definitions",
+    "tags": ["threejs","three","webgl","js"],
+    "url": "https://github.com/tong/three.hx",
+    "license": "MIT",
+    "contributors": ["tong"],
+    "releasenote": "See CHANGES.md",
+    "classPath" : "src/"
+}
