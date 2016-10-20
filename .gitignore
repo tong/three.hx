@@ -1,5 +1,6 @@
 _*
 *.sublime-*
-data/*
 examples/*/app.js*
-haxedoc.xml
+doc/
+test/out/
+test/unit*

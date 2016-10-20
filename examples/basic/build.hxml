@@ -1,5 +1,7 @@
 -js app.js
 -main App
--cp ../../src
--debug
+-lib three.hx
 -dce full
+-debug
+#--remap three.core:three
+#-D three_include_js

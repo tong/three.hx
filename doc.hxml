@@ -1,0 +1,9 @@
+--no-output
+-cp src/
+--macro include('three')
+-D doc
+--each
+
+--next
+-js x
+-xml doc/xml/js.xml

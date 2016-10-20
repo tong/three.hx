@@ -1,8 +1,7 @@
 
 import js.Browser.document;
 import js.Browser.window;
-import Three;
-import three.*;
+import three.Lib;
 
 class App {
 
@@ -43,12 +42,12 @@ class App {
 			var light = new PointLight( 0xff0000, 2 );
 			light.position.set( 100, 30, 100 );
 			scene.add( light );
-			scene.add( new PointLightHelper( light, 10 ) );
+			//scene.add( new PointLightHelper( light, 10 ) );
 
 			var light = new PointLight( 0x00ff00, 2 );
 			light.position.set( -100, 30, 100 );
 			scene.add( light );
-			scene.add( new PointLightHelper( light, 10 ) );
+			//scene.add( new PointLightHelper( light, 10 ) );
 
 			var darkMaterial = new MeshPhongMaterial( { color:0x000000, side:FrontSide, shininess:100 } );
 			var wireframeMaterial = new MeshBasicMaterial( { color: 0xffffff, wireframe: true, transparent: true } );

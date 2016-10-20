@@ -1,5 +1,8 @@
 package three.controls;
 
+import three.core.Object3D;
+import three.math.Vector3;
+
 @:native("THREE.OrbitControls")
 extern class OrbitControls {
 	var object : Object3D;
