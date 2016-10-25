@@ -1,13 +1,15 @@
 
 import js.Browser.document;
 import js.Browser.window;
+import js.html.CanvasElement;
 import three.Lib;
 
 class App {
 
+	static var canvas : CanvasElement;
 	static var renderer : Renderer;
 	static var scene : Scene;
-	static var camera : Camera;
+	static var camera : PerspectiveCamera;
 	static var mesh : Mesh;
 
 	static function update( ?time : Float ) {
@@ -21,6 +23,16 @@ class App {
 		renderer.render( scene, camera );
 	}
 
+	static function handleWindowResize(e) {
+		var w = window.innerWidth;
+		var h = window.innerHeight;
+		camera.aspect = w / h;
+		camera.updateProjectionMatrix();
+		canvas.width = w;
+		canvas.height = h;
+		renderer.setSize( w, h );
+	}
+
 	static function main() {
 
 		window.onload = function(_) {
@@ -32,22 +44,23 @@ class App {
 			camera.lookAt( scene.position );
 			scene.add( camera );
 
-			renderer = new WebGLRenderer( { antialias : true } );
-			//renderer = new CanvasRenderer( { antialias : true } );
-			renderer.setSize( window.innerWidth, window.innerHeight );
+			canvas = document.createCanvasElement();
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+			document.body.appendChild( canvas );
 
-			var container = document.body;
-			container.appendChild( renderer.domElement );
+			renderer = new WebGLRenderer( { antialias : true, canvas: canvas } );
+			renderer.setSize( window.innerWidth, window.innerHeight );
 
 			var light = new PointLight( 0xff0000, 2 );
 			light.position.set( 100, 30, 100 );
 			scene.add( light );
-			//scene.add( new PointLightHelper( light, 10 ) );
+			scene.add( new PointLightHelper( light, 10 ) );
 
 			var light = new PointLight( 0x00ff00, 2 );
 			light.position.set( -100, 30, 100 );
 			scene.add( light );
-			//scene.add( new PointLightHelper( light, 10 ) );
+			scene.add( new PointLightHelper( light, 10 ) );
 
 			var darkMaterial = new MeshPhongMaterial( { color:0x000000, side:FrontSide, shininess:100 } );
 			var wireframeMaterial = new MeshBasicMaterial( { color: 0xffffff, wireframe: true, transparent: true } );
@@ -55,7 +68,9 @@ class App {
 			mesh = cast SceneUtils.createMultiMaterialObject( new BoxGeometry( 50, 50, 50, 1, 1, 1 ), cast material );
 			scene.add( mesh );
 
-			update();
+			window.requestAnimationFrame( update );
+
+			window.addEventListener( 'resize', handleWindowResize, false );
 		}
 	}
 }
