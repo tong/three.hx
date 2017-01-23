@@ -139,6 +139,12 @@ package three;
     var RGBA_PVRTC_2BPPV1_Format = 2103;
 }
 
+@:enum abstract DrawMode(Int) from Int to Int {
+    var TrianglesDrawMode = 0;
+    var TriangleStripDrawMode = 1;
+    var TriangleFanDrawMode = 2;
+}
+
 // From src/objects/Line.js
 @:enum abstract LineType(Int) from Int to Int {
     var LineStrip = 0;

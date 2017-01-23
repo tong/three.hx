@@ -29,7 +29,6 @@ extern class Matrix4 {
     function multiplyMatrices( a : Matrix4, b : Matrix4 ) : Matrix4;
     function multiplyToArray( a : Matrix4, b : Matrix4, r : Array<Float> ) : Matrix4;
     function multiplyScalar( s : Float ) : Matrix4;
-    function applyToVector3Array( array : Array<Float>, ?offset : Int, ?length : Int ) : Matrix4;
     function applyToBuffer( buffer : Dynamic, ?offset : Int, ?length : Int ) : Matrix4; //TODO
     function determinant() : Float;
     function transpose() : Matrix4;

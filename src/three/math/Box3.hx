@@ -24,6 +24,7 @@ extern class Box3 {
     function expandByPoint( point : Vector3 ) : Box3;
     function expandByVector( point : Vector3 ) : Box3;
     function expandByScalar( scalar : Float ) : Box3;
+    function expandByObject( object : Dynamic ) : Box3;
     function containsPoint( point : Vector3 ) : Bool;
     function containsBox( box : Box3 ) : Bool;
     function getParameter( point : Vector3 ) : Vector3;

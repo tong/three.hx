@@ -16,7 +16,6 @@ extern class Matrix3 {
 	function clone() : Matrix3;
     function copy( m : Matrix3 ) : Matrix3;
     function setFromMatrix4( m : Matrix4 ) : Matrix3;
-    function applyToVector3Array( ?array : Array<Float>, ?offset : Int, ?length : Int ) : Matrix3;
     function applyToBuffer( ?buffer : Dynamic, ?offset : Int, ?length : Int ) : Matrix3; //TODO
 	function multiplyScalar( s : Float ) : Matrix3;
 	function determinant() : Float;

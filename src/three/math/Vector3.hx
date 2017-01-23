@@ -1,6 +1,7 @@
 package three.math;
 
 import three.cameras.Camera;
+import three.core.BufferAttribute;
 
 @:native("THREE.Vector3")
 extern class Vector3 {
@@ -74,8 +75,7 @@ extern class Vector3 {
     function equals( v : Vector3 ) : Bool;
     function fromArray( array : Array<Float>, ?offset : Int ) : Vector3;
     function toArray( ?array : Array<Float>, ?offset : Int ) : Array<Float>;
-    function fromAttribute( attribute : Dynamic, index : Int, ?offset : Float ) : Vector3;
-
+    function fromBufferAttribute( attribute : BufferAttribute, index : Int, ?offset : Float ) : Vector3;
     //function setEulerFromRotationMatrix(m:Matrix3, order:String) : Vector3;
     //function setEulerFromQuaternion(q:Quaternion, order:String) : Vector3;
     //function getPositionFromMatrix( m : Matrix4 ) : Vector3;
