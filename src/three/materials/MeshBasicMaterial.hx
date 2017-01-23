@@ -1,7 +1,39 @@
 package three.materials;
 
+import three.Three;
 import three.math.Color;
 import three.textures.Texture;
+import three.textures.Texture;
+
+
+typedef MeshBasicMaterialParameters = {
+
+    ?color: String,
+    ?opacity: String,
+    ?map: Texture,
+
+    ?aoMap: Texture,
+    ?aoMapIntensity: Float,
+
+    ?specularMap: Texture,
+
+    ?alphaMap: Texture,
+
+    ?envMap: Dynamic, //TextureCube,
+    ?combine: Dynamic, //Multiply,
+    ?reflectivity: Float,
+    ?refractionRatio: Float,
+
+    ?shading: Shading,
+    ?depthTest: Bool,
+    ?depthWrite: Bool,
+
+    ?wireframe: Bool,
+    ?wireframeLinewidth: Float,
+
+    ?skinning: Bool,
+    ?morphTargets: Bool
+}
 
 @:native("THREE.MeshBasicMaterial")
 extern class MeshBasicMaterial extends Material {
@@ -24,5 +56,5 @@ extern class MeshBasicMaterial extends Material {
     var skinning : Bool;
     var morphTargets : Bool;
 
-    function new( ?parameters : Dynamic ) : Void;
+    function new( ?parameters : MeshBasicMaterialParameters ) : Void;
 }

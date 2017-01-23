@@ -1,5 +1,7 @@
 package three.math;
 
+import three.core.BufferAttribute;
+
 @:native("THREE.Vector4")
 extern class Vector4 {
 
@@ -52,5 +54,5 @@ extern class Vector4 {
     function equals( v : Vector4 ) : Bool;
     function fromArray( array : Array<Float>, ?offset : Int ) : Vector4;
     function toArray( ?array : Array<Float>, ?offset : Int ) : Array<Float>;
-    function fromAttribute( attribute : Dynamic, index : Int, ?offset : Float ) : Vector4;
+    function fromBufferAttribute( attribute : BufferAttribute, index : Int, ?offset : Float ) : Vector4;
 }

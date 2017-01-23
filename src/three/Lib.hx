@@ -35,7 +35,7 @@ package three;
 @:noDoc typedef Raycaster = three.core.Raycaster;
 @:noDoc typedef UV = three.core.UV;
 
-@:noDoc typedef CurveUtils = three.extras.CurveUtils;
+//@:noDoc typedef CurveUtils = three.extras.CurveUtils;
 @:noDoc typedef SceneUtils = three.extras.SceneUtils;
 @:noDoc typedef ShapeUtils = three.extras.ShapeUtils;
 
@@ -90,7 +90,7 @@ package three;
 @:noDoc typedef MeshNormalMaterial = three.materials.MeshNormalMaterial;
 @:noDoc typedef MeshPhongMaterial = three.materials.MeshPhongMaterial;
 @:noDoc typedef RawShaderMaterial = three.materials.RawShaderMaterial;
-@:noDoc typedef ShaderMaterial = three.materials.ShaderMaterial;
+//@:noDoc typedef ShaderMaterial = three.materials.ShaderMaterial;
 @:noDoc typedef SpriteMaterial = three.materials.SpriteMaterial;
 
 @:noDoc typedef Box2 = three.math.Box2;
@@ -105,7 +105,7 @@ package three;
 @:noDoc typedef Quaternion = three.math.Quaternion;
 //@:noDoc typedef Ray = three.math.Ray;
 @:noDoc typedef Sphere = three.math.Sphere;
-@:noDoc typedef Spline = three.math.Spline;
+//@:noDoc typedef Spline = three.math.Spline;
 @:noDoc typedef Triangle = three.math.Triangle;
 @:noDoc typedef Vector2 = three.math.Vector2;
 @:noDoc typedef Vector3 = three.math.Vector3;

@@ -7,12 +7,15 @@ import three.math.Vector4;
 
 @:native("THREE.BufferAttribute")
 extern class BufferAttribute {
+
 	var array(default,null) : Dynamic;
 	var itemSize(default,null) : Int;
 	var length(default,null) : Int;
 	var count(default,null) : Int;
 	var needsUpdate : Bool;
+
 	function new( array : js.html.ArrayBufferView, itemSize : Int ) : Void;
+
 	function setDynamic( value : Bool ) : BufferAttribute;
 	function copy( source : Dynamic ) : BufferAttribute;
 	function copyAt( index1 : Int, attribute : BufferAttribute, index2 : Int ) : Void;

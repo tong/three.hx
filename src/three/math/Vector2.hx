@@ -1,18 +1,14 @@
 package three.math;
 
-//@:jsRequire("three","Vector2")
-//@js("Vector2")
+import three.core.BufferAttribute;
+
 @:native("THREE.Vector2")
 extern class Vector2 {
 
-	/*
-	static inline function __init__() : Void {
-		haxe.macro.Compiler.includeFile( '../../res/r75/math/Vector2.js' );
-	}
-	*/
-
     var x : Float;
     var y : Float;
+    var width : Float;
+    var height : Float;
 
     function new( ?x : Float, ?y : Float ) : Void;
 
@@ -59,6 +55,6 @@ extern class Vector2 {
     function equals( v : Vector2 ) : Bool;
     function fromArray( array : Array<Float>, ?offset : Int ) : Array<Float>;
     function toArray() : Array<Float>;
-    function fromAttribute( attribute : Dynamic, index : Int, ?offset : Float ) : Vector2;
+    function fromBufferAttribute( attribute : BufferAttribute, index : Int, ?offset : Float ) : Vector2;
     function rotateAround( center : Vector2, angle : Float ) : Vector2;
 }

@@ -5,8 +5,8 @@ extern class EventDispatcher {
 
     function new() : Void;
 
-    function addEventListener( type : String, listener : Dynamic->Void ) : Void;
+    function addEventListener<T>( type : String, listener : T->Void ) : Void;
     function hasEventListener( type : String ) : Bool;
-    function removeEventListener( type : String, listener : Dynamic->Void ) : Void;
+    function removeEventListener<T>( type : String, listener : T->Void ) : Void;
     function dispatchEvent( event : String ) : Void;
 }
