@@ -1,4 +1,4 @@
-package three.extras.helpers;
+package three.helpers;
 
 import three.core.Object3D;
 import three.objects.Bone;

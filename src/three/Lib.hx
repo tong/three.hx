@@ -39,13 +39,13 @@ package three;
 @:noDoc typedef SceneUtils = three.extras.SceneUtils;
 @:noDoc typedef ShapeUtils = three.extras.ShapeUtils;
 
-@:noDoc typedef AxisHelper = three.extras.helpers.AxisHelper;
-@:noDoc typedef BoundingBoxHelper = three.extras.helpers.BoundingBoxHelper;
-//@:noDoc typedef BoxHelper = three.extras.helpers.BoxHelper;
-@:noDoc typedef CameraHelper = three.extras.helpers.CameraHelper;
-@:noDoc typedef DirectionalLightHelper = three.extras.helpers.DirectionalLightHelper;
-@:noDoc typedef GridHelper = three.extras.helpers.GridHelper;
-@:noDoc typedef PointLightHelper = three.extras.helpers.PointLightHelper;
+@:noDoc typedef AxisHelper = three.helpers.AxisHelper;
+@:noDoc typedef BoundingBoxHelper = three.helpers.BoundingBoxHelper;
+//@:noDoc typedef BoxHelper = three.helpers.BoxHelper;
+@:noDoc typedef CameraHelper = three.helpers.CameraHelper;
+@:noDoc typedef DirectionalLightHelper = three.helpers.DirectionalLightHelper;
+@:noDoc typedef GridHelper = three.helpers.GridHelper;
+@:noDoc typedef PointLightHelper = three.helpers.PointLightHelper;
 
 @:noDoc typedef BoxGeometry = three.geometries.BoxGeometry;
 @:noDoc typedef CircleBufferGeometry = three.geometries.CircleBufferGeometry;

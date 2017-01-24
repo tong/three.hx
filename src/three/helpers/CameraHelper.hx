@@ -1,4 +1,4 @@
-package three.extras.helpers;
+package three.helpers;
 
 import three.cameras.Camera;
 
