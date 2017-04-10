@@ -8,6 +8,6 @@ extern class BufferGeometryLoader {
 
 	function new( ?manager : LoadingManager ) : Void;
 
-	function load( url : String, onLoad : Geometry->Material->Void, onProgress : Dynamic->Void, onError: Dynamic->Void ) : Void;
+	function load( url : String, onLoad : Geometry->Material->Void, ?onProgress : Dynamic->Void, ?onError: Dynamic->Void ) : Void;
 	function parse( json : Dynamic ) : Geometry;
 }
