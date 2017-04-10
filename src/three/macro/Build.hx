@@ -23,28 +23,8 @@ class Build {
 				}
 			}
 		}
-
-		/*
-		Context.onGenerate(function(types){
-		});
-		*/
 	}
 
-	/*
-	static function prepare() : Array<Field> {
-
-		//trace("Build.prepare");
-
-		var fields = Context.getBuildFields();
-
-		//var cl = Context.getLocalClass();
-		//trace(cl.get().module);
-		//trace(Context.getModule('Three'));
-		//trace( Context.getModule('Three'));
-
-		return fields;
-	}
-	*/
 }
 
 #end
