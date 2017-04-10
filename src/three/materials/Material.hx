@@ -2,6 +2,7 @@ package three.materials;
 
 import three.Three;
 import three.core.EventDispatcher;
+import three.math.Color;
 
 @:native("THREE.Material")
 extern class Material extends EventDispatcher {
@@ -11,6 +12,8 @@ extern class Material extends EventDispatcher {
 
     var name : String;
     var type : String;
+
+	var color : Color;
 
     var side : Side;
 

@@ -39,6 +39,8 @@ package three;
 @:noDoc typedef SceneUtils = three.extras.SceneUtils;
 @:noDoc typedef ShapeUtils = three.extras.ShapeUtils;
 
+@:noDoc typedef Shape = three.extras.core.Shape;
+
 @:noDoc typedef AxisHelper = three.helpers.AxisHelper;
 @:noDoc typedef BoundingBoxHelper = three.helpers.BoundingBoxHelper;
 //@:noDoc typedef BoxHelper = three.helpers.BoxHelper;
@@ -90,6 +92,7 @@ package three;
 @:noDoc typedef MeshNormalMaterial = three.materials.MeshNormalMaterial;
 @:noDoc typedef MeshPhongMaterial = three.materials.MeshPhongMaterial;
 @:noDoc typedef RawShaderMaterial = three.materials.RawShaderMaterial;
+@:noDoc typedef MeshStandardMaterial = three.materials.MeshStandardMaterial;
 //@:noDoc typedef ShaderMaterial = three.materials.ShaderMaterial;
 @:noDoc typedef SpriteMaterial = three.materials.SpriteMaterial;
 

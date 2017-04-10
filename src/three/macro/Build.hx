@@ -7,40 +7,33 @@ import haxe.macro.Compiler;
 import haxe.macro.Expr;
 import sys.FileSystem;
 
+using StringTools;
+
 class Build {
 
 	static function init() {
 
-		/*
-		var path = '/home/tong/dev/lib/three.hx/src/three';
-
-		for( f in FileSystem.readDirectory(path) ) {
-			trace(f);
-		}
-
-		*/
-		
 		if( Context.defined( 'three_include_js' ) ) {
-			//Compiler.includeFile( 'res/script/three.js' );
+			var classPaths = Context.getClassPath();
+			for( cp in classPaths ) {
+				if( cp.endsWith( '/three.hx/src/' ) ) {
+					cp = cp.substr( 0, cp.length - 5 );
+					Compiler.includeFile( '$cp/res/script/three.js' );
+					break;
+				}
+			}
 		}
 
-
-		//trace(Sys.getCwd());
-
 		/*
-		trace("Build.init");
-
 		Context.onGenerate(function(types){
-			for( type in types ) {
-				trace(type);
-			}
 		});
 		*/
 	}
 
+	/*
 	static function prepare() : Array<Field> {
 
-		trace("Build.prepare");
+		//trace("Build.prepare");
 
 		var fields = Context.getBuildFields();
 
@@ -51,6 +44,7 @@ class Build {
 
 		return fields;
 	}
+	*/
 }
 
 #end

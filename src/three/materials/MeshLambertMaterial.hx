@@ -25,7 +25,7 @@ private typedef MeshLambertMaterialParamaters = {
 
 @:native("THREE.MeshLambertMaterial")
 extern class MeshLambertMaterial extends Material {
-    var color : Color;
+    //var color : Color;
     var ambient : Color;
     var emissive : Color;
     var map : Texture;

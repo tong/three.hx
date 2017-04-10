@@ -38,7 +38,7 @@ typedef MeshBasicMaterialParameters = {
 @:native("THREE.MeshBasicMaterial")
 extern class MeshBasicMaterial extends Material {
 
-    var color : Color;
+    //var color : Color;
     var map : Texture;
     var lightMap : Texture;
     var specularMap : Texture;

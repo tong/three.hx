@@ -8,7 +8,7 @@ import three.textures.Texture;
 
 typedef MeshPhongMaterialParameters = {
 
-    ?color : Int,
+    ?color : String,
     ?ambient: Int,
     ?emissive: Int,
     ?specular: Int,
@@ -58,7 +58,7 @@ typedef MeshPhongMaterialParameters = {
 @:native("THREE.MeshPhongMaterial")
 extern class MeshPhongMaterial extends Material {
 
-    var color : Color;
+    //var color : Color;
     var ambient : Color;
     var emissive : Color;
     var specular : Color;

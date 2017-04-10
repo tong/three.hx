@@ -7,6 +7,8 @@ import three.materials.Material;
 
 @:native("THREE.Line")
 extern class Line extends Object3D {
+    var geometry : Geometry;
+    var material : Material;
     function new( geometry : Geometry, ?material : Material, ?mode : LineSegments ) : Void;
     function raycast( raycaster : Raycaster, intersects : Dynamic ) : Line;
     //function clone() : Line;

@@ -17,21 +17,19 @@ import three.math.Vector2;
 }
 
 typedef LineBasicMaterialParameters = {
-	@:optional var color : Int;
-	@:optional var linewidth : Int;
-	@:optional var linecap : String;
-	@:optional var linejoin : String;
-	@:optional var vertexColors : Colors;
-	@:optional var fog : Bool;
+	?color : Int,
+	?opacity : Float,
+	?linewidth : Int,
+	?linecap : String,
+	?linejoin : String,
 }
 
 @:native("THREE.LineBasicMaterial")
 extern class LineBasicMaterial extends Material {
-    var color : Color; // new Color(0xffffff)
-    var linewidth : Float; // 1
-    var linecap : LineCap; // 'round'
-    var linejoin : LineJoin; // 'round'
-    var vertexColors : Bool; // false
-    var fog : Bool; // true
-    function new( ?parameters : LineBasicMaterialParameters ) : Void;
+    //var color : Color;
+    var linewidth : Float;
+    var linecap : LineCap;
+    var linejoin : LineJoin;
+    var lights : Bool;
+    function new( ?params : LineBasicMaterialParameters ) : Void;
 }

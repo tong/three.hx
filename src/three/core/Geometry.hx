@@ -12,29 +12,36 @@ import three.objects.Mesh;
 extern class Geometry {
 
 	var id : Int;
+
 	var uuid : String;
+
 	var name : String;
+	var type : String;
+
 	var vertices : Array<Vector3>;
 	var colors : Array<Color>;
-	var materials : Array<Material>;
 	var faces : Array<Face3>;
-	var faceUvs : Array<Array<UV>>;
 	var faceVertexUvs : Array<Array<UV>>;
-	var morphTargets : Array<{name:String,vertices:Array<Vector3>}>;
+
+	var morphTargets : Array<{ name: String, vertices: Array<Vector3> }>;
+	var morphNormals : Array<Dynamic>; //TODO
+
 	var skinWeights : Array<Vector4>;
 	var skinIndices : Array<Vector4>;
+
+	var lineDistances : Array<Float>;
+
 	var boundingBox : Box3;
-	var boundingSphere : {radius:Float};
-	var hasTangents : Bool; // false
-	@:native("dynamic")
-	var _dynamic : Bool; // true
+	var boundingSphere : { radius: Float };
+
+
+	var elementsNeedUpdate : Bool;
 	var verticesNeedUpdate : Bool;
-	var elementsNeedUpdate : Bool; // false
-	var uvsNeedUpdate : Bool; // false
-	var normalsNeedUpdate : Bool; // false
-	var tangentsNeedUpdate : Bool; // false
-	var colorsNeedUpdate : Bool; // false
-	var lineDistancesNeedUpdate : Bool; // false
+	var uvsNeedUpdate : Bool;
+	var normalsNeedUpdate : Bool;
+	var colorsNeedUpdate : Bool;
+	var lineDistancesNeedUpdate : Bool;
+	var groupsNeedUpdate : Bool;
 
 	function new() : Void;
 
@@ -48,9 +55,9 @@ extern class Geometry {
 	function fromBufferGeometry( geometry : Geometry ) : Geometry;
 	function center() : Float;
 	function normalize() : Geometry;
-	//function computeCentroids() : Void;
 	function computeFaceNormals() : Void;
 	function computeVertexNormals( ?areaWeighted : Bool ) : Void;
+	function computeFlatVertexNormals() : Void;
 	function computeMorphNormals() : Void;
 	//function computeTangents() : Void;
 	function computeLineDistances() : Void;

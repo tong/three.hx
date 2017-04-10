@@ -1,6 +1,5 @@
 package three.renderers.webgl;
 
-// Not usefull in the API, we may prefer to remove it
 @:native("THREE.ShaderChunk")
 extern class WebGLShaders {
 

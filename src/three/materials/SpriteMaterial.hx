@@ -1,7 +1,6 @@
 package three.materials;
 
 import three.textures.Texture;
-import three.math.Color;
 import three.math.Vector2;
 
 @:native("THREE.SpriteMaterial")
@@ -9,7 +8,7 @@ extern class SpriteMaterial extends Material {
     var map : Texture;
     var uvScale : Vector2;
     var sizeAttenuation : Bool;
-    var color : Color;
+    //var color : Color;
     var uvOffset : Vector2;
     var fog : Bool;
     var useScreenCoordinates : Bool;
