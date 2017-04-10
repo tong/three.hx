@@ -8,7 +8,7 @@ import three.textures.Texture;
 
 typedef MeshPhongMaterialParameters = {
 
-    ?color : String,
+    ?color : Color,
     ?ambient: Int,
     ?emissive: Int,
     ?specular: Int,

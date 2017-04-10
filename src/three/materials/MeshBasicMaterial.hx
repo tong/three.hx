@@ -7,7 +7,7 @@ import three.textures.Texture;
 
 typedef MeshBasicMaterialParameters = {
 
-    ?color: String,
+    ?color: Color,
     ?opacity: String,
     ?map: Texture,
 
