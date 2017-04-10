@@ -2,7 +2,7 @@
 import js.Browser.document;
 import js.Browser.window;
 import js.html.CanvasElement;
-import three.Lib;
+import three.Three;
 
 class App {
 
@@ -63,8 +63,9 @@ class App {
 			scene.add( light );
 			scene.add( new PointLightHelper( light, 10 ) );
 
-			var darkMaterial = new MeshPhongMaterial( { color: 0x000000, side: FrontSide, shininess: 100 } );
-			var wireframeMaterial = new MeshBasicMaterial( { color: 0xffffff, wireframe: true, transparent: true } );
+			var darkMaterial = new MeshPhongMaterial( { color: new Color(0x000000), side: FrontSide, shininess: 100 } );
+			//var wireframeMaterial = new MeshBasicMaterial( { color: new Color(0xffffff), wireframe: true, transparent: true } );
+			var wireframeMaterial = new MeshBasicMaterial( { color: new Color(0xffffff), wireframe: true } );
 			var material = [darkMaterial,wireframeMaterial];
 			mesh = cast SceneUtils.createMultiMaterialObject( new BoxGeometry( 50, 50, 50, 1, 1, 1 ), cast material );
 			scene.add( mesh );
