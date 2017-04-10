@@ -1,7 +1,7 @@
 
 # Three.hx
 
-Haxe/JS type definitions for [three.js](http://threejs.org/).
+[Haxe](https://haxe.org/)→[Threejs](http://threejs.org/) type definitions.
 
-### Compiler defines
-`three_include_js`
+### Compiler Defines
+`-D three_include_js` 
