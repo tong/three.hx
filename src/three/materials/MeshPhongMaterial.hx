@@ -1,6 +1,6 @@
 package three.materials;
 
-import three.Three;
+import three.Lib;
 import three.math.Color;
 import three.math.Vector2;
 import three.math.Vector3;
@@ -52,7 +52,7 @@ typedef MeshPhongMaterialParameters = {
     ?fog: Bool,
 
     ?transparent: Bool,
-    ?side: Three.Side
+    ?side: Side
 }
 
 @:native("THREE.MeshPhongMaterial")

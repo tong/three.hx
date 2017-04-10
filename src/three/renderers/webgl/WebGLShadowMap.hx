@@ -1,6 +1,6 @@
 package three.renderers.webgl;
 
-import three.Three;
+import three.Lib;
 import three.cameras.Camera;
 import three.materials.Material;
 import three.math.Vector3;

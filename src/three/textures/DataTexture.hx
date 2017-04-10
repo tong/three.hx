@@ -1,6 +1,6 @@
 package three.textures;
 
-import three.Three;
+import three.Lib;
 import three.textures.Texture;
 
 @:native("THREE.DataTexture")

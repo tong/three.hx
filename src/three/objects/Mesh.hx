@@ -1,6 +1,6 @@
 package three.objects;
 
-import three.Three;
+import three.Lib;
 import three.core.Geometry;
 import three.core.Object3D;
 import three.materials.Material;

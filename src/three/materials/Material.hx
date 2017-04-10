@@ -1,6 +1,6 @@
 package three.materials;
 
-import three.Three;
+import three.Lib;
 import three.core.EventDispatcher;
 import three.math.Color;
 

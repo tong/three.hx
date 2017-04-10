@@ -1,6 +1,6 @@
 package three.renderers.webgl;
 
-import three.Three;
+import three.Lib;
 import three.core.EventDispatcher;
 import three.math.Vector2;
 

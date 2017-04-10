@@ -1,6 +1,6 @@
 package three.materials;
 
-import three.Three;
+import three.Lib;
 
 typedef ShaderMaterialParameters<TUniforms> = {
 	?defines : Dynamic,

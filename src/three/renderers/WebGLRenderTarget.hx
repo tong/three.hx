@@ -1,6 +1,6 @@
 package three.renderers;
 
-import three.Three;
+import three.Lib;
 import three.core.EventDispatcher;
 import three.math.Vector2;
 
@@ -21,18 +21,18 @@ typedef WebGLRenderTargetOptions = {
 extern class WebGLRenderTarget extends EventDispatcher {
     var width : Int;
     var height : Int;
-    var wrapS : WrappingMode; // ClampToEdgeWrapping
-    var wrapT : WrappingMode; // ClampToEdgeWrapping
-    var magFilter : Filter; // LinearFilter
-    var minFilter : Filter; // LinearMipMapLinearFilter
-    var anisotropy : Int; // 1
-    var repeat : Vector2; // (1,1)
-    var offset : Vector2; // (0,0)
-    var format : PixelFormat; // RGBAFormat
-    var type : DataType; // UnsignedByteType
-    var depthBuffer : Bool; // true
-    var stencilBuffer : Bool; // true
-    var generateMipmaps : Bool; // true
+    var wrapS : WrappingMode;
+    var wrapT : WrappingMode;
+    var magFilter : Filter;
+    var minFilter : Filter;
+    var anisotropy : Int;
+    var repeat : Vector2;
+    var offset : Vector2;
+    var format : PixelFormat;
+    var type : DataType;
+    var depthBuffer : Bool;
+    var stencilBuffer : Bool;
+    var generateMipmaps : Bool;
     var shareDepthFrom : WebGLRenderTarget;
     function new( width : Float, height : Float, ?options : WebGLRenderTargetOptions ) : Void;
     function setSize( width : Int, height : Int ) : Void;

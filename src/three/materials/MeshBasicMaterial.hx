@@ -1,10 +1,9 @@
 package three.materials;
 
-import three.Three;
+import three.Lib;
 import three.math.Color;
 import three.textures.Texture;
 import three.textures.Texture;
-
 
 typedef MeshBasicMaterialParameters = {
 

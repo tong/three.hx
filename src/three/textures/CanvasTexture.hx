@@ -1,7 +1,7 @@
 package three.textures;
 
 import js.html.CanvasElement;
-import three.Three;
+import three.Lib;
 import three.textures.Texture;
 
 @:native("THREE.CanvasTexture")
