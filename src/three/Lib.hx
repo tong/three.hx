@@ -1,5 +1,31 @@
 package three;
 
+#if macro
+
+import haxe.macro.Context;
+import haxe.macro.Compiler;
+
+using StringTools;
+
+class Lib {
+
+    static function build() {
+		if( Context.defined( 'threejs_include' ) ) {
+			var classPaths = Context.getClassPath();
+			for( cp in classPaths ) {
+				if( cp.endsWith( '/three.hx/src/' ) ) {
+					cp = cp.substr( 0, cp.length - 5 );
+					var ext = Context.defined( 'debug' ) ? 'js' : 'min.js';
+					Compiler.includeFile( '$cp/res/script/three.$ext' );
+					break;
+				}
+			}
+		}
+	}
+}
+
+#end
+
 @:enum abstract CullFace(Int) from Int to Int {
     var None = 0;
     var Back = 1;
@@ -146,17 +172,3 @@ package three;
     var LineStrip = 0;
     var LinePieces = 1;
 }
-
-#if macro
-
-class Lib {
-
-    /*
-    static function init() {
-        //trace(Compiler.defined('three_include_js'));
-    }
-    */
-
-}
-
-#end
