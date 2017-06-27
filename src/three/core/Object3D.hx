@@ -54,7 +54,10 @@ extern class Object3D extends EventDispatcher {
 
 	function new() : Void;
 
+	function onBeforeRender() : Void;
+	function onAfterRender() : Void;
 	function applyMatrix( matrix : Matrix4 ) : Void;
+	function applyQuaternion( q : Quaternion ) : Object3D;
 	function setRotationFromAxisAngle( axis : Vector3, angle : Float ) : Void;
 	function setRotationFromEuler( euler : Euler ) : Void;
 	function setRotationFromMatrix( m : Matrix4 ) : Void;

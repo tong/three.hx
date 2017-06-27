@@ -16,6 +16,9 @@ package three;
 @:noDoc typedef PerspectiveCamera = three.cameras.PerspectiveCamera;
 @:noDoc typedef StereoCamera = three.cameras.StereoCamera;
 
+@:noDoc typedef OrbitControls = three.controls.OrbitControls;
+@:noDoc typedef TrackballControls = three.controls.TrackballControls;
+
 @:noDoc typedef BufferAttribute = three.core.BufferAttribute;
 @:noDoc typedef BufferGeometry = three.core.BufferGeometry;
 @:noDoc typedef Clock = three.core.Clock;
@@ -79,9 +82,11 @@ package three;
 @:noDoc typedef PointLight = three.lights.PointLight;
 @:noDoc typedef SpotLight = three.lights.SpotLight;
 
+@:noDoc typedef BufferGeometryLoader = three.loaders.BufferGeometryLoader;
 @:noDoc typedef JSONLoader = three.loaders.JSONLoader;
 @:noDoc typedef Loader = three.loaders.Loader;
 @:noDoc typedef ObjectLoader = three.loaders.ObjectLoader;
+@:noDoc typedef TextureLoader = three.loaders.TextureLoader;
 
 @:noDoc typedef LineBasicMaterial = three.materials.LineBasicMaterial;
 @:noDoc typedef LineDashedMaterial = three.materials.LineDashedMaterial;
