@@ -1,5 +1,6 @@
 _*
 *.sublime-*
+depricated/
 examples/*/app.js*
 doc/
 test/out/
