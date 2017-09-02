@@ -1,7 +1,16 @@
 
 import js.Browser.document;
 import js.Browser.window;
-import three.Three;
+import three.cameras.Camera;
+import three.cameras.PerspectiveCamera;
+import three.geometries.BoxGeometry;
+import three.objects.Mesh;
+import three.materials.MeshBasicMaterial;
+import three.math.Color;
+import three.renderers.Renderer;
+import three.renderers.WebGLRenderer;
+import three.scenes.Scene;
+import three.Lib;
 
 class App {
 
@@ -23,7 +32,7 @@ class App {
 
 	static function main() {
 
-		window.onload = function(_) {
+		window.onload = function() {
 
 			scene = new Scene();
 

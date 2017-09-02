@@ -2,7 +2,20 @@
 import js.Browser.document;
 import js.Browser.window;
 import js.html.CanvasElement;
-import three.Three;
+import three.Lib;
+import three.cameras.PerspectiveCamera;
+import three.extras.SceneUtils;
+import three.geometries.BoxGeometry;
+import three.helpers.PointLightHelper;
+import three.lights.PointLight;
+import three.math.Color;
+import three.math.Color;
+import three.materials.MeshBasicMaterial;
+import three.materials.MeshPhongMaterial;
+import three.objects.Mesh;
+import three.renderers.Renderer;
+import three.renderers.WebGLRenderer;
+import three.scenes.Scene;
 
 class App {
 
