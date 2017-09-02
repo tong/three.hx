@@ -9,5 +9,6 @@ import three.scenes.Scene;
 extern class CubeCamera extends Object3D {
 	var renderTarget : WebGLRenderTargetCube;
 	function new( near : Float, far : Float, cubeResolution : Float ) : Void;
-	function updateCubeMap( renderer : Renderer, scene : Scene ) : Void;
+	function update( renderer : Renderer, scene : Scene ) : Void;
+	function clear( renderer : Renderer, ?color : Bool, ?depth : Bool, ?stencil : Bool ) : Void;
 }
