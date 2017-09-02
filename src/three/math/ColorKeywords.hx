@@ -120,6 +120,7 @@ package three.math;
     var plum = 0xDDA0DD;
     var powderblue = 0xB0E0E6;
     var purple = 0x800080;
+    var rebeccapurple = 0x663399;
     var red = 0xFF0000;
     var rosybrown = 0xBC8F8F;
     var royalblue = 0x4169E1;
