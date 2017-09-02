@@ -1,6 +1,6 @@
 package three.materials;
 
-import three.Three;
+import three.Lib;
 import three.math.Color;
 import three.math.Vector2;
 

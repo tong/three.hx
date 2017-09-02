@@ -1,7 +1,6 @@
 package three.textures;
 
 import js.html.Element;
-import three.Three;
 import three.Lib;
 import three.core.UV;
 import three.math.Vector2;

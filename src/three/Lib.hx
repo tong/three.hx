@@ -24,7 +24,9 @@ class Lib {
 	}
 }
 
-#end
+#else
+
+////////////////////////////////////////////////////////////////////////////////
 
 @:enum abstract CullFace(Int) from Int to Int {
     var None = 0;
@@ -172,3 +174,8 @@ class Lib {
     var LineStrip = 0;
     var LinePieces = 1;
 }
+
+//@:build(three.macro.Build.prepare())
+class Lib {}
+
+#end

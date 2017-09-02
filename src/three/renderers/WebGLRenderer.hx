@@ -2,7 +2,7 @@ package three.renderers;
 
 import js.html.CanvasElement;
 import js.html.webgl.RenderingContext;
-import three.Three;
+import three.Lib;
 import three.cameras.Camera;
 import three.core.Geometry;
 import three.core.Object3D;
