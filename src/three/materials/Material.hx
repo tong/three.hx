@@ -16,6 +16,7 @@ extern class Material extends EventDispatcher {
 	var color : Color;
 
     var side : Side;
+    var flatShading : Bool;
 
     var opacity : Float;
     var transparent : Bool;
@@ -45,6 +46,8 @@ extern class Material extends EventDispatcher {
     var overdraw : Float;
 
     var visible : Float;
+
+    var userData : Dynamic;
 
     var needsUpdate : Bool;
 

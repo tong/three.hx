@@ -69,6 +69,7 @@ package three;
 @:noDoc typedef RingGeometry = three.geometries.RingGeometry;
 @:noDoc typedef ShapeGeometry = three.geometries.ShapeGeometry;
 @:noDoc typedef SphereGeometry = three.geometries.SphereGeometry;
+@:noDoc typedef TetrahedronGeometry = three.geometries.TorusGeometry;
 @:noDoc typedef TorusGeometry = three.geometries.TorusGeometry;
 @:noDoc typedef TorusKnotGeometry = three.geometries.TorusKnotGeometry;
 @:noDoc typedef TubeGeometry = three.geometries.TubeGeometry;

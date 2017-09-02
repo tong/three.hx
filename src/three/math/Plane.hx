@@ -19,7 +19,6 @@ extern class Plane {
     function distanceToPoint( point : Vector3 ) : Float;
     function distanceToSphere( sphere : Sphere ) : Float;
     function projectPoint( point : Vector3, ?optionalTarget : Vector3) : Vector3;
-    function orthoPoint( point : Vector3, ?optionalTarget : Vector3 ) : Vector3;
     function isIntersectionLine( line : Line3 ) : Bool;
     function intersectLine( line : Line3, ?optionalTarget : Vector3 ) : Vector3;
     function intersectsLine( line : Line3 ) : Bool;

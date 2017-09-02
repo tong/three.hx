@@ -2,5 +2,5 @@ package three.geometries;
 
 @:native("THREE.TetrahedronGeometry")
 extern class TetrahedronGeometry extends PolyhedronGeometry {
-    function new(radius:Float, ?detail:Int) : Void;
+    function new( radius : Float, ?detail : Int ) : Void;
 }
