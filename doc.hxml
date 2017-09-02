@@ -1,5 +1,5 @@
 --no-output
--cp src/
+-lib three.hx
 --macro include('three')
 -D doc
 --each
