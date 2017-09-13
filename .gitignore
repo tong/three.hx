@@ -2,6 +2,6 @@ _*
 depricated/
 examples/*/app.js*
 doc/
-test/out/
+test/bin/
 test/unit*
 haxedoc.xml
