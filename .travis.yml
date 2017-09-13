@@ -5,19 +5,17 @@ language: haxe
 
 os:
   - linux
-  - osx
-  
+
 haxe:
-  - "3.4.0"
+  - "3.4.3"
   - development
-  
+
 matrix:
   allow_failures:
     - haxe: development
-    
+
 install:
-  - haxelib install travix
-  - haxelib run travix install
+  - haxelib dev three.hx .
 
 script:
-  - haxelib run travix js
+  - haxe doc.hxml
