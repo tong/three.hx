@@ -12,6 +12,7 @@ import three.math.Color;
 import three.renderers.webgl.WebGLExtensions;
 import three.renderers.webgl.WebGLRenderTarget;
 import three.renderers.webgl.WebGLShadowMap;
+import three.renderers.webvr.WebVRManager;
 import three.scenes.Fog;
 import three.scenes.Scene;
 import three.textures.Texture;
@@ -70,6 +71,8 @@ extern class WebGLRenderer implements Renderer {
     var autoScaleCubemaps : Bool;
 
     var shadowMap : WebGLShadowMap;
+
+    var vr(default,null) : WebVRManager;
 
     var renderPluginsPre : Array<Dynamic>; // TODO
     var renderPluginsPost : Array<Dynamic>; // TODO
