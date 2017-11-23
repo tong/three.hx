@@ -9,7 +9,6 @@ import three.geometries.BoxGeometry;
 import three.helpers.PointLightHelper;
 import three.lights.PointLight;
 import three.math.Color;
-import three.math.Color;
 import three.materials.MeshBasicMaterial;
 import three.materials.MeshPhongMaterial;
 import three.objects.Mesh;

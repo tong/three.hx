@@ -8,7 +8,7 @@ import three.textures.Texture;
 typedef MeshBasicMaterialParameters = {
 
     ?color: Color,
-    ?opacity: String,
+    ?opacity: Float,
     ?map: Texture,
 
     ?aoMap: Texture,
@@ -31,7 +31,9 @@ typedef MeshBasicMaterialParameters = {
     ?wireframeLinewidth: Float,
 
     ?skinning: Bool,
-    ?morphTargets: Bool
+    ?morphTargets: Bool,
+
+    ?transparent: Bool
 }
 
 @:native("THREE.MeshBasicMaterial")

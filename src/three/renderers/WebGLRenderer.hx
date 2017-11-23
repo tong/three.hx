@@ -123,6 +123,7 @@ extern class WebGLRenderer implements Renderer {
 
     function renderBufferImmediate(object:Object3D, program:Dynamic, material:Material) : Void;
     function renderBufferDirect(camera:Camera, lights:Array<Light>, fog:Fog, material:Material, geometry:Geometry, object:Object3D) : Void;
+    function animate( callback : Void->Void ) : Void;
     @:overload(function( scene:Scene, camera:Camera, ?renderTarget:WebGLRenderTarget, ?forceClear:Bool ):Void{})
     function render( scene : Scene, camera : Camera ) : Void;
 //    function render( scene : Scene, camera : Camera, ?renderTarget : WebGLRenderTarget, ?forceClear : Bool ) : Void;

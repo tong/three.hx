@@ -10,7 +10,7 @@ extern class JSONLoader {
 
 	function new( ?manager : LoadingManager ) : Void;
 
-	function load( url : String, onLoad : Geometry->Material->Void, onProgress : Dynamic->Void, onError: Dynamic->Void ) : Void;
+	function load( url : String, onLoad : Geometry->Material->Void, ?onProgress : Dynamic->Void, ?onError: Dynamic->Void ) : Void;
 	function setTexturePath( value : String ) : Void;
 	function parse( json : Dynamic, ?texturePath : String ) : { geometry: Geometry, materials: Array<Material> };
 }
