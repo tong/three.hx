@@ -6,6 +6,7 @@ extern class FileLoader {
 	function new( ?manager : LoadingManager ) : Void;
 
 	function load( url : String, onLoad : String->Void, ?onProgress : Dynamic->Void, ?onError : Dynamic->Void ) : Void;
+
 	function setPath( value : String ) : FileLoader;
 	function setResponseType( value : String ) : FileLoader;
 	function setWithCredentials( value : String ) : FileLoader;
