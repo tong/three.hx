@@ -1,5 +1,6 @@
 package three.core;
 
+import js.html.ArrayBufferView;
 import three.math.Color;
 import three.math.Vector2;
 import three.math.Vector3;
@@ -14,7 +15,7 @@ extern class BufferAttribute {
 	var count(default,null) : Int;
 	var needsUpdate : Bool;
 
-	function new( array : js.html.ArrayBufferView, itemSize : Int ) : Void;
+	function new( array : ArrayBufferView, itemSize : Int, ?normalized : Bool ) : Void;
 
 	function setDynamic( value : Bool ) : BufferAttribute;
 	function copy( source : Dynamic ) : BufferAttribute;
@@ -38,4 +39,49 @@ extern class BufferAttribute {
 	function setXYZ( index : Int, x : Dynamic, y : Dynamic, z : Dynamic ) : Void;
 	function setXYZW( index : Int, x : Dynamic, y : Dynamic, z : Dynamic, w : Int ) : Void;
 	function clone() : BufferAttribute;
+}
+
+@:native("THREE.Int8BufferAttribute")
+extern class Int8BufferAttribute extends BufferAttribute {
+	function new( array : ArrayBufferView, itemSize : Int, ?normalized : Bool ) : Void;
+}
+
+@:native("THREE.Uint8BufferAttribute")
+extern class Uint8BufferAttribute extends BufferAttribute {
+	function new( array : ArrayBufferView, itemSize : Int, ?normalized : Bool ) : Void;
+}
+
+@:native("THREE.Uint8ClampedBufferAttribute")
+extern class Uint8ClampedBufferAttribute extends BufferAttribute {
+	function new( array : ArrayBufferView, itemSize : Int, ?normalized : Bool ) : Void;
+}
+
+@:native("THREE.Int16BufferAttribute")
+extern class Int16BufferAttribute extends BufferAttribute {
+	function new( array : ArrayBufferView, itemSize : Int, ?normalized : Bool ) : Void;
+}
+
+@:native("THREE.Uint16BufferAttribute")
+extern class Uint16BufferAttribute extends BufferAttribute {
+	function new( array : ArrayBufferView, itemSize : Int, ?normalized : Bool ) : Void;
+}
+
+@:native("THREE.Int32BufferAttribute")
+extern class Int32BufferAttribute extends BufferAttribute {
+	function new( array : ArrayBufferView, itemSize : Int, ?normalized : Bool ) : Void;
+}
+
+@:native("THREE.Uint32BufferAttribute")
+extern class Uint32BufferAttribute extends BufferAttribute {
+	function new( array : ArrayBufferView, itemSize : Int, ?normalized : Bool ) : Void;
+}
+
+@:native("THREE.Float32BufferAttribute")
+extern class Float32BufferAttribute extends BufferAttribute {
+	function new( array : ArrayBufferView, itemSize : Int, ?normalized : Bool ) : Void;
+}
+
+@:native("THREE.Float64BufferAttribute")
+extern class Float64BufferAttribute extends BufferAttribute {
+	function new( array : ArrayBufferView, itemSize : Int, ?normalized : Bool ) : Void;
 }
