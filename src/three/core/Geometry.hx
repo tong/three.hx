@@ -4,6 +4,7 @@ import three.materials.Material;
 import three.math.Box3;
 import three.math.Color;
 import three.math.Matrix4;
+import three.math.Vector2;
 import three.math.Vector3;
 import three.math.Vector4;
 import three.objects.Mesh;
@@ -21,7 +22,7 @@ extern class Geometry {
 	var vertices : Array<Vector3>;
 	var colors : Array<Color>;
 	var faces : Array<Face3>;
-	var faceVertexUvs : Array<Array<UV>>;
+	var faceVertexUvs : Array<Array<Vector2>>;
 
 	var morphTargets : Array<{ name: String, vertices: Array<Vector3> }>;
 	var morphNormals : Array<Dynamic>; //TODO

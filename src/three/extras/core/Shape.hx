@@ -6,7 +6,7 @@ import three.geometries.ShapeGeometry;
 import three.extras.core.Shape;
 
 @:native("THREE.Shape")
-extern class Shape extends three.core.Path {
+extern class Shape extends three.extras.core.Path {
 
     var holes : Array<Dynamic>;
     //var holes : Array<Vector2>;

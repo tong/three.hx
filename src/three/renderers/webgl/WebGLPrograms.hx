@@ -1,5 +1,7 @@
 package three.renderers.webgl;
 
+import three.Lib;
+
 @:native("THREE.WebGLPrograms")
 extern class WebGLPrograms {
     var programs : Array<WebGLProgram>;

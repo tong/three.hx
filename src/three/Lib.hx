@@ -110,6 +110,18 @@ class Lib {
     var AddOperation = 2;
 }
 
+@:enum abstract DrawMode(Int) from Int to Int {
+    var TrianglesDrawMode = 0;
+    var TriangleStripDrawMode = 1;
+    var TriangleFanDrawMode = 2;
+}
+
+// From src/objects/Line.js
+@:enum abstract LineType(Int) from Int to Int {
+    var LineStrip = 0;
+    var LinePieces = 1;
+}
+
 @:enum abstract WrappingMode(Int) from Int to Int {
     var RepeatWrapping = 1000;
     var ClampToEdgeWrapping = 1001;
@@ -163,25 +175,40 @@ class Lib {
     var RGBA_PVRTC_2BPPV1_Format = 2103;
 }
 
-@:enum abstract DrawMode(Int) from Int to Int {
-    var TrianglesDrawMode = 0;
-    var TriangleStripDrawMode = 1;
-    var TriangleFanDrawMode = 2;
-}
-
-// From src/objects/Line.js
-@:enum abstract LineType(Int) from Int to Int {
-    var LineStrip = 0;
-    var LinePieces = 1;
-}
-
 @:enum abstract LoopMode(Int) from Int to Int {
     var LoopOnce = 2200;
     var LoopRepeat = 2201;
     var LoopPingPong = 2202;
 }
 
-//@:build(three.macro.Build.prepare())
+@:enum abstract InterpolateMode(Int) from Int to Int {
+    var InterpolateDiscrete = 2300;
+    var InterpolateLinear = 2301;
+    var InterpolateSmooth = 2302;
+}
+
+@:enum abstract Ending(Int) from Int to Int {
+    var ZeroCurvatureEnding = 2400;
+    var ZeroSlopeEnding = 2401;
+    var WrapAroundEnding = 2402;
+}
+
+@:enum abstract Encoding(Int) from Int to Int {
+    var LinearEncoding = 3000;
+    var sRGBEncoding = 3001;
+    var GammaEncoding = 3007;
+    var RGBEEncoding = 3002;
+    var LogLuvEncoding = 3003;
+    var RGBM7Encoding = 3004;
+    var RGBM16Encoding = 3005;
+    var RGBDEncoding = 3006;
+}
+
+@:enum abstract DepthPacking(Int) from Int to Int {
+    var BasicDepthPacking = 3200;
+    var RGBADepthPacking = 3201;
+}
+
 class Lib {}
 
 #end

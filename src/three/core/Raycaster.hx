@@ -1,6 +1,7 @@
 package three.core;
 
 import three.cameras.Camera;
+import three.math.Ray;
 import three.math.Vector2;
 import three.math.Vector3;
 

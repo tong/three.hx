@@ -11,6 +11,6 @@ extern class FrenetFrames {
 
 @:native("THREE.TubeGeometry")
 extern class TubeGeometry extends three.core.Geometry {
-	function new( path : three.core.Path,
+	function new( path : three.extras.core.Path,
 				  ?segments : Int, ?radius : Float, ?radiusSegments : Int, ?closed : Bool ) : Void;
 }

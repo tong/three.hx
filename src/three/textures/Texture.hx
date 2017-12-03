@@ -2,7 +2,6 @@ package three.textures;
 
 import js.html.Element;
 import three.Lib;
-import three.core.UV;
 import three.math.Vector2;
 import three.core.EventDispatcher;
 
@@ -39,5 +38,5 @@ extern class Texture extends EventDispatcher {
 	function copy( source : Texture ) : Texture;
 	function toJSON( ?meta : Dynamic ) : Dynamic;
 	function dispose() : Void;
-	function transformUv( uv : UV ) : Void;
+	function transformUv( uv : Vector2 ) : Void;
 }
