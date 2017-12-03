@@ -175,6 +175,12 @@ class Lib {
     var LinePieces = 1;
 }
 
+@:enum abstract LoopMode(Int) from Int to Int {
+    var LoopOnce = 2200;
+    var LoopRepeat = 2201;
+    var LoopPingPong = 2202;
+}
+
 //@:build(three.macro.Build.prepare())
 class Lib {}
 
