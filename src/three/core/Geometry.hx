@@ -34,7 +34,6 @@ extern class Geometry {
 	var boundingBox : Box3;
 	var boundingSphere : { radius: Float };
 
-
 	var elementsNeedUpdate : Bool;
 	var verticesNeedUpdate : Bool;
 	var uvsNeedUpdate : Bool;
