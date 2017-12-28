@@ -1,13 +1,15 @@
 package three;
 
 #if macro
-
 import haxe.macro.Context;
 import haxe.macro.Compiler;
+#end
 
 using StringTools;
 
 class Lib {
+
+    #if macro
 
     static function build() {
 		if( Context.defined( 'threejs_include' ) ) {
@@ -21,10 +23,21 @@ class Lib {
 				}
 			}
 		}
+        /*
+        Context.onGenerate( function(types) {
+            for( type in types ) {
+                switch type {
+                case TInst(t,p):
+                    trace(t);
+                case _:
+                }
+            }
+        } );
+        */
 	}
-}
 
-#else
+    #end
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -154,12 +167,14 @@ class Lib {
 }
 
 @:enum abstract PixelFormat(Int) from Int to Int {
-    var AlphaFormat = 1019;
-    var RGBFormat = 1020;
-    var RGBAFormat = 1021;
-    var LuminanceFormat = 1022;
-    var LuminanceAlphaFormat = 1023;
-    var RGBEFormat = 1021;
+    var AlphaFormat = 1021;
+    var RGBFormat = 1022;
+    var RGBAFormat = 1023;
+    var LuminanceFormat = 1024;
+    var LuminanceAlphaFormat = 1025;
+    var RGBEFormat = 1023;
+    var DepthFormat = 1026;
+    var DepthStencilFormat = 1027;
 }
 
 @:enum abstract TextureFormat(Int) from Int to Int {
@@ -208,7 +223,3 @@ class Lib {
     var BasicDepthPacking = 3200;
     var RGBADepthPacking = 3201;
 }
-
-class Lib {}
-
-#end

@@ -55,7 +55,7 @@ extern class Vector3 {
     function dot( v : Vector3 ) : Float;
     function lengthSq() : Float;
     function length() : Float;
-    function lengthManhattan() : Float;
+    function manhattanLength() : Float;
     function normalize() : Vector3;
     function setLength( l : Float ) : Vector3;
     function lerp( v : Vector3, alpha : Float ) : Vector3;
@@ -68,6 +68,7 @@ extern class Vector3 {
     function angleTo( v : Vector3 ) : Float;
     function distanceTo( v : Vector3 ) : Float;
     function distanceToSquared( v : Vector3 ) : Float;
+    function manhattanDistanceTo( v : Vector3 ) : Float;
     function setFromSpherical( s: Dynamic ) : Vector3; //TODO
     function setFromMatrixPosition( m : Matrix4 ) : Vector3;
     function setFromMatrixScale( m : Matrix4 ) : Vector3;

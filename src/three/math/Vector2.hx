@@ -31,6 +31,7 @@ extern class Vector2 {
     function multiplyScalar( s : Float ) : Vector2;
     function divide( v : Float ) : Vector2;
     function divideScalar( s : Float ) : Vector2;
+    function applyMatrix3( m : Matrix3 ) : Vector2;
     function min( v : Vector2 ) : Vector2;
     function max( v : Vector2 ) : Vector2;
     function clamp( min : Vector2, max : Vector2 ) : Vector2;
@@ -44,11 +45,12 @@ extern class Vector2 {
     function dot( v : Vector2 ) : Float;
     function lengthSq() : Float;
     function length() : Float;
-    function lengthManhattan() : Float;
+    function manhattanLength() : Float;
     function normalize() : Vector2;
     function angle() : Float;
     function distanceTo( v : Vector2 ) : Float;
     function distanceToSquared( v : Vector2 ) : Float;
+    function manhattanDistanceTo( v : Vector2 ) : Float;
     function setLength( l : Float ) : Vector2;
     function lerp( v : Vector2, alpha:Float) : Vector2;
     function lerpVectors( v1 : Vector2, v2 : Vector2, alpha : Float ) : Vector2;

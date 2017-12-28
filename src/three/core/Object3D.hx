@@ -72,6 +72,7 @@ extern class Object3D extends EventDispatcher {
 	function translateZ( distance : Float ) : Object3D;
 	function localToWorld( v : Vector3 ) : Vector3;
 	function worldToLocal( v : Vector3 ) : Vector3;
+	//@:overload()
 	function lookAt( v : Vector3 ) : Void;
 	function add( object : Object3D ) : Object3D;
 	function remove( object : Object3D ) : Void;

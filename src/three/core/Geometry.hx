@@ -13,9 +13,7 @@ import three.objects.Mesh;
 extern class Geometry {
 
 	var id : Int;
-
 	var uuid : String;
-
 	var name : String;
 	var type : String;
 
@@ -52,20 +50,20 @@ extern class Geometry {
 	function translate( x : Float, y : Float, z : Float ) : Geometry;
 	function scale( x : Float, y : Float, z : Float ) : Geometry;
 	function lookAt( vector : Vector3 ) : Void;
-	function fromBufferGeometry( geometry : Geometry ) : Geometry;
+	function fromBufferGeometry( geometry : BufferGeometry ) : Geometry;
 	function center() : Float;
 	function normalize() : Geometry;
 	function computeFaceNormals() : Void;
 	function computeVertexNormals( ?areaWeighted : Bool ) : Void;
 	function computeFlatVertexNormals() : Void;
 	function computeMorphNormals() : Void;
-	//function computeTangents() : Void;
 	function computeLineDistances() : Void;
 	function computeBoundingBox() : Void;
 	function computeBoundingSphere() : Void;
 	function merge( geometry : Geometry, ?matrix : Matrix4, ?materialIndexOffset : Int ) : Void;
 	function mergeMesh( mesh : Mesh ) : Void;
 	function mergeVertices() : Void;
+	function setFromPoints( points : Array<Vector3> ) : Geometry;
 	function sortFacesByMaterialIndex() : Void;
 	function toJSON() : Dynamic;
 	function clone() : Geometry;

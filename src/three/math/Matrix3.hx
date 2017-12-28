@@ -1,8 +1,8 @@
 package three.math;
 
 @:native("THREE.Matrix3")
-
 extern class Matrix3 {
+
     var elements : Array<Float>;
 
     function new( ?n11 : Float, ?n12 : Float, ?n13 : Float,
@@ -16,15 +16,21 @@ extern class Matrix3 {
 	function clone() : Matrix3;
     function copy( m : Matrix3 ) : Matrix3;
     function setFromMatrix4( m : Matrix4 ) : Matrix3;
-    function applyToBuffer( ?buffer : Dynamic, ?offset : Int, ?length : Int ) : Matrix3; //TODO
-	function multiplyScalar( s : Float ) : Matrix3;
-	function determinant() : Float;
-	function getInverse( ?throwOnDegenerate : Bool ) : Matrix3;
-	function transpose() : Matrix3;
-	function flattenToArrayOffset( ?array : Array<Float>, ?offset : Int ) : Matrix3;
-	function getNormalMatrix( m : Matrix4 ) : Matrix3;
-	function transposeIntoArray( dest : Array<Float> ) : Matrix3;
-	function fromArray( array : Array<Float> ) : Array<Float>;
-	function toArray() : Array<Float>;
-
+    function applyToBufferAttribute() : Dynamic; //TODO
+    function multiply( m : Matrix3 ) : Matrix3;
+    function premultiply( m : Matrix3 ) : Matrix3;
+    function multiplyMatrices( a : Matrix3, b : Matrix3 ) : Matrix3;
+    function multiplyScalar( s : Float ) : Matrix3;
+    function determinant() : Float;
+    function getInverse( ?matrix : Matrix4, ?throwOnDegenerate : Bool ) : Matrix3;
+    function transpose() : Matrix3;
+    function getNormalMatrix( m : Matrix4 ) : Matrix3;
+    function transposeIntoArray( dest : Array<Float> ) : Matrix3;
+    function setUvTransform( tx : Float, ty : Float, sx : Float, sy : Float, rotation : Float, cx : Float, cy : Float ) : Matrix3;
+    function scale( sx : Float, sy : Float ) : Matrix3;
+    function rotate( theta : Float ) : Matrix3;
+    function translatet( tx : Float, ty : Float ) : Matrix3;
+    function equals( m : Matrix3 ) : Bool;
+    function fromArray( a : Array<Float>, ?offset : Int ) : Bool;
+    function toArray() : Array<Float>;
 }

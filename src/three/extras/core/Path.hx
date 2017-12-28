@@ -22,4 +22,5 @@ extern class Path extends CurvePath {
     // override public function getPoints(?divisions:Int, closePath:Bool) : Array<Vector2>;
     function debug( canvas : js.html.Element ) : Void;
     function toShapes() : Array<Shape>;
+    function copy( source : Path ) : Path;
 }

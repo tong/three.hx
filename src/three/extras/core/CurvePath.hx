@@ -2,28 +2,27 @@ package three.extras.core;
 
 import three.core.Geometry;
 import three.math.Vector2;
+import three.math.Vector3;
 
 @:native("THREE.CurvePath")
 extern class CurvePath extends Curve {
+
+    var type(default,null) : String;
     var curves : Array<Curve>;
     var bends : Array<Path>;
-    var autoClose : Bool; // false
+    var autoClose : Bool;
+
     function new() : Void;
-    function add(curve:Curve) : Void;
-    function checkConnection() : Void;
+
+    function add( curve : Curve ) : Void;
     function closePath() : Void;
-    // override function getPoint(t:Float) : Vector3;
-    // override function getLength() : Float;
+    function getPoint( t : Float ) : Vector3;
+    function getLength() : Float;
+    function updateArcLengths() : Void;
     function getCurveLengths() : Array<Float>;
-    function getBoundingBox() : { minX:Float, minY:Float, maxX:Float, maxY:Float, centroid:Vector2 };
-    // TODO: If any curves are 3D, getBoundingBox will also return minZ and maxZ, and centroid will be Vector3
-
-    function createPointsGeometry( ?divisions : Int ) : Geometry;
-    function createSpacedPointsGeometry( ?divisions : Int ) : Geometry;
-    function createGeometry(points:Array<Vector2>) : Geometry; // TODO: Array can have Vector3, or both 2 and 3
-
-    function addWrapPath(bendpath:Path) : Void;
-    function getTransformedPoints(segments:Int, bends:Array<Path>) : Array<Vector2>;
-    function getTransformedSpacedPoints(segments:Int, bends:Array<Path>) : Array<Vector2>;
-    function getWrapPoints(oldPts:Array<Vector2>, path:Path) : Array<Vector2>;
+    function getSpacedPoints( ?divisions : Int ) : Array<Float>;
+    function getPoints( ?divisions : Int ) : Array<Float>;
+    function copy( source : CurvePath ) : CurvePath;
+    function toJSON() : Dynamic;
+    function fromJSON( json : Dynamic ) : CurvePath;
 }
