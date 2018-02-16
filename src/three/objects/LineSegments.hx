@@ -6,4 +6,5 @@ import three.materials.Material;
 @:native("THREE.LineSegments")
 extern class LineSegments extends Line {
 	function new( geometry : Geometry, ?material : Material ) : Void;
+	function computeLineDistance() : LineSegments;
 }

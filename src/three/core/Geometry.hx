@@ -57,7 +57,7 @@ extern class Geometry {
 	function computeVertexNormals( ?areaWeighted : Bool ) : Void;
 	function computeFlatVertexNormals() : Void;
 	function computeMorphNormals() : Void;
-	function computeLineDistances() : Void;
+	//function computeLineDistances() : Void;
 	function computeBoundingBox() : Void;
 	function computeBoundingSphere() : Void;
 	function merge( geometry : Geometry, ?matrix : Matrix4, ?materialIndexOffset : Int ) : Void;

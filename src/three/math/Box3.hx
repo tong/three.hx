@@ -31,6 +31,7 @@ extern class Box3 {
     function intersectsBox( box : Box3 ) : Box3;
     function intersectsSphere( sphere : Sphere ) : Box3;
     function intersectsPlane( plane : Plane ) : Box3;
+    function intersectsTriangle( plane : Triangle ) : Box3;
     function clampPoint( point : Vector3, ?optionalTarget : Vector3 ) : Vector3;
     function distanceToPoint( point : Vector3 ) : Float;
     function getBoundingSphere( ?optionalTarget : Sphere ) : Sphere;

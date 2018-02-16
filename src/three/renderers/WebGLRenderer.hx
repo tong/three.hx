@@ -9,6 +9,7 @@ import three.core.Object3D;
 import three.materials.Material;
 import three.lights.Light;
 import three.math.Color;
+import three.math.Vector2;
 import three.renderers.webgl.WebGLExtensions;
 import three.renderers.webgl.WebGLRenderTarget;
 import three.renderers.webgl.WebGLShadowMap;
@@ -26,7 +27,9 @@ import three.textures.Texture;
 typedef RenderInfo = {
     render : { calls:Int, vertices:Int, faces:Int, points:Int },
     memory : { programs:Int, geometries:Int, textures:Int },
-    programs : Dynamic
+    programs : Dynamic,
+    autoReset : Bool,
+    reset : Void->Void
 }
 
 typedef WebGLRendererParameters = {
@@ -133,7 +136,7 @@ extern class WebGLRenderer implements Renderer {
     //function initMaterial( material:Material, lights:Array<Light>, fog:IFog, ?object:Object3D ) : Void;
     function uploadTexture( texture : Texture ) : Void;
 
-    function setFaceCulling(cullFace:Int, frontFaceDirection:Int) : Void;
+    //function setFaceCulling(cullFace:Int, frontFaceDirection:Int) : Void;
     function setMaterialFaces(material:Material) : Void;
     function setDepthTest(depthTest:Int) : Void;
     function setDepthWrite(depthWrite:Int) : Void;
@@ -141,4 +144,6 @@ extern class WebGLRenderer implements Renderer {
     function setTexture(texture:Texture, slot:Int) : Void;
     function setRenderTarget(?renderTarget:WebGLRenderTarget) : Void;
     function readRenderTargetPixels( renderTarget : WebGLRenderTarget, x : Int, y : Int, width : Int, height : Int, buffer : Dynamic ) : Void;
+
+    function copyFramebufferToTexture( position : Vector2, texture : Texture, ?level : Int ) : Void;
 }

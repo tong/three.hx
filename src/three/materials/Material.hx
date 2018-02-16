@@ -33,6 +33,12 @@ extern class Material extends EventDispatcher {
 	var depthTest : Bool;
 	var depthWrite : Bool;
 
+	var clippingPlanes : Bool;
+	var clipIntersection : Bool;
+	var clipShadows : Bool;
+
+	var shadowSide : Bool;
+
     var colorWrite : Bool;
 
     var precision : Float;
