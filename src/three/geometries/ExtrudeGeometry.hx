@@ -13,8 +13,8 @@ typedef ExtrudeGeometryOptions = {
 	@:optional var bevelSegments : Int;
 	@:optional var extrudePath : Dynamic; //CurvePath;
 	@:optional var frames : TubeGeometry.FrenetFrames;
-	@:optional var material : Int;
-	@:optional var extrudeMaterial : Int;
+	//@:optional var material : Int;
+	//@:optional var extrudeMaterial : Int;
 	@:optional var uvGenerator : Dynamic;
 }
 

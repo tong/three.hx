@@ -5,7 +5,6 @@ extern class DirectGeometry {
     var uuid : String;
     var name : String;
     var type : String;
-    var indices : Array<Dynamic>;
     var vertices : Array<Dynamic>;
     var normals : Array<Dynamic>;
     var colors : Array<Dynamic>;

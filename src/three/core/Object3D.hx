@@ -81,7 +81,7 @@ extern class Object3D extends EventDispatcher {
 	function getObjectByProperty( name : String, value : String ) : Dynamic;
 	function getWorldPosition( ?optionalTarget : Vector3 ) : Vector3;
 	function getWorldQuaternion( ?optionalTarget : Quaternion ) : Quaternion;
-	function getWorldRotation( ?optionalTarget : Euler ) : Euler;
+	//function getWorldRotation( ?optionalTarget : Euler ) : Euler;
 	function getWorldScale( ?optionalTarget : Vector3 ) : Vector3;
 	function getWorldDirection( ?optionalTarget : Vector3 ) : Vector3;
 	//function raycast() : Void;
