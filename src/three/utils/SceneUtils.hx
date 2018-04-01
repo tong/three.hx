@@ -1,4 +1,4 @@
-package three.extras;
+package three.utils;
 
 import three.core.Geometry;
 import three.core.Object3D;
