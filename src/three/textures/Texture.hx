@@ -51,6 +51,7 @@ extern class Texture extends EventDispatcher {
 
 	function new( ?image : Element, ?mapping : Mapping, ?wrapS : WrappingMode, ?wrapT : WrappingMode, ?magFilter : Filter, ?minFilter : Filter, ?format : Int, ?type : Int, ?anisotropy : Int ) : Void;
 
+	function updateMatrix() : Void;
 	function clone() : Texture;
 	function copy( source : Texture ) : Texture;
 	function toJSON( ?meta : Dynamic ) : Dynamic;
