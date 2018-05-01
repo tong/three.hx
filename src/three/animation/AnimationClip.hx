@@ -14,6 +14,5 @@ extern class AnimationClip {
 	function resetDuration() : Void;
 	function trim() : Void;
 	function optimize() : Void;
-
-
+	static function CreateFromMorphTargetSequence( name : String, morphTargetSequence : Array<Dynamic>, ?fps : Int, ?noLoop : Bool ) : AnimationClip;
 }
