@@ -27,6 +27,8 @@ extern class BufferGeometry {
 
     var drawRange : { start: Int, count: Int };
 
+    var userData : Dynamic;
+
     // var dynamic : Bool; // false
     //var offsets : Array<Float>; // or Array<Int> ?
     //var hasTangents : Bool; // false

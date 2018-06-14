@@ -16,7 +16,7 @@ extern class Color {
 	function addScalar( s : Float ) : Color;
 	function clone() : Color;
 	function copy( color : Color ) : Color;
-	function convertGammaToLinear() : Color;
+	function convertGammaToLinear( color : Color, ?gammaFactor : Float ) : Color;
 	function convertLinearToGamma() : Color;
 	function copyCammaToLinear( color : Color ) : Color;
 	function copyLinearToGamma( color : Color ) : Color;

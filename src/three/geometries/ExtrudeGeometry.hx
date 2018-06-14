@@ -24,4 +24,5 @@ extern class ExtrudeGeometry extends Geometry {
 	function new( ?shapes : Array<Shape>, ?options : ExtrudeGeometryOptions ) : Void;
 	function addShapeList( shapes : Array<Shape>, options : ExtrudeGeometryOptions ) : Void;
 	function addShape( shape : Shape, options : ExtrudeGeometryOptions ) : Void;
+	function toJSON() : Dynamic;
 }

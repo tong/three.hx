@@ -126,7 +126,8 @@ extern class WebGLRenderer implements Renderer {
 
     function renderBufferImmediate(object:Object3D, program:Dynamic, material:Material) : Void;
     function renderBufferDirect(camera:Camera, lights:Array<Light>, fog:Fog, material:Material, geometry:Geometry, object:Object3D) : Void;
-    function animate( callback : Void->Void ) : Void;
+    function setAnimationLoop( callback : Void->Void ) : Void;
+
     @:overload(function( scene:Scene, camera:Camera, ?renderTarget:WebGLRenderTarget, ?forceClear:Bool ):Void{})
     function render( scene : Scene, camera : Camera ) : Void;
 //    function render( scene : Scene, camera : Camera, ?renderTarget : WebGLRenderTarget, ?forceClear : Bool ) : Void;
@@ -142,7 +143,8 @@ extern class WebGLRenderer implements Renderer {
     function setDepthWrite(depthWrite:Int) : Void;
     function setBlending(blending:Int, ?blendEquation:Int, ?blendSrc:Int, ?blendDst:Int) : Void;
     function setTexture(texture:Texture, slot:Int) : Void;
-    function setRenderTarget(?renderTarget:WebGLRenderTarget) : Void;
+    function getRenderTarget() : WebGLRenderTarget;
+    function setRenderTarget( ?renderTarget : WebGLRenderTarget ) : Void;
     function readRenderTargetPixels( renderTarget : WebGLRenderTarget, x : Int, y : Int, width : Int, height : Int, buffer : Dynamic ) : Void;
 
     function copyFramebufferToTexture( position : Vector2, texture : Texture, ?level : Int ) : Void;

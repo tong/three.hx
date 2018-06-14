@@ -1,5 +1,6 @@
 package three.audio;
 
+import js.html.MediaElement;
 import js.html.audio.AudioBuffer;
 import js.html.audio.AudioContext;
 import js.html.audio.AudioNode;
@@ -13,6 +14,7 @@ extern class Audio extends Object3D {
 	function new( listener : AudioListener ) : Void;
 	function getOutput() : AudioNode;
 	function setNodeSource( audioNode : AudioBufferSourceNode ) : Audio;
+	function setMediaElementSource( mediaElement : MediaElement ) : Audio;
 	function setBuffer( audioBuffer : AudioBuffer ) : Audio;
 	function play() : Audio;
 	function pause() : Audio;
