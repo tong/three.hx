@@ -1,9 +1,7 @@
 --no-output
+-js _
+-xml haxedoc.xml
 -lib three.hx
 --macro include('three')
 -D doc
---each
-
---next
--js x
--xml haxedoc.xml
+-D doc-gen
