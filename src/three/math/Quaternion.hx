@@ -17,6 +17,8 @@ extern class Quaternion {
     function setFromAxisAngle( axis : Vector3, angle : Float ) : Quaternion;
     function setFromRotationMatrix( m : Matrix3 ) : Quaternion;
     function setFromUnitVectors( vFrom : Vector3, vTo : Vector3 ) : Quaternion;
+    function angleTo( q : Quaternion ) : Float;
+    function rotateTowards( q : Quaternion, step : Float ) : Quaternion;
     function inverse() : Quaternion;
     function conjugate() : Quaternion;
     function dot( v : Vector3 ) : Float;

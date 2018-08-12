@@ -23,4 +23,6 @@ extern class PositionalAudio extends Audio {
 
 	function setMaxDistance( value : Float ) : Void;
 	function getMaxDistance() : Float;
+
+	function setDirectionalCone( coneInnerAngle : Float, coneOuterAngle : Float, coneOuterGain : Float ) : PositionalAudio;
 }

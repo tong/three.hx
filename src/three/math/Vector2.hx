@@ -43,6 +43,7 @@ extern class Vector2 {
     function roundToZero() : Vector2;
     function negate() : Vector2;
     function dot( v : Vector2 ) : Float;
+    function cross( v : Vector2 ) : Float;
     function lengthSq() : Float;
     function length() : Float;
     function manhattanLength() : Float;

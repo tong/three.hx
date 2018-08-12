@@ -17,5 +17,6 @@ extern class WebXRManager {
     function updateCamera( camera : Camera, ?parent : Dynamic ) : Void;
     function getCamera( camera : three.cameras.Camera ) : three.cameras.ArrayCamera;
     function setAnimationLoop( callback : Void->Void ) : Void;
+    function dispose() : Void;
     function getStandingMatrix() : Matrix4;
 }
