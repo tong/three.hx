@@ -5,8 +5,6 @@
 
 [![Build Status](https://travis-ci.org/tong/three.hx.svg?branch=master)](https://travis-ci.org/tong/three.hx)
 
-This is an research projet, usable but certainly not complete.
-
 
 ### Compiler Defines
 
