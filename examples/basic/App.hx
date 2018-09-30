@@ -10,6 +10,7 @@ import three.lights.PointLight;
 import three.math.Color;
 import three.materials.MeshBasicMaterial;
 import three.materials.MeshPhongMaterial;
+import three.objects.Group;
 import three.objects.Mesh;
 import three.renderers.Renderer;
 import three.renderers.WebGLRenderer;
@@ -22,7 +23,7 @@ class App {
 	static var renderer : Renderer;
 	static var scene : Scene;
 	static var camera : PerspectiveCamera;
-	static var mesh : Mesh;
+	static var mesh : Group;
 
 	static function update( ?time : Float ) {
 
@@ -65,26 +66,28 @@ class App {
 			camera.lookAt( scene.position );
 			scene.add( camera );
 
-			var light = new PointLight( 0xff0000, 2 );
-			light.position.set( 100, 30, 100 );
-			scene.add( light );
-			scene.add( new PointLightHelper( light, 10 ) );
+			var light1 = new PointLight( 0x0000ff, 2 );
+			light1.position.set( 100, 30, 100 );
+			scene.add( light1 );
+			scene.add( new PointLightHelper( light1, 10 ) );
 
-			var light = new PointLight( 0x00ff00, 2 );
-			light.position.set( -100, 30, 100 );
-			scene.add( light );
-			scene.add( new PointLightHelper( light, 10 ) );
+			var light2 = new PointLight( 0xff0000, 2 );
+			light2.position.set( -100, 30, 100 );
+			scene.add( light2 );
+			scene.add( new PointLightHelper( light2, 10 ) );
 
-			var darkMaterial = new MeshPhongMaterial( { color: new Color(0x000000), side: FrontSide, shininess: 100 } );
-			//var wireframeMaterial = new MeshBasicMaterial( { color: new Color(0xffffff), wireframe: true, transparent: true } );
-			var wireframeMaterial = new MeshBasicMaterial( { color: new Color(0xffffff), wireframe: true } );
-			var material = [darkMaterial,wireframeMaterial];
-			mesh = cast SceneUtils.createMultiMaterialObject( new BoxGeometry( 50, 50, 50, 1, 1, 1 ), cast material );
+			var geometry = new BoxGeometry( 50, 50, 50, 1, 1, 1 );
+			var materials = [
+				new MeshPhongMaterial( { color: new Color(0x000000), side: FrontSide, shininess: 100 } ),
+			 	new MeshBasicMaterial( { color: new Color(0xffffff), wireframe: true } )
+			];
+
+			mesh = new Group();
+			for( m in materials ) mesh.add( new Mesh( geometry, m ) );
 			scene.add( mesh );
 
-			window.requestAnimationFrame( update );
-
 			window.addEventListener( 'resize', handleWindowResize, false );
+			window.requestAnimationFrame( update );
 		}
 	}
 }
