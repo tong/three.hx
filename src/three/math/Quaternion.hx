@@ -3,6 +3,8 @@ package three.math;
 @:native("THREE.Quaternion")
 extern class Quaternion {
 
+    var isQuaternion(default,null) : Bool;
+	
     var x : Float;
     var y : Float;
     var z : Float;

@@ -3,9 +3,8 @@ package three;
 #if macro
 import haxe.macro.Context;
 import haxe.macro.Compiler;
-#end
-
 using StringTools;
+#end
 
 class Lib {
 
@@ -23,17 +22,6 @@ class Lib {
 				}
 			}
 		}
-        /*
-        Context.onGenerate( function(types) {
-            for( type in types ) {
-                switch type {
-                case TInst(t,p):
-                    trace(t);
-                case _:
-                }
-            }
-        } );
-        */
 	}
 
     #end

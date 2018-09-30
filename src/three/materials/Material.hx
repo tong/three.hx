@@ -59,7 +59,7 @@ extern class Material extends EventDispatcher {
 
     function onBeforeCompile() : Void;
     function setValues( values : Dynamic ) : Void;
-    function toJSON() : Dynamic;
+    function toJSON( ?meta : Dynamic ) : Dynamic;
     function clone() : Material;
     function copy( source : Dynamic ) : Void;
     function update() : Void;

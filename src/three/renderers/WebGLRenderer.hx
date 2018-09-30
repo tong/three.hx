@@ -112,7 +112,7 @@ extern class WebGLRenderer implements Renderer {
     function getClearColor() : Color;
     function getClearAlpha() : Float;
     function clear(?color:Bool, ?depth:Bool, ?stencil:Bool) : Void;
-    function clearTarget(renderTarget:WebGLRenderTarget, ?color:Bool, ?depth:Bool, ?stencil:Bool) : Void;
+    //function clearTarget(renderTarget:WebGLRenderTarget, ?color:Bool, ?depth:Bool, ?stencil:Bool) : Void;
     function dispose() : Void;
 
     function addPostPlugin(plugin:Dynamic) : Void; // TODO
