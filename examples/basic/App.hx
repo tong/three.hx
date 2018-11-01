@@ -37,13 +37,10 @@ class App {
 	}
 
 	static function handleWindowResize(e) {
-
 		var w = window.innerWidth;
 		var h = window.innerHeight;
-
 		camera.aspect = w / h;
 		camera.updateProjectionMatrix();
-
 		renderer.setSize( w, h );
 	}
 
@@ -52,8 +49,6 @@ class App {
 		window.onload = function() {
 
 			canvas = document.createCanvasElement();
-			canvas.width = window.innerWidth;
-			canvas.height = window.innerHeight;
 			document.body.appendChild( canvas );
 
 			renderer = new WebGLRenderer( { antialias : true, canvas: canvas } );
@@ -61,7 +56,7 @@ class App {
 
 			scene = new Scene();
 
-			camera = new PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 20000 );
+			camera = new PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.01, 10000 );
 			camera.position.set( 0, 100, 300 );
 			camera.lookAt( scene.position );
 			scene.add( camera );
