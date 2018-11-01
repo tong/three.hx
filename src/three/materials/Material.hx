@@ -49,8 +49,6 @@ extern class Material extends EventDispatcher {
 
     var alphaTest : Float;
 
-    var overdraw : Float;
-
     var visible : Float;
 
     var userData : Dynamic;
