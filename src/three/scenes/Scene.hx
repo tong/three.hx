@@ -8,4 +8,7 @@ extern class Scene extends three.core.Object3D {
 	var fog : Fog; //IFog; //Fog; // TODO: Can this be FogExp2?
 	var overrideMaterial : Material;
 	var autoUpdate : Bool;
+	function copy( source : Scene, ?recursive : Bool ) : Dynamic;
+	function toJSON( meta : Dynamic ) : Dynamic;
+	function dispose() : Void;
 }
