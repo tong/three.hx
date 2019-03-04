@@ -1,5 +1,6 @@
 package three.renderers;
 
+import haxe.extern.EitherType;
 import js.html.CanvasElement;
 import js.html.webgl.RenderingContext;
 import three.Lib;
@@ -103,8 +104,13 @@ extern class WebGLRenderer implements Renderer {
 
     function getSize() : { width : Float, height : Float };
     function setSize(width:Int, height:Int) : Void;
-    function setViewport(x:Float, y:Float, width:Float, height:Float) : Void;
+    function getCurrentViewport( target : Vector4 ) : Vector4;
+    function getViewport( target : Vector4 ) : Vector4;
+    function setViewport( x : EitherType<Float,Vector4>, y : Float, width : Float, height : Float ) : Void;
+    function getScissor( target : Vector4 ) : Vector4;
     function setScissor(x:Float, y:Float, width:Float, height:Float) : Void;
+    function getScissorTest() : Bool;
+    function setScissorTest( enable : Bool ) : Void;
     function enableScissorTest(enable:Bool) : Void;
 
     function setClearColorHex(hexColor:Int, opacity:Float) : Void;
