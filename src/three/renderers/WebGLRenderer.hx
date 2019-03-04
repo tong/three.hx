@@ -11,6 +11,7 @@ import three.materials.Material;
 import three.lights.Light;
 import three.math.Color;
 import three.math.Vector2;
+import three.math.Vector4;
 import three.renderers.webgl.WebGLExtensions;
 import three.renderers.webgl.WebGLRenderTarget;
 import three.renderers.webgl.WebGLShadowMap;
