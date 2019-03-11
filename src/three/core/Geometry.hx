@@ -1,5 +1,6 @@
 package three.core;
 
+import three.animation.AnimationClip;
 import three.materials.Material;
 import three.math.Box3;
 import three.math.Color;
@@ -7,10 +8,26 @@ import three.math.Matrix4;
 import three.math.Vector2;
 import three.math.Vector3;
 import three.math.Vector4;
+import three.objects.Bone;
 import three.objects.Mesh;
 
+typedef MorphTarget = {
+	var name : String;
+	var vertices : Array<Vector3>;
+}
+
+typedef MorphColor = {
+	var name : String;
+	var colors : Array<Color>;
+}
+
+typedef MorphNormals = {
+	var name : String;
+	var normals : Array<Vector3>;
+}
+
 @:native("THREE.Geometry")
-extern class Geometry {
+extern class Geometry extends EventDispatcher {
 
 	var id : Int;
 	var uuid : String;
@@ -22,8 +39,8 @@ extern class Geometry {
 	var faces : Array<Face3>;
 	var faceVertexUvs : Array<Array<Vector2>>;
 
-	var morphTargets : Array<{ name: String, vertices: Array<Vector3> }>;
-	var morphNormals : Array<Dynamic>; //TODO
+	var morphTargets : Array<MorphTarget>;
+	var morphNormals : Array<MorphNormals>;
 
 	var skinWeights : Array<Vector4>;
 	var skinIndices : Array<Vector4>;
@@ -40,6 +57,11 @@ extern class Geometry {
 	var colorsNeedUpdate : Bool;
 	var lineDistancesNeedUpdate : Bool;
 	var groupsNeedUpdate : Bool;
+
+	 // These properties do not exist in a normal Geometry class, but if you use the instance that was passed by JSONLoader, it will be added.
+	var bones : Array<Bone>;
+  	var animation : AnimationClip;
+  	var animations : Array<AnimationClip>;
 
 	function new() : Void;
 

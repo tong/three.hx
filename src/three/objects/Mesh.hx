@@ -1,6 +1,8 @@
 package three.objects;
 
+import haxe.extern.EitherType;
 import three.Lib;
+import three.core.BufferGeometry;
 import three.core.Geometry;
 import three.core.Object3D;
 import three.materials.Material;
@@ -11,7 +13,7 @@ extern class Mesh extends Object3D {
     var geometry : Geometry;
     var material : Material;
 
-    function new( geometry : Geometry, ?material : Material ) : Void;
+    function new( geometry : EitherType<Geometry,BufferGeometry>, ?material : Material ) : Void;
 
     function setDrawMode( value : DrawMode ) : Void;
     function updateMorphTargets() : Void;

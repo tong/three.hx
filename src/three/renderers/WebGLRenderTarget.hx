@@ -19,22 +19,33 @@ typedef WebGLRenderTargetOptions = {
 
 @:native("THREE.WebGLRenderTarget")
 extern class WebGLRenderTarget extends EventDispatcher {
+
+    var uuid : String;
     var width : Int;
     var height : Int;
+    var scissor : Vector4;
+    var scissorTest : Bool;
+    var viewport : Vector4;
+    var texture : Texture;
+    var depthBuffer : Bool;
+    var stencilBuffer : Bool;
+    var depthTexture : Texture;
+
+	/* // deprecated
     var wrapS : WrappingMode;
     var wrapT : WrappingMode;
     var magFilter : Filter;
     var minFilter : Filter;
     var anisotropy : Int;
-    var repeat : Vector2;
     var offset : Vector2;
+    var repeat : Vector2;
     var format : PixelFormat;
     var type : DataType;
-    var depthBuffer : Bool;
-    var stencilBuffer : Bool;
     var generateMipmaps : Bool;
-    var shareDepthFrom : WebGLRenderTarget;
+	*/
+
     function new( width : Float, height : Float, ?options : WebGLRenderTargetOptions ) : Void;
+
     function setSize( width : Int, height : Int ) : Void;
     function clone() : WebGLRenderTarget;
     function copy( source : WebGLRenderTarget ) : WebGLRenderTarget;
