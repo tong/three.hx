@@ -3,6 +3,8 @@ package three.renderers;
 import three.Lib;
 import three.core.EventDispatcher;
 import three.math.Vector2;
+import three.math.Vector4;
+import three.textures.Texture;
 
 typedef WebGLRenderTargetOptions = {
     @:optional var wrapS : WrappingMode;
