@@ -1,7 +1,13 @@
 package three.audio;
 
-import js.html.audio.AnalyserNode;
+#if (haxe_ver >= 4)
+import js.lib.ArrayBufferView;
+import js.lib.Uint8Array;
+#else
+import js.html.ArrayBufferView;
 import js.html.Uint8Array;
+#end
+import js.html.audio.AnalyserNode;
 
 @:native("THREE.AudioAnalyser")
 extern class AudioAnalyser {

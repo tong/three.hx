@@ -1,6 +1,10 @@
 package three.core;
 
+#if (haxe_ver >= 4)
+import js.lib.ArrayBufferView;
+#else
 import js.html.ArrayBufferView;
+#end
 import three.math.Color;
 import three.math.Vector2;
 import three.math.Vector3;
