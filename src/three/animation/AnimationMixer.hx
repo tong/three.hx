@@ -3,7 +3,9 @@ package three.animation;
 import three.core.Object3D;
 
 @:native("THREE.AnimationMixer")
-extern class AnimationMixer {
+extern class AnimationMixer extends three.core.EventDispatcher {
+	var time : Float;
+	var timeScale : Float;
 	function new( root : Dynamic ) : Void;
 	function clipAction( clip : AnimationClip, ?root : Dynamic ) : AnimationAction;
 	function existingAction( clip : AnimationClip, ?root : Dynamic ) : AnimationAction;

@@ -184,7 +184,7 @@ class Lib {
     var LoopPingPong = 2202;
 }
 
-@:enum abstract InterpolateMode(Int) from Int to Int {
+@:enum abstract InterpolationModes(Int) from Int to Int {
     var InterpolateDiscrete = 2300;
     var InterpolateLinear = 2301;
     var InterpolateSmooth = 2302;
