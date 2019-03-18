@@ -2,11 +2,15 @@ package three.audio;
 
 import js.html.audio.AnalyserNode;
 import js.html.audio.AudioContext;
-import js.html.Uint8Array;
+import js.html.audio.GainNode;
+import js.lib.Uint8Array;
 import three.core.Object3D;
 
 @:native("THREE.AudioListener")
 extern class AudioListener extends Object3D {
+	var context : AudioContext;
+	var gain : GainNode;
+	var filter : Null<Dynamic>;
 	function new() : Void;
 	function getInput() : Float;
 	function removeFilter() : Float;

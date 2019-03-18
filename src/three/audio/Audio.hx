@@ -11,6 +11,20 @@ import three.core.Object3D;
 
 @:native("THREE.Audio")
 extern class Audio extends Object3D {
+	var context : AudioContext;
+	var gain : GainNode;
+	var autoplay : Bool;
+	var buffer : Null<Audio>;
+	var detune : Float;
+	var loop : Bool;
+	var startTime : Float;
+	var offset : Float;
+	var playbackRate : Float;
+	var isPlaying : Bool;
+	var hasPlaybackControl : Bool;
+	var sourceType : String;
+	var source : AudioBufferSourceNode;
+	var filters : Array<Dynamic>;
 	function new( listener : AudioListener ) : Void;
 	function getOutput() : AudioNode;
 	function setNodeSource( audioNode : AudioBufferSourceNode ) : Audio;

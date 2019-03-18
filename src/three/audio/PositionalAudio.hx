@@ -26,3 +26,14 @@ extern class PositionalAudio extends Audio {
 
 	function setDirectionalCone( coneInnerAngle : Float, coneOuterAngle : Float, coneOuterGain : Float ) : PositionalAudio;
 }
+
+
+@:native("THREE.PositionalAudio")
+extern class AudioBuffer extends Audio {
+	var ready : Bool;
+	var readyCallbacks : Array<Dynamic>;
+	function new( context : Dynamic ) : Void;
+	function load( file : String ) : AudioBuffer;
+	function onReady( callback : Dynamic->Void ) : Void;
+}
+
