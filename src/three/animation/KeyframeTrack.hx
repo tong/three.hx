@@ -1,6 +1,10 @@
 package three.animation;
 
+#if (haxe_ver >= 4)
 import js.lib.Float32Array;
+#else
+import js.html.Float32Array;
+#end
 import three.Lib;
 import three.math.Interpolant;
 import three.math.interpolants.CubicInterpolant;

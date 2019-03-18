@@ -3,7 +3,11 @@ package three.audio;
 import js.html.audio.AnalyserNode;
 import js.html.audio.AudioContext;
 import js.html.audio.GainNode;
+#if (haxe_ver >= 4)
 import js.lib.Uint8Array;
+#else
+import js.html.Uint8Array;
+#end
 import three.core.Object3D;
 
 @:native("THREE.AudioListener")
