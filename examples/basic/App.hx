@@ -15,7 +15,6 @@ import three.objects.Mesh;
 import three.renderers.Renderer;
 import three.renderers.WebGLRenderer;
 import three.scenes.Scene;
-import three.utils.SceneUtils;
 
 class App {
 
@@ -73,7 +72,7 @@ class App {
 
 			var geometry = new BoxGeometry( 50, 50, 50, 1, 1, 1 );
 			var materials = [
-				new MeshPhongMaterial( { color: new Color(0x000000), side: FrontSide, shininess: 100 } ),
+				new MeshPhongMaterial( { color: new Color(0x000000), shininess: 100 } ),
 			 	new MeshBasicMaterial( { color: new Color(0xffffff), wireframe: true } )
 			];
 
