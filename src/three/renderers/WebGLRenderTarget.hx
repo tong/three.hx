@@ -48,7 +48,7 @@ extern class WebGLRenderTarget extends EventDispatcher {
 
     function new( width : Float, height : Float, ?options : WebGLRenderTargetOptions ) : Void;
 
-    function setSize( width : Int, height : Int ) : Void;
+    function setSize( width : Float, height : Float ) : Void;
     function clone() : WebGLRenderTarget;
     function copy( source : WebGLRenderTarget ) : WebGLRenderTarget;
     function dispose() : Void;

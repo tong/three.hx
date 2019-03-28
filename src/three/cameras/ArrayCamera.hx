@@ -2,5 +2,7 @@ package three.cameras;
 
 @:native("THREE.ArrayCamera")
 extern class ArrayCamera extends PerspectiveCamera {
-    function new( array : Array<Camera> ) : Void;
+	var cameras : Array<PerspectiveCamera>;
+	var isArrayCamera : Bool;
+    function new( ?cameras : Array<PerspectiveCamera> ) : Void;
 }

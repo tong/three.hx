@@ -105,6 +105,12 @@ class Lib {
     var NotEqualDepth = 7;
 }
 
+@:enum abstract Combine(Int) from Int to Int {
+	var MultiplyOperation = 0;
+	var MixOperation = 1;
+	var AddOperation = 2;
+}
+
 @:enum abstract TextureConstant(Int) from Int to Int {
     var MultiplyOperation = 0;
     var MixOperation = 1;

@@ -13,8 +13,8 @@ import three.math.Color;
 import three.math.Vector2;
 import three.math.Vector4;
 import three.renderers.webgl.WebGLExtensions;
-import three.renderers.webgl.WebGLRenderTarget;
 import three.renderers.webgl.WebGLShadowMap;
+import three.renderers.webgl.WebGLState;
 import three.renderers.webvr.WebVRManager;
 import three.scenes.Fog;
 import three.scenes.Scene;
@@ -77,6 +77,8 @@ extern class WebGLRenderer implements Renderer {
 
     var shadowMap : WebGLShadowMap;
 
+	var state : WebGLState;
+
     var vr(default,null) : WebVRManager;
 
     var renderPluginsPre : Array<Dynamic>; // TODO
@@ -102,6 +104,9 @@ extern class WebGLRenderer implements Renderer {
     //function getPrecision() : RenderPrecision;
     function getPixelRatio() : Float;
     function setPixelRatio( value : Float ) : Void;
+    
+	function getDrawingBufferSize( target : Vector2 ) : Vector2;
+	function setDrawingBufferSize( width : Float, height : Float, pixelRatio : Float ) : Void;
 
     function getSize() : { width : Float, height : Float };
     function setSize(width:Int, height:Int) : Void;
@@ -114,12 +119,14 @@ extern class WebGLRenderer implements Renderer {
     function setScissorTest( enable : Bool ) : Void;
     function enableScissorTest(enable:Bool) : Void;
 
-    function setClearColorHex(hexColor:Int, opacity:Float) : Void;
-    function setClearColor(color:Color, ?opacity:Float) : Void;
+    function setClearColor( color : EitherType<Color,EitherType<String,Float>>, ?alpha : Float ) : Void;
     function getClearColor() : Color;
     function getClearAlpha() : Float;
-    function clear(?color:Bool, ?depth:Bool, ?stencil:Bool) : Void;
-    //function clearTarget(renderTarget:WebGLRenderTarget, ?color:Bool, ?depth:Bool, ?stencil:Bool) : Void;
+    function clear( ?color : Bool, ?depth : Bool, ?stencil : Bool ) : Void;
+    function clearDepth() : Void;
+    function clearStencil() : Void;
+    function clearTarget( renderTarget : WebGLRenderTarget, color : Bool, depth : Bool, stencil : Bool ) : Void;
+	
     function dispose() : Void;
 
     function addPostPlugin(plugin:Dynamic) : Void; // TODO
