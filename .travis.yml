@@ -15,6 +15,6 @@ install:
   - haxelib dev three.hx .
 
 script:
-  - haxe doc.hxml
+  - haxe haxedoc.hxml
   - haxe --cwd examples/basic build.hxml
   - haxe --cwd examples/hello build.hxml
