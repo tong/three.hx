@@ -1,12 +1,10 @@
 package three.renderers.webgl;
 
-import three.cameras.Camera;
+import js.html.webgl.RenderingContext;
 
-//TODO
-
+//TODO:
 @:native("THREE.WebGLLights")
 extern class WebGLLights {
-	var state : Dynamic;
-	function new() : Void;
-	function setup( lights : Array<Dynamic>, shadows : Array<Dynamic>, camera : Camera ) : Void;
+	function new( gl : RenderingContext, properties : Dynamic, infoRender : Dynamic ) : Void;
+	function get( light : Dynamic ) : Dynamic;
 }

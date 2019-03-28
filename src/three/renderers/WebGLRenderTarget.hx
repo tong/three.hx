@@ -2,49 +2,40 @@ package three.renderers;
 
 import three.Lib;
 import three.core.EventDispatcher;
-import three.math.Vector2;
 import three.math.Vector4;
 import three.textures.Texture;
 
 typedef WebGLRenderTargetOptions = {
-    @:optional var wrapS : WrappingMode;
-    @:optional var wrapT : WrappingMode;
-    @:optional var magFilter : Filter;
-    @:optional var minFilter : Filter;
-    @:optional var anisotropy : Int;
-    @:optional var format : PixelFormat;
-    @:optional var type : DataType;
-    @:optional var depthBuffer : Bool;
-    @:optional var stencilBuffer : Bool;
-    @:optional var shareDepthFrom : WebGLRenderTarget;
+    ?wrapS : WrappingMode,
+    ?wrapT : WrappingMode,
+    ?magFilter : Filter,
+    ?minFilter : Filter,
+    ?anisotropy : Int,
+    ?format : PixelFormat,
+    ?type : DataType,
+    ?depthBuffer : Bool,
+    ?stencilBuffer : Bool,
+    ?shareDepthFrom : WebGLRenderTarget
 }
 
 @:native("THREE.WebGLRenderTarget")
 extern class WebGLRenderTarget extends EventDispatcher {
 
-    var uuid : String;
+    //var uuid : String;
+
     var width : Int;
     var height : Int;
+
     var scissor : Vector4;
     var scissorTest : Bool;
+
     var viewport : Vector4;
+
     var texture : Texture;
+
     var depthBuffer : Bool;
     var stencilBuffer : Bool;
     var depthTexture : Texture;
-
-	/* // deprecated
-    var wrapS : WrappingMode;
-    var wrapT : WrappingMode;
-    var magFilter : Filter;
-    var minFilter : Filter;
-    var anisotropy : Int;
-    var offset : Vector2;
-    var repeat : Vector2;
-    var format : PixelFormat;
-    var type : DataType;
-    var generateMipmaps : Bool;
-	*/
 
     function new( width : Float, height : Float, ?options : WebGLRenderTargetOptions ) : Void;
 

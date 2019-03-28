@@ -31,17 +31,27 @@ extern class Audio extends Object3D {
 	function setMediaElementSource( mediaElement : MediaElement ) : Audio;
 	function setBuffer( audioBuffer : AudioBuffer ) : Audio;
 	function play() : Audio;
+	function onEnded() : Void;
 	function pause() : Audio;
 	function stop() : Audio;
 	function connect() : Audio;
 	function disconnect() : Audio;
-	function getFilter() : Audio;
+	function setDetune( value : Float ) : Audio;
+	function getDetune() : Float;
+	function getFilter( value : Array<Dynamic> ) : Audio;
+	function getFilters() : Array<Dynamic>;
 	function setFilter( value : Dynamic ) : Audio;
 	function setPlaybackRate( value : Float ) : Audio;
 	function getPlaybackRate() : Float;
-	function onEnded() : Void;
 	function getLoop() : Bool;
 	function setLoop( value : Bool ) : Audio;
-	function setVolume( value : Float ) : Audio;
 	function getVolume() : Float;
+	function setVolume( value : Float ) : Audio;
 }
+
+/*
+@:native("THREE.AudioBuffer")
+extern class AudioBuffer {
+}
+*/
+

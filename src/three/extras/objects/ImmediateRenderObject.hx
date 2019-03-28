@@ -5,6 +5,7 @@ import three.materials.Material;
 
 @:native("THREE.ImmediateRenderObject")
 extern class ImmediateRenderObject extends Object3D {
+	var Curve : Material;
     function new( material : Material ) : Void;
     function render( renderCallback : Void->Void ) : Void;
 }

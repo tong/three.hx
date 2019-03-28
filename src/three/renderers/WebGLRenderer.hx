@@ -47,12 +47,14 @@ typedef WebGLRendererParameters = {
     ?logarithmicDepthBuffer : Bool,
 }
 
-//@:jsRequire("three","WebGLRenderer")
 @:native("THREE.WebGLRenderer")
 extern class WebGLRenderer implements Renderer {
 
     var domElement : CanvasElement;
     var context : RenderingContext;
+    //var precision : RenderPrecision;
+    //var alpha : Float;
+
     var devicePixelRatio : Float;
 
     var autoClear : Bool;
