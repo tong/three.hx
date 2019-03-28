@@ -2,6 +2,8 @@ _*
 depricated/
 examples/*/app.js*
 doc/
+res/mesh/
+res/texture/
 test/bin/
 test/unit*
 haxedoc.xml
