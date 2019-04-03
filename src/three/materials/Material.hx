@@ -1,8 +1,45 @@
 package three.materials;
 
+import haxe.extern.EitherType;
 import three.Lib;
 import three.core.EventDispatcher;
 import three.math.Color;
+import three.math.Plane;
+
+typedef MaterialParameters = {
+	?alphaTest : Float,
+	?blendDst : BlendingDestinationFactor,
+	?blendDstAlpha : Float,
+	?blendEquation : BlendingEquation,
+	?blendEquationAlpha : Float,
+	?blending : BlendMode,
+	?blendSrc : BlendingDestinationFactor,
+	?blendSrcAlpha : Float,
+	?clipIntersection : Bool,
+	?clippingPlanes : Array<Plane>,
+	?clipShadows : Bool,
+	?colorWrite : Bool,
+	?depthFunc : DepthModes,
+	?depthTest : Bool,
+	?depthWrite : Bool,
+	?fog : Bool,
+	?lights : Bool,
+	?name : String,
+	?opacity : Float,
+	?overdraw : Float,
+	?polygonOffset : Bool,
+	?polygonOffsetFactor : Float,
+	?polygonOffsetUnits : Float,
+	?precision : String, // 'highp' | 'mediump' | 'lowp' | null,
+	?premultipliedAlpha : Bool,
+	?dithering : Bool,
+	?flatShading : Bool,
+	?side : Side,
+	?transparent : Bool,
+	?vertexColors : Colors,
+	?vertexTangents : Bool,
+	?visible : Bool,
+};
 
 @:native("THREE.Material")
 extern class Material extends EventDispatcher {

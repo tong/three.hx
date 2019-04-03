@@ -78,6 +78,8 @@ class Lib {
     var AddEquation = 100;
     var SubtractEquation = 101;
     var ReverseSubtractEquation = 102;
+	var MinEquation = 103;
+	var MaxEquation = 104;
 }
 
 @:enum abstract BlendingDestinationFactor(Int) from Int to Int {

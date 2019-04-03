@@ -2,6 +2,7 @@ package three.core;
 
 import three.math.Box3;
 import three.math.Matrix3;
+import three.math.Sphere;
 import three.math.Vector3;
 
 @:native("THREE.BufferGeometry")
@@ -9,24 +10,18 @@ extern class BufferGeometry {
 
     static var MaxIndex(default,never) : Int;
 
-    var uuid : Int;
-
+    var	id : Int;
+    var uuid : String;
     var name : String;
     var type : String;
-
     var index : Dynamic;
-    var attributes : Dynamic; // hash map
-
+    var attributes : Dynamic; //TODO:
     //var morphAttributes : Array<{name:String, vertices:Array<Vector3>}>; // "for compatibility"
     var morphAttributes : Array<Dynamic>; // "for compatibility"
-
-    var groups : Dynamic;
-
+    var groups : Array<Dynamic>;
     var boundingBox : Box3;
-    var boundingSphere : { radius:Float };
-
+    var boundingSphere : Sphere; //{ radius:Float };
     var drawRange : { start: Int, count: Int };
-
     var userData : Dynamic;
 
     // var dynamic : Bool; // false

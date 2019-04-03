@@ -2,11 +2,11 @@ package three.materials;
 
 import three.Lib;
 
-typedef ShaderMaterialParameters<TUniforms> = {
+typedef ShaderMaterialParameters<T> = {
 	?defines : Dynamic,
-	?uniforms : TUniforms,
-	?fragmentShader : String,
+	?uniforms : T,
 	?vertexShader : String,
+	?fragmentShader : String,
 	?shading : Shading,
 	?blending : BlendMode,
 	?depthTest : Bool,
@@ -22,8 +22,8 @@ typedef ShaderMaterialParameters<TUniforms> = {
 }
 
 @:native("THREE.ShaderMaterial")
-extern class ShaderMaterial<TUniforms> extends Material {
-	var uniforms : TUniforms;
+extern class ShaderMaterial<T> extends Material {
+	var uniforms : T;
 	var vertexShader : String;
 	var fragmentShader : String;
 	var defines : Dynamic;
@@ -37,6 +37,6 @@ extern class ShaderMaterial<TUniforms> extends Material {
 	var skinning : Bool;
 	var morphTargets : Bool;
 	var morphNormals : Bool;
-	function new( ?parameters : ShaderMaterialParameters<TUniforms> ) : Void;
+	function new( ?parameters : ShaderMaterialParameters<T> ) : Void;
 	//function clone() : ShaderMaterial<TUniforms>;
 }
