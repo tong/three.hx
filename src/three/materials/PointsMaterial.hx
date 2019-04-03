@@ -5,15 +5,14 @@ import three.math.Color;
 import three.textures.Texture;
 
 typedef PointsMaterialParameters = {
-	?color : Color;
-	?map : Texture;
-	?size : Float;
-	?sizeAttenuation : Bool;
+	?color : Color,
+	?map : Texture,
+	?size : Float,
+	?sizeAttenuation : Bool
 };
 
 @:native("THREE.PointsMaterial")
 extern class PointsMaterial extends Material {
-	var color : Color;
 	var map : Texture;
 	var size : Float;
 	var sizeAttenuation : Bool;
