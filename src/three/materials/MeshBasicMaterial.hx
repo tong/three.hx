@@ -3,43 +3,33 @@ package three.materials;
 import three.Lib;
 import three.math.Color;
 import three.textures.Texture;
-import three.textures.Texture;
 
 typedef MeshBasicMaterialParameters = {
-
     ?color: Color,
     ?opacity: Float,
     ?map: Texture,
-
     ?aoMap: Texture,
     ?aoMapIntensity: Float,
-
     ?specularMap: Texture,
-
     ?alphaMap: Texture,
-
-    ?envMap: Dynamic, //TextureCube,
-    ?combine: Dynamic, //Multiply,
+    ?envMap: Texture,
+    ?combine: Combine,
     ?reflectivity: Float,
     ?refractionRatio: Float,
-
     ?shading: Shading,
     ?depthTest: Bool,
     ?depthWrite: Bool,
-
     ?wireframe: Bool,
     ?wireframeLinewidth: Float,
-
+    ?wireframeLinecap: String,
+    ?wireframeLinejoin: String,
     ?skinning: Bool,
     ?morphTargets: Bool,
-
-    ?transparent: Bool
+    //?transparent: Bool
 }
 
 @:native("THREE.MeshBasicMaterial")
 extern class MeshBasicMaterial extends Material {
-
-    //var color : Color;
     var map : Texture;
     var lightMap : Texture;
     var specularMap : Texture;
@@ -56,6 +46,6 @@ extern class MeshBasicMaterial extends Material {
     var vertexColors : Int;
     var skinning : Bool;
     var morphTargets : Bool;
-
     function new( ?parameters : MeshBasicMaterialParameters ) : Void;
+    function setValues( parameters : MeshBasicMaterialParameters ) : Void;
 }
