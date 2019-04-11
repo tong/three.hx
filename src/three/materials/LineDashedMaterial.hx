@@ -1,15 +1,23 @@
 package three.materials;
 
+import haxe.extern.EitherType;
 import three.math.Color;
+
+typedef LineDashedMaterialParameters = {
+	?color : EitherType<Color,EitherType<Int,String>>,
+	?linewidth : Int,
+	?scale : Float,
+	?dashSize : Float,
+	?gapSize : Float,
+}
 
 @:native("THREE.LineDashedMaterial")
 extern class LineDashedMaterial extends Material {
-    //var color : Color; // new Color(0xffffff)
-    var linewidth : Float; // 1
-    var scale : Float; // 1
-    var dashSize : Float; // 3
-    var gapSize : Float; // 1
-    var vertexColors : Bool; // false
-    var fog : Bool; // true
-    function new(?parameters:Dynamic) : Void;
+	var isLineDashedMaterial(default,null) : Bool;
+    var linewidth : Float;
+    var scale : Float;
+    var dashSize : Float;
+    var gapSize : Float;
+    function new( ?parameters : LineDashedMaterialParameters ) : Void;
+    function setValues( parameters : LineDashedMaterialParameters ) : Void;
 }
