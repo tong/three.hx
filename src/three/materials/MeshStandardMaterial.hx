@@ -1,14 +1,44 @@
 package three.materials;
 
+import haxe.extern.EitherType;
 import three.math.Color;
 import three.math.Vector2;
+import three.textures.Texture;
 
-typedef MeshStandardMaterialParameters = Dynamic; //TODO
+typedef MeshStandardMaterialParameters = {
+	?color : Color,
+	?roughness : Float,
+	?metalness : Float,
+	?map : Texture,
+	?lightMap : Texture,
+	?aoMap : Texture,
+	?aoMapIntensity : Float,
+	?emissive : EitherType<Color,Int>,
+	?emissiveIntensity : Float,
+	?emissiveMap : Texture,
+	?bumpMap : Texture,
+	?bumpScale : Float,
+	?normalMap : Texture,
+	?normalScale : Vector2,
+	?displacementMap : Texture,
+	?displacementScale : Float,
+	?displacementBias : Float,
+	?roughnessMap : Texture,
+	?metalnessMap : Texture,
+	?alphaMap : Texture,
+	?envMap : Texture,
+	?envMapIntensity : Float,
+	?refractionRatio : Float,
+	?wireframe : Bool,
+	?wireframeLinewidth : Float,
+	?skinning : Bool,
+	?morphTargets : Bool,
+	?morphNormals : Bool,
+}
 
 @:native("THREE.MeshStandardMaterial")
 extern class MeshStandardMaterial extends Material {
 
-    //var color : Color;
     var roughness : Float;
     var metalness : Float;
 
@@ -55,4 +85,5 @@ extern class MeshStandardMaterial extends Material {
     var morphNormals : Bool;
 
     function new( ?parameters : MeshStandardMaterialParameters ) : Void;
+	function setValues( parameters : MeshStandardMaterialParameters ) : Void;
 }

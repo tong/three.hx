@@ -1,9 +1,18 @@
 package three.materials;
 
+import three.materials.MeshStandardMaterial;
+
+typedef MeshPhysicalMaterialParameters = {
+	> MeshStandardMaterialParameters,
+	?reflectivity : Float,
+	?clearCoat : Float,
+	?clearCoatRoughness : Float,
+}
+
 @:native("THREE.MeshPhysicalMaterial")
 extern class MeshPhysicalMaterial extends Material {
-    var reflectivity : Float; // maps to F0 = 0.04
+    var reflectivity : Float;
     var clearCoat : Float;
     var clearCoatRoughness : Float;
-    function new( ?parameters : Dynamic ) : Void;
+    function new( ?parameters : MeshPhysicalMaterialParameters ) : Void;
 }

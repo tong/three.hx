@@ -7,18 +7,19 @@ typedef ShaderMaterialParameters<T> = {
 	?uniforms : T,
 	?vertexShader : String,
 	?fragmentShader : String,
-	?shading : Shading,
-	?blending : BlendMode,
-	?depthTest : Bool,
-	?depthWrite : Bool,
+	//?shading : Shading,
+	//?blending : BlendMode,
+	//?depthTest : Bool,
+	//?depthWrite : Bool,
 	?wireframe : Bool,
 	?wireframeLinewidth : Float,
 	?lights : Bool,
-	?vertexColors : Colors,
+	//?vertexColors : Colors,
+	?clipping : Bool,
 	?skinning : Bool,
 	?morphTargets : Bool,
 	?morphNormals : Bool,
-	?fog : Bool
+	//?fog : Bool
 }
 
 @:native("THREE.ShaderMaterial")
@@ -33,7 +34,8 @@ extern class ShaderMaterial<T> extends Material {
 	var wireframeLinewidth : Float;
 	var fog : Bool;
 	var lights : Bool;
-	var vertexColors : Colors;
+	var clipping : Bool;
+	//var vertexColors : Colors;
 	var skinning : Bool;
 	var morphTargets : Bool;
 	var morphNormals : Bool;
