@@ -4,13 +4,13 @@ import three.Lib;
 import three.math.Color;
 import three.math.Vector2;
 
-@:enum abstract LineCap(String) {
+@:enum abstract LineCap(String) from String to String {
     var butt = 'butt';
     var round = 'round';
     var square = 'square';
 }
 
-@:enum abstract LineJoin(String) {
+@:enum abstract LineJoin(String) from String to String {
     var round = 'round';
     var bevel = 'bevel';
     var miter = 'miter';
@@ -18,15 +18,15 @@ import three.math.Vector2;
 
 typedef LineBasicMaterialParameters = {
 	?color : Int,
-	?opacity : Float,
+	//?opacity : Float,
 	?linewidth : Int,
-	?linecap : String,
-	?linejoin : String,
+	?linecap : LineCap,
+	?linejoin : LineJoin,
 }
 
 @:native("THREE.LineBasicMaterial")
 extern class LineBasicMaterial extends Material {
-    //var color : Color;
+	var isLineBasicMaterial(default,null) : Bool;
     var linewidth : Float;
     var linecap : LineCap;
     var linejoin : LineJoin;
