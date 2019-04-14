@@ -10,7 +10,7 @@ extern class SpotLight extends Light {
     var angle : Float; // Math.PI / 2
     var exponent : Float; // 10
     var decay : Float;
-    var shadow : LightShadow;
+    var shadow : SpotLightShadow;
     function new( hexColor : Int, ?intensity : Float, ?distance : Float, ?angle : Float, ?exponent : Float, ?decay : Float ) : Void;
     //function copy( source : SpotLight ) : SpotLight;
 }
