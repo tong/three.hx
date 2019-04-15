@@ -1,5 +1,6 @@
 package three.materials;
 
+import haxe.extern.EitherType;
 import three.Lib;
 import three.materials.Material;
 import three.math.Color;
@@ -8,10 +9,8 @@ import three.math.Vector3;
 import three.textures.Texture;
 
 typedef MeshPhongMaterialParameters = {
-
 	> MaterialParameters,
-
-	//?color : Color,
+	?color: EitherType<Color,EitherType<Int,String>>,
     ?specular : Color,
     ?shininess : Float,
     ?map : Texture,
