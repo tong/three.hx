@@ -14,7 +14,7 @@ extern class WebVRManager {
     function new( renderer : WebGLRenderer ) : Void;
     function getDevice() : VRDisplay;
     function setDevice( value : VRDisplay ) : Void;
-    function setPoseTarget( object : Object3D ) : Void;
+    function setPoseTarget( ?object : Object3D ) : Void;
     function getCamera( camera : PerspectiveCamera ) : EitherType<PerspectiveCamera,ArrayCamera>;
     function submitFrame() : Void;
     function dispose() : Void;
