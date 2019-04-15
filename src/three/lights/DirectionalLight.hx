@@ -10,7 +10,7 @@ extern class DirectionalLight extends Light {
     var intensity : Float; // 1
     // var castShadow : Bool; // false
     //var onlyShadow : Bool; // false
-    var shadow : LightShadow;
+    //var shadow : LightShadow;
 
     /*
     var shadowCameraNear : Float; // 50
