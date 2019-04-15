@@ -1,11 +1,14 @@
 package three.materials;
 
+import haxe.extern.EitherType;
 import three.Lib;
 import three.math.Color;
+import three.materials.Material;
 import three.textures.Texture;
 
 typedef PointsMaterialParameters = {
-	?color : Color,
+	> MaterialParameters,
+	?color: EitherType<Color,EitherType<Int,String>>,
 	?map : Texture,
 	?size : Float,
 	?sizeAttenuation : Bool
@@ -18,6 +21,6 @@ extern class PointsMaterial extends Material {
 	var sizeAttenuation : Bool;
 	function new( parameters : PointsMaterialParameters ) : Void;
 	//function copy( source ) : PointsMaterial;
-	function setValues( parameters : PointsMaterialParameters ) : Void;
+	function setValues( ?parameters : PointsMaterialParameters ) : Void;
 }
 

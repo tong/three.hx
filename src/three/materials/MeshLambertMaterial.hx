@@ -1,47 +1,59 @@
 package three.materials;
 
-import three.math.*;
+import haxe.extern.EitherType;
+import three.Lib;
+import three.materials.Material;
+import three.math.Color;
 import three.textures.Texture;
 
-/*
-private typedef MeshLambertMaterialParamaters = {
-    @:optional var color : Int;
-    @:optional var map : Texture;
-    @:optional var lightMap : Dynamic; //TODO
-    @:optional var specularMap : Dynamic; //TODO
-    @:optional var alphaMap : Dynamic; //TODO
-    @:optional var envMap : Dynamic; //TODO
-    @:optional var fog : Bool;
-    @:optional var shading : Shading;
-    @:optional var wireframe : Bool;
-    @:optional var wireframeLinewidth : Float;
-    @:optional var wireframeLinecap : Dynamic; //TODO
-    @:optional var wireframeLinejoin : Dynamic; //TODO
-    @:optional var vertexColors : Colors;
-    @:optional var skinning : Bool;
-    @:optional var morphTargets : Bool;
+typedef MeshLambertMaterialParamaters = {
+	> MaterialParameters,
+	?color: EitherType<Color,EitherType<Int,String>>,
+	?emissive : EitherType<Color,EitherType<Int,String>>,
+	?emissiveIntensity : Float,
+	?emissiveMap : Texture,
+	?map : Texture,
+	?lightMap : Texture,
+	?lightMapIntensity : Float,
+	?aoMap : Texture,
+	?aoMapIntensity : Float,
+	?specularMap : Texture,
+	?alphaMap : Texture,
+	?envMap : Texture,
+	?combine : Combine,
+	?reflectivity : Float,
+	?refractionRatio : Float,
+	?wireframe : Bool,
+	?wireframeLinewidth : Float,
+	?wireframeLinecap : String,
+	?wireframeLinejoin : String,
+	?skinning : Bool,
+	?morphTargets : Bool,
+	?morphNormals : Bool,
 }
-*/
 
 @:native("THREE.MeshLambertMaterial")
 extern class MeshLambertMaterial extends Material {
-    //var color : Color;
-    var ambient : Color;
     var emissive : Color;
-    var map : Texture;
-    var specularMap : Texture;
-    var envMap : Texture;
-    var combine : Int;
-    var reflectivity : Float;
-    var refractionRatio : Float;
-    var fog : Bool;
-    var wireframe : Bool;
-    var wireframeLinewidth : Float;
-    var wireframeLinecap : String;
-    var wireframeLinejoin : String;
-    var vertexColors : Bool;
-    var skinning : Bool;
-    var morphTargets : Bool;
-    var morphNormals : Bool;
+	var emissiveIntensity : Float;
+	var emissiveMap : Texture;
+	var map : Texture;
+	var lightMap : Texture;
+	var lightMapIntensity : Float;
+	var aoMap : Texture;
+	var aoMapIntensity : Float;
+	var specularMap : Texture;
+	var alphaMap : Texture;
+	var envMap : Texture;
+	var combine : Combine;
+	var reflectivity : Float;
+	var refractionRatio : Float;
+	var wireframe : Bool;
+	var wireframeLinewidth : Float;
+	var wireframeLinecap : String;
+	var wireframeLinejoin : String;
+	var skinning : Bool;
+	var morphTargets : Bool;
+	var morphNormals : Bool;
     function new( ?parameters : Dynamic ) : Void;
 }

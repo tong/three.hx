@@ -1,6 +1,8 @@
 package three.materials;
 
+import haxe.extern.EitherType;
 import three.Lib;
+import three.materials.Material;
 import three.math.Color;
 import three.math.Vector2;
 
@@ -17,7 +19,8 @@ import three.math.Vector2;
 }
 
 typedef LineBasicMaterialParameters = {
-	?color : Int,
+	> MaterialParameters,
+	?color: EitherType<Color,EitherType<Int,String>>,
 	//?opacity : Float,
 	?linewidth : Int,
 	?linecap : LineCap,

@@ -3,12 +3,14 @@ package three.math;
 @:native("THREE.Color")
 extern class Color {
 
+	var isColor : Bool;
 	var r : Float;
 	var g : Float;
 	var b : Float;
 
 	@:overload(function(r:Int,g:Int,b:Int) : Void {})
 	@:overload(function(?value:String) : Void {})
+	@:overload(function(?value:Color) : Void {})
 	function new( ?value : Int ) : Void;
 
 	function add( color : Color ) : Color;
@@ -24,8 +26,10 @@ extern class Color {
 	function fromArray( array : Array<Int>, ?offset : Int ) : Color;
 	function toArray( array : Array<Int>, ?offset : Int ) : Array<Int>;
 	function toJSON() : Dynamic;
+	@:overload( function( value : Color ) : Void {} )
 	@:overload( function( value : String ) : Void {} )
 	function set( value : Int ) : Void;
+	function setScalar( scalar : Int ) : Color;
 	function setHex( hex : Int ) : Color;
 	function setRGB( r : Float, g : Float, b : Float ) : Color;
 	function setHSL( p : Float, q : Float, t : Float ) : Color;

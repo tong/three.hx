@@ -44,6 +44,8 @@ typedef MaterialParameters = {
 @:native("THREE.Material")
 extern class Material extends EventDispatcher {
 
+	//TODO:
+	
 	var uuid(default,never) : Int;
     //var id : Int;
 

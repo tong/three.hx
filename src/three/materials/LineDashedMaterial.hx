@@ -1,9 +1,11 @@
 package three.materials;
 
 import haxe.extern.EitherType;
+import three.materials.Material;
 import three.math.Color;
 
 typedef LineDashedMaterialParameters = {
+	> MaterialParameters,
 	?color : EitherType<Color,EitherType<Int,String>>,
 	?linewidth : Int,
 	?scale : Float,

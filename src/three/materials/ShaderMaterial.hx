@@ -1,8 +1,10 @@
 package three.materials;
 
 import three.Lib;
+import three.materials.Material;
 
 typedef ShaderMaterialParameters<T> = {
+	> MaterialParameters,
 	?defines : Dynamic,
 	?uniforms : T,
 	?vertexShader : String,
@@ -22,6 +24,7 @@ typedef ShaderMaterialParameters<T> = {
 	//?fog : Bool
 }
 
+@:deprecated
 @:native("THREE.ShaderMaterial")
 extern class ShaderMaterial<T> extends Material {
 	var uniforms : T;
@@ -35,10 +38,18 @@ extern class ShaderMaterial<T> extends Material {
 	var fog : Bool;
 	var lights : Bool;
 	var clipping : Bool;
-	//var vertexColors : Colors;
 	var skinning : Bool;
 	var morphTargets : Bool;
 	var morphNormals : Bool;
+	var extensions : {
+		derivatives: Bool,
+		fragDepth: Bool,
+		drawBuffers: Bool,
+		shaderTextureLOD: Bool,
+	};
+  	var defaultAttributeValues: Dynamic;
+  	var index0AttributeName: String;
 	function new( ?parameters : ShaderMaterialParameters<T> ) : Void;
-	//function clone() : ShaderMaterial<TUniforms>;
+	function setValues( parameters : ShaderMaterialParameters<T> ) : Void;
+	//function toJSON() : ShaderMaterial<TUniforms>;
 }

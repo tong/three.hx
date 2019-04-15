@@ -1,23 +1,28 @@
 package three.materials;
 
-import three.textures.Texture;
+import haxe.extern.EitherType;
+import three.materials.Material;
+import three.math.Color;
 import three.math.Vector2;
+import three.textures.Texture;
+
+typedef SpriteMaterialParamaters = {
+	> MaterialParameters,
+	?color: EitherType<Color,EitherType<Int,String>>,
+	?map : Texture,
+	?rotation : Float
+}
 
 @:native("THREE.SpriteMaterial")
 extern class SpriteMaterial extends Material {
-    var map : Texture;
-    var uvScale : Vector2;
-    var sizeAttenuation : Bool;
-    //var color : Color;
-    var uvOffset : Vector2;
-    var fog : Bool;
-    var useScreenCoordinates : Bool;
-    var scaleByViewport : Bool;
-    // var depthTest : Bool; // false
-    var alignment : Vector2; // SpriteAlignment.center.clone()
-    function new( ?parameters : Dynamic ) : Void;
+	var map : Texture;
+	var rotation : Float;
+	var isSpriteMaterial(default,null) : Bool;
+    function new( ?parameters : SpriteMaterialParamaters ) : Void;
+    function setValues( parameters : SpriteMaterialParamaters ) : Void;
 }
 
+/*
 class SpriteAlign {
     public static var topLeft = new Vector2(1, -1);
     public static var topCenter = new Vector2(0, -1);
@@ -29,3 +34,4 @@ class SpriteAlign {
     public static var bottomCenter = new Vector2(0, 1);
     public static var bottomRight = new Vector2(-1, 1);
 }
+*/
