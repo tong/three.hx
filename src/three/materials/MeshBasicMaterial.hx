@@ -1,11 +1,12 @@
 package three.materials;
 
+import haxe.extern.EitherType;
 import three.Lib;
 import three.math.Color;
 import three.textures.Texture;
 
 typedef MeshBasicMaterialParameters = {
-    ?color: Color,
+    ?color: EitherType<Color,EitherType<Int,String>>,
     ?opacity: Float,
     ?map: Texture,
     ?aoMap: Texture,
