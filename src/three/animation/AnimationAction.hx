@@ -6,7 +6,7 @@ import three.core.Object3D;
 
 @:native("THREE.AnimationAction")
 extern class AnimationAction {
-	var loop : Bool;
+	var loop(default,null) : Bool;
 	var time : Float;
 	var timeScale : Float;
 	var weight : Float;
