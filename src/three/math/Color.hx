@@ -3,7 +3,7 @@ package three.math;
 @:native("THREE.Color")
 extern class Color {
 
-	var isColor : Bool;
+	var isColor(default,null) : Bool;
 	var r : Float;
 	var g : Float;
 	var b : Float;
@@ -18,10 +18,10 @@ extern class Color {
 	function addScalar( s : Float ) : Color;
 	function clone() : Color;
 	function copy( color : Color ) : Color;
-	function convertGammaToLinear( color : Color, ?gammaFactor : Float ) : Color;
-	function convertLinearToGamma() : Color;
 	function copyCammaToLinear( color : Color ) : Color;
 	function copyLinearToGamma( color : Color ) : Color;
+	function convertGammaToLinear( color : Color, ?gammaFactor : Float ) : Color;
+	function convertLinearToGamma() : Color;
 	function equals( color : Color) : Bool;
 	function fromArray( array : Array<Int>, ?offset : Int ) : Color;
 	function toArray( array : Array<Int>, ?offset : Int ) : Array<Int>;
