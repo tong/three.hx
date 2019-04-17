@@ -45,6 +45,8 @@ typedef MaterialParameters = {
 extern class Material extends EventDispatcher {
 
 	//TODO:
+
+	var alphaTest : Float;
 	
 	var uuid(default,never) : Int;
     //var id : Int;
@@ -66,6 +68,7 @@ extern class Material extends EventDispatcher {
     var blendDst : BlendingDestinationFactor; // OneMinusSrcAlphaFactor
     var blendSrcAlpha : BlendingDestinationFactor;
     var blendDstAlpha : BlendingDestinationFactor;
+    var blendEquation : BlendingEquation;
     var blendEquationAlpha : BlendingEquation;
 
     var depthFunc : DepthModes;
@@ -85,8 +88,6 @@ extern class Material extends EventDispatcher {
     var polygonOffset : Bool;
     var polygonOffsetFactor : Float;
     var polygonOffsetUnits : Float;
-
-    var alphaTest : Float;
 
     var visible : Float;
 

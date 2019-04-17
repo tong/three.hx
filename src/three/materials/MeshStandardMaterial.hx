@@ -1,11 +1,13 @@
 package three.materials;
 
 import haxe.extern.EitherType;
+import three.materials.Material;
 import three.math.Color;
 import three.math.Vector2;
 import three.textures.Texture;
 
 typedef MeshStandardMaterialParameters = {
+	> MaterialParameters,
 	?color : Color,
 	?roughness : Float,
 	?metalness : Float,

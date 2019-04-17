@@ -154,12 +154,14 @@ class Lib {
     var IntType = 1013;
     var UnsignedIntType = 1014;
     var FloatType = 1015;
+    var HalfFloatType = 1016;
 }
 
 @:enum abstract PixelType(Int) from Int to Int {
-    var UnsignedShort4444Type = 1016;
-    var UnsignedShort5551Type = 1017;
-    var UnsignedShort565Type = 1018;
+    var UnsignedShort4444Type = 1017;
+    var UnsignedShort5551Type = 1018;
+    var UnsignedShort565Type = 1019;
+	var UnsignedInt248Type = 1020;
 }
 
 @:enum abstract PixelFormat(Int) from Int to Int {

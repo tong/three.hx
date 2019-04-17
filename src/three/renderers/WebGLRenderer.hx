@@ -124,6 +124,7 @@ extern class WebGLRenderer implements Renderer {
     function setClearColor( color : EitherType<Color,EitherType<String,Float>>, ?alpha : Float ) : Void;
     function getClearColor() : Color;
     function getClearAlpha() : Float;
+    function setClearAlpha( alpha : Float ) : Void;
     function clear( ?color : Bool, ?depth : Bool, ?stencil : Bool ) : Void;
     function clearDepth() : Void;
     function clearStencil() : Void;

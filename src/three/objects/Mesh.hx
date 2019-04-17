@@ -10,7 +10,7 @@ import three.materials.Material;
 @:native("THREE.Mesh")
 extern class Mesh extends Object3D {
 
-    var geometry : Geometry;
+    var geometry : EitherType<Geometry,BufferGeometry>;
     var material : Material;
 
     function new( geometry : EitherType<Geometry,BufferGeometry>, ?material : Material ) : Void;
