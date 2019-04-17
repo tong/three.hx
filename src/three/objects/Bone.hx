@@ -5,8 +5,6 @@ import three.core.Object3D;
 @:native("THREE.Bone")
 extern class Bone extends Object3D {
 	var skin : SkinnedMesh;
-	//var skinMatrix : Matrix4;
-	function new( skin : SkinnedMesh ) : Void;
-	//function update( parentSkinMatrix : Matrix4, ?forceUpdate : Bool ) : Void;
-	//function copy( source : Bone ) : Void;
+	var isBone : Bool;
+	function new() : Void;
 }
