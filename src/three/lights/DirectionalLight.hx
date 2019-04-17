@@ -1,6 +1,8 @@
 package three.lights;
 
+import haxe.extern.EitherType;
 import three.core.Object3D;
+import three.math.Color;
 import three.math.Vector3;
 
 @:native("THREE.DirectionalLight")
@@ -41,7 +43,7 @@ extern class DirectionalLight extends Light {
     var shadowCamera : Dynamic; // ???
     var shadowMatrix : Dynamic; // ???
 
-    function new( hex : Int, ?intensity : Float ) : Void;
+    function new( ?color : EitherType<Color,EitherType<Int,String>>, ?intensity : Float ) : Void;
 
     // override function clone() : DirectionalLight;
 }

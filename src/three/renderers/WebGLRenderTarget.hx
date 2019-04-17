@@ -8,11 +8,11 @@ import three.textures.Texture;
 typedef WebGLRenderTargetOptions = {
     ?wrapS : WrappingMode,
     ?wrapT : WrappingMode,
-    ?magFilter : Filter,
-    ?minFilter : Filter,
+    ?magFilter : TextureFilter,
+    ?minFilter : TextureFilter,
     ?anisotropy : Int,
     ?format : PixelFormat,
-    ?type : DataType,
+    ?type : TextureDataType,
     ?depthBuffer : Bool,
     ?stencilBuffer : Bool,
     ?shareDepthFrom : WebGLRenderTarget

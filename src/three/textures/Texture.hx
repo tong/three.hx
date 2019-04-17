@@ -2,19 +2,20 @@ package three.textures;
 
 import js.html.Element;
 import three.Lib;
+import three.core.EventDispatcher;
 import three.math.Matrix3;
 import three.math.Vector2;
-import three.core.EventDispatcher;
-
-typedef Mapping = Dynamic; //TODO
 
 @:native("THREE.Texture")
 extern class Texture extends EventDispatcher {
 
+	static var DEFAULT_IMAGE(default,never) : Dynamic;
+	static var DEFAULT_MAPPING(default,never) : Dynamic;
+
 	var onUpdate : Void->Void;
 
-	var uuid : Int;
 	var id : Int;
+	var uuid : Int;
 	var name : String;
 
 	//var sourceFile : String;
@@ -26,8 +27,8 @@ extern class Texture extends EventDispatcher {
 	var wrapS : WrappingMode; // ClampToEdgeWrapping
 	var wrapT : WrappingMode; // ClampToEdgeWrapping
 
-	var magFilter : Filter; // LinearFilter
-	var minFilter : Filter; // LinearMipMapLinearFilter
+	var magFilter : TextureFilter; // LinearFilter
+	var minFilter : TextureFilter; // LinearMipMapLinearFilter
 
 	var anisotropy : Int; // 1
 
@@ -49,8 +50,7 @@ extern class Texture extends EventDispatcher {
 
 	var needsUpdate : Bool;
 
-	function new( ?image : Element, ?mapping : Mapping, ?wrapS : WrappingMode, ?wrapT : WrappingMode, ?magFilter : Filter, ?minFilter : Filter, ?format : Int, ?type : Int, ?anisotropy : Int ) : Void;
-
+	function new( ?image : Element, ?mapping : Mapping, ?wrapS : WrappingMode, ?wrapT : WrappingMode, ?magFilter : TextureFilter, ?minFilter : TextureFilter, ?format : Int, ?type : Int, ?anisotropy : Int ) : Void;
 	function updateMatrix() : Void;
 	function clone() : Texture;
 	function copy( source : Texture ) : Texture;

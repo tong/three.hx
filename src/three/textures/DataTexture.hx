@@ -8,7 +8,7 @@ extern class DataTexture extends Texture {
 	function new( data : Dynamic,
 				  width : Int, height : Int,
 				  ?format : PixelFormat,
-				  ?type : DataType,
+				  ?type : TextureDataType,
 				  ?mapping : Mapping,
 				  ?wrapS : WrappingMode,
 				  ?wrapT : WrappingMode,

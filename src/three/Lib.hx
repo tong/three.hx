@@ -113,6 +113,26 @@ class Lib {
 	var AddOperation = 2;
 }
 
+@:enum abstract ToneMapping(Int) from Int to Int {
+	var NoToneMapping = 0;
+	var LinearToneMapping = 1;
+	var ReinhardToneMapping = 2;
+	var Uncharted2ToneMapping = 3;
+	var CineonToneMapping = 4;
+	var ACESFilmicToneMapping = 5;
+}
+
+@:enum abstract Mapping(Int) from Int to Int {
+	var UVMapping = 300;
+	var CubeReflectionMapping = 301;
+	var CubeRefractionMapping = 302;
+	var EquirectangularReflectionMapping = 303;
+	var EquirectangularRefractionMapping = 304;
+	var SphericalReflectionMapping = 305;
+	var CubeUVReflectionMapping = 306;
+	var CubeUVRefractionMapping = 307;
+}
+
 @:enum abstract TextureConstant(Int) from Int to Int {
     var MultiplyOperation = 0;
     var MixOperation = 1;
@@ -137,7 +157,7 @@ class Lib {
     var MirroredRepeatWrapping = 1002;
 }
 
-@:enum abstract Filter(Int) from Int to Int {
+@:enum abstract TextureFilter(Int) from Int to Int {
     var NearestFilter = 1003;
     var NearestMipMapNearestFilter = 1004;
     var NearestMipMapLinearFilter = 1005;
@@ -146,7 +166,7 @@ class Lib {
     var LinearMipMapLinearFilter = 1008;
 }
 
-@:enum abstract DataType(Int) from Int to Int {
+@:enum abstract TextureDataType(Int) from Int to Int {
     var UnsignedByteType = 1009;
     var ByteType = 1010;
     var ShortType = 1011;
@@ -206,7 +226,7 @@ class Lib {
     var WrapAroundEnding = 2402;
 }
 
-@:enum abstract Encoding(Int) from Int to Int {
+@:enum abstract TextureEncoding(Int) from Int to Int {
     var LinearEncoding = 3000;
     var sRGBEncoding = 3001;
     var GammaEncoding = 3007;
