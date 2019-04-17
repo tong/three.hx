@@ -13,11 +13,17 @@ import three.math.Vector4;
 @:native("THREE.BufferAttribute")
 extern class BufferAttribute {
 
+	var uuid(default,null) : String;
 	var array(default,null) : Dynamic;
 	var itemSize(default,null) : Int;
-	var length(default,null) : Int;
-	var count(default,null) : Int;
+	@:native("dynamic") var dynamic_(default,null) : Bool;
+	var updateRange(default,null) : { offset : Float, count : Float };
+	var version : Int;
+	var normalized : Bool;
 	var needsUpdate : Bool;
+	var count(default,null) : Int;
+
+	var length(default,null) : Int;
 
 	function new( array : ArrayBufferView, itemSize : Int, ?normalized : Bool ) : Void;
 
@@ -42,6 +48,7 @@ extern class BufferAttribute {
 	function setXY( index : Int, x : Dynamic, y : Dynamic ) : Void;
 	function setXYZ( index : Int, x : Dynamic, y : Dynamic, z : Dynamic ) : Void;
 	function setXYZW( index : Int, x : Dynamic, y : Dynamic, z : Dynamic, w : Int ) : Void;
+	function onUpload( callback : Void->Void ) : BufferAttribute;
 	function clone() : BufferAttribute;
 }
 
