@@ -1,13 +1,13 @@
 package three.geometries;
 
 typedef SphereParameters = {
-	var radius: Float;
-	var widthSegments: Int;
-	var heightSegments: Int;
-	var phiStart: Float;
-	var phiLength: Float;
-	var thetaStart: Float;
-	var thetaLength: Float;
+	radius: Float,
+	widthSegments: Int,
+	heightSegments: Int,
+	phiStart: Float,
+	phiLength: Float,
+	thetaStart: Float,
+	thetaLength: Float,
 }
 
 @:native("THREE.SphereGeometry")

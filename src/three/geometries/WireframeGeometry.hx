@@ -6,5 +6,5 @@ import three.core.Geometry;
 
 @:native("THREE.WireframeGeometry")
 extern class WireframeGeometry extends three.core.BufferGeometry {
-	function new( ?geometry : EitherType<Geometry,BufferGeometry> ) : Void;
+	function new( geometry : EitherType<Geometry,BufferGeometry> ) : Void;
 }
