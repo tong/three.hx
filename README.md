@@ -1,10 +1,11 @@
 
 # Three.hx
 
-[Haxe](https://haxe.org/)→[Threejs](http://threejs.org/) type definitions.
-
 [![Build Status](https://travis-ci.org/tong/three.hx.svg?branch=master)](https://travis-ci.org/tong/three.hx)
 
+[Haxe](https://haxe.org/)→[Threejs](http://threejs.org/) type definitions.
+
+Requires haxe >= 4
 
 ### Compiler Defines
 
