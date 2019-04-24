@@ -12,6 +12,7 @@ import three.lights.Light;
 import three.math.Color;
 import three.math.Vector2;
 import three.math.Vector4;
+import three.renderers.webgl.WebGLCapabilities;
 import three.renderers.webgl.WebGLExtensions;
 import three.renderers.webgl.WebGLShadowMap;
 import three.renderers.webgl.WebGLState;
@@ -89,6 +90,7 @@ extern class WebGLRenderer implements Renderer {
     var info : RenderInfo;
 
     var extensions : WebGLExtensions;
+    var capabilities : WebGLCapabilities;
 
     function new( ?parameters : WebGLRendererParameters ) : Void;
 

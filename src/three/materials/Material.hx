@@ -100,6 +100,6 @@ extern class Material extends EventDispatcher {
     function toJSON( ?meta : Dynamic ) : Dynamic;
     function clone() : Material;
     function copy( source : Dynamic ) : Void;
-    function update() : Void;
+    //function update() : Void;
     function dispose() : Void;
 }
