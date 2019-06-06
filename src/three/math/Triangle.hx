@@ -6,12 +6,6 @@ extern class Triangle {
     var b : Vector3;
     var c : Vector3;
     function new(?a:Vector3, ?b:Vector3, ?c:Vector3) : Void;
-    // "Same field name can't be use for both static and instance : normal"
-    // static function normal(a:Vector3, b:Vector3, c:Vector3, ?optionalTarget:Vector3) : Vector3;
-    // "Same field name can't be use for both static and instance : barycoordFromPo"
-    // static function barycoordFromPoint(point:Vector3, a:Vector3, b:Vector3, c:Vector3, ?optionalTarget:Vector3) : Vector3;
-    // "Same field name can't be use for both static and instance : containsPoint"
-    // static function containsPoint(point:Vector3, a:Vector3, b:Vector3, c:Vector3) : Bool;
     function set(a:Vector3, b:Vector3, c:Vector3) : Triangle; // this
     function setFromPointsAndIndices(points:Array<Vector3>, i0:Int, i1:Int, i2:Int) : Triangle; // this
     function copy(triangle:Triangle) : Triangle; // this
@@ -23,4 +17,9 @@ extern class Triangle {
     function containsPoint(point:Vector3) : Bool;
     function equals(triangle:Triangle) : Bool;
     function clone() : Triangle;
+	static function getNormal( a : Vector3, b : Vector3, c : Vector3, target : Vector3 ) : Vector3;
+	static function getBarycoord( point : Vector3, a : Vector3, b : Vector3, c : Vector3 ) : Vector3;
+	static function containsPoint( point : Vector3, a : Vector3, b : Vector3, c : Vector3 ) : Bool;
+	static function getUV( point : Vector3, p1 : Vector3, p2 : Vector3, p3 : Vector3, uv1 : Vector3, uv2 : Vector3, uv3 : Vector3, target : Vector3  ) : Vector2;
+	static function isFrontFacing( a : Vector3, b : Vector3, c : Vector3, direction : Vector3 ) : Bool;
 }

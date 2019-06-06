@@ -50,6 +50,7 @@ extern class BufferAttribute {
 	function setXYZW( index : Int, x : Dynamic, y : Dynamic, z : Dynamic, w : Int ) : Void;
 	function onUpload( callback : Void->Void ) : BufferAttribute;
 	function clone() : BufferAttribute;
+	function toJSON() : Dynamic;
 }
 
 @:native("THREE.Int8BufferAttribute")

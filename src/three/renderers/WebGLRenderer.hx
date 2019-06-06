@@ -46,6 +46,7 @@ typedef WebGLRendererParameters = {
     ?premultipliedAlpha : Bool,
     ?preserveDrawingBuffer : Bool,
     ?logarithmicDepthBuffer : Bool,
+	?failIfMajorPerformanceCaveat : Bool
 }
 
 @:native("THREE.WebGLRenderer")
@@ -164,7 +165,7 @@ extern class WebGLRenderer implements Renderer {
     function setTexture(texture:Texture, slot:Int) : Void;
     function getRenderTarget() : WebGLRenderTarget;
     function setRenderTarget( ?renderTarget : WebGLRenderTarget ) : Void;
-    function readRenderTargetPixels( renderTarget : WebGLRenderTarget, x : Int, y : Int, width : Int, height : Int, buffer : Dynamic ) : Void;
+    function readRenderTargetPixels( renderTarget : WebGLRenderTarget, x : Int, y : Int, width : Int, height : Int, buffer : Dynamic, ?activeCubeFaceIndex : Int ) : Void;
 
     function copyFramebufferToTexture( position : Vector2, texture : Texture, ?level : Int ) : Void;
 }
