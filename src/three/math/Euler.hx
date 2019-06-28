@@ -30,5 +30,5 @@ extern class Euler {
 	function fromArray( a : Array<Float> ) : Euler;
 	function toArray( ?array : Array<Float>, ?offset : Int ) : Array<Float>;
 	function toVector3( ?optionalResult : Vector3 ) : Vector3;
-	function onChange( callback : Void->Void ) : Vector3;
+	//function onChange( callback : Void->Void ) : Vector3;
 }

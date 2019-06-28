@@ -33,5 +33,5 @@ extern class Quaternion {
     function equals( q : Quaternion ) : Bool;
     function fromArray( array : Array<Float>, ?offset : Int ) : Quaternion;
     function toArray( ?array : Array<Float>, ?offset : Int ) : Array<Float>;
-    function onChange( callback : Void->Void ) : Quaternion;
+    //function onChange( callback : Void->Void ) : Quaternion;
 }

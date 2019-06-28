@@ -6,6 +6,7 @@ import three.core.Raycaster;
 
 @:native("THREE.LOD")
 extern class LOD extends Object3D {
+	var autoUpdate : Bool;
 	var isLOD(default,null) : Bool;
     function addLevel( object : Object3D, ?distance : Float ) : Void;
     function getObjectForDistance( distance : Float ) : Object3D;

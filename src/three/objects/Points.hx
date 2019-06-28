@@ -15,4 +15,6 @@ extern class Points extends Object3D {
     var material : EitherType<Material,Array<Material>>;
     function new( ?geometry : EitherType<Geometry,BufferGeometry>, ?material : EitherType<Material,Array<Material>> ) : Void;
     function raycast( raycaster : Raycaster, intersects : Array<Intersection> ) : Void;
+    function updateMorphTargets() : Void;
+    function clone() : Points;
 }
