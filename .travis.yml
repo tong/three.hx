@@ -5,11 +5,13 @@ os:
 
 haxe:
   - "3.4.7"
+  - "4.0.0-rc.3"
   - development
 
 matrix:
   allow_failures:
     - haxe: "3.4.7"
+    - haxe: development
 
 install:
   - haxelib dev three.hx .
