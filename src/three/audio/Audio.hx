@@ -6,7 +6,6 @@ import js.html.audio.AudioContext;
 import js.html.audio.AudioNode;
 import js.html.audio.AudioBufferSourceNode;
 import js.html.audio.GainNode;
-import js.html.audio.PannerNode;
 import three.core.Object3D;
 
 @:native("THREE.Audio")
@@ -19,6 +18,7 @@ extern class Audio extends Object3D {
 	var loop : Bool;
 	var startTime : Float;
 	var offset : Float;
+	var duration : Float;
 	var playbackRate : Float;
 	var isPlaying : Bool;
 	var hasPlaybackControl : Bool;

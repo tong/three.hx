@@ -24,7 +24,7 @@ typedef ShaderMaterialParameters<T> = {
 	//?fog : Bool
 }
 
-@:deprecated
+//@:deprecated
 @:native("THREE.ShaderMaterial")
 extern class ShaderMaterial<T> extends Material {
 	var uniforms : T;
