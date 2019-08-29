@@ -5,7 +5,6 @@ import js.html.ProgressEvent;
 import three.textures.DataTexture;
 
 @:native("THREE.DataTextureLoader")
-extern class DataTextureLoader {
-	function new( ?manager : Dynamic ) : Void;
+extern class DataTextureLoader extends Loader {
 	function load( url : String, onLoad : DataTexture->Void, ?onProgress : ProgressEvent->Void, ?onError : ErrorEvent->Void ) : Void;
 }

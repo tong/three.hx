@@ -3,6 +3,24 @@ package three.loaders;
 import three.core.Geometry;
 import three.materials.Material;
 
+//TODO
+
+//interface LoaderHandler {}
+
+@:native("THREE.Loader")
+extern class Loader {
+	//static var Handlers : LoaderHandler;
+	var crossOrigin : String;
+	var path : String;
+	var resourcePath : String;
+	var manager : String;
+	function new( ?manager : LoadingManager );
+	function setCrossOrigin() : Loader;
+	function setPath( path : String ) : Loader;
+	function setResourcePath( resourcePath : String ) : Loader;
+}
+
+/*
 @:native("THREE.Loader")
 extern class Loader {
 
@@ -24,3 +42,4 @@ extern class Loader {
     function needsTangents( materials:Array<Material> ) : Bool;
     function createMaterial( m : Material, texturePath : String, ?crossOrigin : String ) : Bool;
 }
+*/

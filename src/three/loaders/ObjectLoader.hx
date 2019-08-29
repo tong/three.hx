@@ -1,22 +1,21 @@
 package three.loaders;
 
+import js.html.ErrorEvent;
+import js.html.ProgressEvent;
+import three.animation.AnimationClip;
 import three.core.Geometry;
 import three.core.Object3D;
 import three.materials.Material;
+import three.textures.Texture;
 
 @:native("THREE.ObjectLoader")
-extern class ObjectLoader {
-
-	function new( ?manager : Dynamic ) : Void;
-
-	function setCrossOrigin( value : String ) : Void;
-
-	//function load( url : String, onLoad : Dynamic->Void, ?onProgress : Dynamic->Void, ?onError : Dynamic->Void ) : Void;
-	//function load( url : String, resultCallback : Geometry->Material->Void, ?texturePath : String ) : Void;
-	function load( url : String, resultCallback : Object3D->Void, ?texturePath : String ) : Void;
-
+extern class ObjectLoader extends Loader {
+	function load( url : String, onLoad : Object3D->Void, ?onProgress : ProgressEvent->Void, ?onError: ErrorEvent->Void ) : Void;
 	function parse( json : Dynamic ) : Dynamic;
-	function parseGeometries( json : Dynamic ) : Dynamic;
-	function parseMaterials( json : Dynamic ) : Dynamic;
-	//function parseObject() : Dynamic;
+	function parseGeometries( json : Dynamic ) : Array<Dynamic>;
+	function parseMaterials( json : Dynamic, textures : Array<Texture> ) : Array<Material>;
+	function parseAnimations( json : Dynamic ) : Array<AnimationClip>;
+	function parseImages( json : Dynamic ) : Dynamic;
+	function parseTextures( json : Dynamic, images : Dynamic ) : Array<Texture>;
+	function parseObject<T:Object3D>( json : Dynamic, geometries : Array<Dynamic>, materials : Array<Material> ) : T;
 }
