@@ -23,7 +23,7 @@ typedef MaterialParameters = {
 	?depthTest : Bool,
 	?depthWrite : Bool,
 	?fog : Bool,
-	?lights : Bool,
+	//?lights : Bool,
 	?name : String,
 	?opacity : Float,
 	?overdraw : Float,
@@ -39,6 +39,13 @@ typedef MaterialParameters = {
 	?vertexColors : Colors,
 	?vertexTangents : Bool,
 	?visible : Bool,
+	?stencilWrite : Bool,
+	?stencilFunc : StencilFunc,
+	?stencilRef : Float,
+	?stencilMask : Float,
+	?stencilFail : StencilOp,
+	?stencilZFail : StencilOp,
+	?stencilZPass : StencilOp,
 };
 
 @:native("THREE.Material")

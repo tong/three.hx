@@ -11,6 +11,7 @@ extern class AnimationMixer extends three.core.EventDispatcher {
 	function existingAction( clip : AnimationClip, ?root : Dynamic ) : AnimationAction;
 	function stopAllAction() : AnimationAction;
 	function update( delta : Float) : AnimationMixer;
+	function setTime( timeInSeconds : Float) : AnimationMixer;
 	function getRoot() : Dynamic;
 	function uncacheClip( clip : AnimationClip ) : Void;
 	function uncacheRoot( root : Dynamic ) : Void;

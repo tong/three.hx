@@ -201,7 +201,7 @@ class Lib {
     var RGBA_S3TC_DXT1_Format = 2002;
     var RGBA_S3TC_DXT3_Format = 2003;
     var RGBA_S3TC_DXT5_Format = 2004;
-    // PVRTC compressed texture formats
+    // PVRTC compressed texture formats-
     var RGB_PVRTC_4BPPV1_Format = 2100;
     var RGB_PVRTC_2BPPV1_Format = 2101;
     var RGBA_PVRTC_4BPPV1_Format = 2102;
@@ -240,4 +240,26 @@ class Lib {
 @:enum abstract DepthPacking(Int) from Int to Int {
     var BasicDepthPacking = 3200;
     var RGBADepthPacking = 3201;
+}
+
+@:enum abstract StencilOp(Int) from Int to Int {
+	var ZeroStencilOp = 0;
+	var KeepStencilOp = 7680;
+	var ReplaceStencilOp = 7681;
+	var IncrementStencilOp = 7682;
+	var DecrementStencilOp = 7683;
+	var IncrementWrapStencilOp = 34055;
+	var DecrementWrapStencilOp = 34056;
+	var InvertStencilOp = 5386;
+}
+
+@:enum abstract StencilFunc(Int) from Int to Int {
+	var NeverStencilFunc = 512;
+	var LessStencilFunc = 513;
+	var EqualStencilFunc = 514;
+	var LessEqualStencilFunc = 515;
+	var GreaterStencilFunc = 516;
+	var NotEqualStencilFunc = 517;
+	var GreaterEqualStencilFunc = 518;
+	var AlwaysStencilFunc = 519;
 }
