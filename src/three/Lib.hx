@@ -17,7 +17,7 @@ class Lib {
 				if( cp.endsWith( '/three.hx/src/' ) ) {
 					cp = cp.substr( 0, cp.length - 5 );
 					var ext = Context.defined( 'debug' ) ? 'js' : 'min.js';
-					Compiler.includeFile( '$cp/res/script/three.$ext' );
+					Compiler.includeFile( '$cp/lib/three.$ext' );
 					break;
 				}
 			}
