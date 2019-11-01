@@ -12,7 +12,7 @@ Requires haxe >= 4
 * `-D threejs_include`: Include `three.js` in generated output (`three.min.js` if `-D debug` is not set)
 
 
-### copy/paste help
+## copy/paste help
 
 Usually you copy paste code from examples on the internet.
 Here are some quick tips to get these examples started:
@@ -83,7 +83,7 @@ document.body.appendChild(renderer.domElement);
 ```
 
 ```haxe
-// haxe
+// Haxe
 import js.Browser.document;
 
 document.body.appendChild(renderer.domElement);
@@ -115,7 +115,7 @@ Haxe just wants to know a bit more.
 First lets fix this js code so it will work and after that a better fix?
 
 ```haxe
-//haxe
+// Haxe
 var animate;
 animate = function (?time:Float) {
 	window.requestAnimationFrame( animate );
@@ -145,7 +145,7 @@ To fix that just send `0`: `animate(0)`
 Better solution would be, to make a different function for this.
 
 ```haxe
-// haxe
+// Haxe
 function animate(?time:Float) {
 	window.requestAnimationFrame(animate);
 
@@ -165,7 +165,7 @@ animate();
 
 
 
-``````
+
 
 
 **quick and dirty import**
@@ -189,7 +189,7 @@ import three.scenes.Scene;
 
 and make sure the `requestAnimationFrame` is attached to the `window`
 
-### Haxelib
+## Haxelib
 
 Currently you can't install these externs via Haxelib.
 But not to worry!
