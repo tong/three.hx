@@ -26,7 +26,7 @@ Every line of code in JavaScript will start with `THREE`:
 var scene = new THREE.Scene();
 ```
 
-You could explane that as a package name, in Haxe we are not allowed to have package names with capitals:
+You could explain that as a package name, in Haxe we are not allowed to have package names with capitals:
 
 ```haxe
 // Haxe
@@ -47,7 +47,7 @@ import three.scenes.Scene;
 var scene = new Scene();
 ```
 
-If you have VSCode installed with Haxe 4, you can remove all the `THREE`'s and the editor will give you feedback about the packages you shoul import
+If you have VSCode installed with Haxe 4, you can remove all the `THREE`'s and the editor will give you feedback about the packages you should import
 
 
 
@@ -60,7 +60,7 @@ To update the code 60fps javascript examples use:
 requestAnimationFrame( animate );
 ```
 
-This is something that JavaScript will fix automaticly, but Haxe wants to know where `requestAnimationFrame` comes from: `window`
+This is something that JavaScript will fix automatically, but Haxe wants to know where `requestAnimationFrame` comes from: `window`
 
 ```haxe
 // haxe
@@ -75,7 +75,7 @@ Import and write window before you code and it will work
 
 **document**
 
-Again something that js is automaticly works out for you:
+Again something that JavaScript fixes automatically for you:
 
 ```js
 // js
@@ -94,7 +94,7 @@ Only have to import and it will work
 
 **animate**
 
-Another block of code that will not work automaticly
+Another block of code that will not work automatically
 
 
 ```js
@@ -112,7 +112,7 @@ animate();
 ````
 
 Haxe just wants to know a bit more.
-First lets fix this js code so it will work and after that a better fix?
+First lets fix this JavaScript code so it will work and after that a better fix?
 
 ```haxe
 // Haxe
@@ -129,8 +129,8 @@ animate = function (?time:Float) {
 animate(0);
 ````
 
-As we previousily saw, `requestAnimationFrame` needs `window`.
-New here is `?time:Float`, the [documentation](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) also mentions that the callback (in this case `animate`) has a parameter. For some reason, you can ignore this in js.
+As we previously saw, `requestAnimationFrame` needs `window`.
+New here is `?time:Float`, the [documentation](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) also mentions that the callback (in this case `animate`) has a parameter. For some reason, you can ignore this in JavaScript.
 
 Haxe likes you to be more strict, and so `time`;
 
