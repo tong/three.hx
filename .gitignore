@@ -7,3 +7,4 @@ res/texture/
 test/bin/
 test/unit*
 haxedoc.xml
+.vscode

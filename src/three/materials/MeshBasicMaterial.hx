@@ -26,6 +26,8 @@ typedef MeshBasicMaterialParameters = {
     ?wireframeLinejoin: String,
     ?skinning: Bool,
     ?morphTargets: Bool,
+	?side:Side,
+	?transparent:Bool,
 }
 
 @:native("THREE.MeshBasicMaterial")

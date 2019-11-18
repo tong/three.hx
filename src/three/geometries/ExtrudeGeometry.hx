@@ -5,16 +5,19 @@ import three.core.Geometry;
 import three.extras.core.Shape;
 
 typedef ExtrudeGeometryOptions = {
-	?curveSegments : Int,
-	?steps : Int,
-	?amount : Float,
-	?bevelEnabled : Bool,
-	?bevelThickness : Float,
-	?bevelSize : Float,
-	?bevelSegments : Int,
-	?extrudePath : Dynamic, //CurvePath,
-	?uvGenerator : Dynamic,
-}
+	?curveSegments:Int,
+	?steps:Int,
+	?depth:Float,
+	?bevelEnabled:Bool,
+	?bevelThickness:Float,
+	?bevelSize:Float,
+	?bevelOffset:Float,
+	?bevelSegments:Int,
+	?extrudePath:Dynamic,
+	// CurvePath,
+	?uvGenerator:Dynamic,
+	// ???
+	?amount:Float,}
 
 @:native("THREE.ExtrudeGeometry")
 extern class ExtrudeGeometry extends Geometry {

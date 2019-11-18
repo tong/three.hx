@@ -1,0 +1,6 @@
+-js app.js
+-main App
+-lib three.hx
+-dce full
+-debug
+#-D three_include_js
