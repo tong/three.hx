@@ -1,5 +1,6 @@
 package three.core;
 
+import haxe.extern.EitherType;
 import three.math.Box3;
 import three.math.Matrix3;
 import three.math.Sphere;
@@ -34,6 +35,7 @@ extern class BufferGeometry {
     function setIndex( index : Int ) : Void;
     function addAttribute( name : String, attribute : BufferAttribute ) : Void;
     function getAttribute( name : String ) : BufferAttribute;
+    function setAttribute( name : String, attribute: EitherType<BufferAttribute,InterleavedBufferAttribute> ) : BufferAttribute;
     function removeAttribute( name : String ) : Void;
     function addGroup( start : Int, count : Int, materialIndex : Int ) : Void;
     function clearGroups() : Void;

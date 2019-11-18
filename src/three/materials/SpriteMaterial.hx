@@ -10,12 +10,14 @@ typedef SpriteMaterialParamaters = {
 	> MaterialParameters,
 	?color: EitherType<Color,EitherType<Int,String>>,
 	?map : Texture,
+	?alphaMap : Texture,
 	?rotation : Float
 }
 
 @:native("THREE.SpriteMaterial")
 extern class SpriteMaterial extends Material {
 	var map : Texture;
+	var alphaMap : Texture;
 	var rotation : Float;
 	var isSpriteMaterial(default,null) : Bool;
     function new( ?parameters : SpriteMaterialParamaters ) : Void;

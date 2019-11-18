@@ -1,5 +1,6 @@
 package three.core;
 
+import three.Lib;
 #if (haxe_ver >= 4)
 import js.lib.ArrayBufferView;
 #else
@@ -16,7 +17,7 @@ extern class BufferAttribute {
 	var uuid(default,null) : String;
 	var array(default,null) : Dynamic;
 	var itemSize(default,null) : Int;
-	@:native("dynamic") var dynamic_(default,null) : Bool;
+	var usage(default,null) : Usage;
 	var updateRange(default,null) : { offset : Float, count : Float };
 	var version : Int;
 	var normalized : Bool;

@@ -7,7 +7,7 @@ extern class WebGLProgram {
     static function fetchAttributeLocations( gl : Dynamic, program : Dynamic, identifiers : Dynamic ) : Dynamic;
     static function filterEmptyLine( string : String ) : Bool;
     var id : Int;
-    var code : Dynamic;
+    var cacheKey : Dynamic;
     var usedTimes : Int;
     var program : Dynamic;
     var vertexShader : Dynamic;

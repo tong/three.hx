@@ -7,7 +7,7 @@ extern class WebGLPrograms {
     var programs : Array<WebGLProgram>;
     var shaderIDs : Dynamic;
     var parameterNames : Array<String>;
-    function new( renderer : WebGLRenderer, capabilities : WebGLCapabilities )  : Void;
+    function new( renderer : WebGLRenderer, extensions: WebGLExtensions, capabilities : WebGLCapabilities )  : Void;
     function allocateBones( object : Dynamic ) : Int;
     function allocateLights( lights : Dynamic ) : Dynamic;
     function allocateShadows( lights : Dynamic ) : Dynamic;

@@ -10,5 +10,6 @@ extern class AnimationUtils {
 	static function getKeyframeOrder( times : Dynamic ) : Array<Int>;
 	static function sortedArray<T>( values : Array<T>, stride : Int, order : Dynamic ) : Array<Int>;
 	static function flattenJSON<T>( jsonKeys : Array<Dynamic>, times : Array<Dynamic>, values : Array<Dynamic>, ?valuePropertyName : String ) : Void;
+	static function subclip( sourceClip : AnimationClip, name : String, startFrame : Int, endFrame : Int, ?fps : Float ) : AnimationClip;
 
 }

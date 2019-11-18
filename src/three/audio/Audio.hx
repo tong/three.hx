@@ -47,6 +47,8 @@ extern class Audio extends Object3D {
 	function getPlaybackRate() : Float;
 	function getLoop() : Bool;
 	function setLoop( value : Bool ) : Audio;
+	function setLoopStart( value : Float ) : Audio;
+	function setLoopEnd( value : Float ) : Audio;
 	function getVolume() : Float;
 	function setVolume( value : Float ) : Audio;
 }

@@ -45,7 +45,7 @@ extern class MeshBasicMaterial extends Material {
     var wireframeLinewidth : Float;
     var wireframeLinecap : String;
     var wireframeLinejoin : String;
-    var vertexColors : Int;
+    //var vertexColors : Int;
     var skinning : Bool;
     var morphTargets : Bool;
     function new( ?parameters : MeshBasicMaterialParameters ) : Void;

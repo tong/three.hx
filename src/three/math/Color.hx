@@ -34,6 +34,7 @@ extern class Color {
 	function setRGB( r : Float, g : Float, b : Float ) : Color;
 	function setHSL( p : Float, q : Float, t : Float ) : Color;
 	function setStyle( style : String ) : Color;
+	function setColorName( style : String ) : Color;
 	function getHex() : Int;
 	function getHexString() : String;
 	function getHSL() : {h:Float, s:Float, l:Float};
@@ -42,4 +43,5 @@ extern class Color {
 	function multiply( color : Color ) : Color;
 	function multiplyScalar( s : Float ) : Color;
 	function lerp( color : Color, alpha : Float ) : Color;
+	//TODO: static var NAMES(default,null) : Record<string, number>;
 }

@@ -65,6 +65,9 @@ extern class Material extends EventDispatcher {
 
     var side : Side;
     var flatShading : Bool;
+	
+	var vertexTangents : Bool;
+	var vertexColors : Colors;
 
     var opacity : Float;
     var transparent : Bool;

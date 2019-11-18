@@ -10,6 +10,7 @@ typedef PointsMaterialParameters = {
 	> MaterialParameters,
 	?color: EitherType<Color,EitherType<Int,String>>,
 	?map : Texture,
+	?alphaMap : Texture,
 	?size : Float,
 	?sizeAttenuation : Bool
 };
@@ -17,6 +18,7 @@ typedef PointsMaterialParameters = {
 @:native("THREE.PointsMaterial")
 extern class PointsMaterial extends Material {
 	var map : Texture;
+	var alphaMap : Texture;
 	var size : Float;
 	var sizeAttenuation : Bool;
 	function new( parameters : PointsMaterialParameters ) : Void;

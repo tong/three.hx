@@ -11,7 +11,7 @@ extern class Plane {
     function set( normal : Vector3, constant : Float ) : Plane;
     function setComponents( x : Float, y : Float, z : Float, w : Float) : Plane;
     function setFromNormalAndCoplanarPoint( normal : Vector3, point : Vector3 ) : Plane;
-    function setFromCoplanarPoints( a : Vector3, b : Vector3, c : Vector3) : Void;
+    function setFromCoplanarPoints( a : Vector3, b : Vector3, c : Vector3) : Plane;
     function clone() : Plane;
     function copy( plane : Plane ) : Plane;
     function normalize() : Plane;

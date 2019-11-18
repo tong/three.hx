@@ -168,4 +168,6 @@ extern class WebGLRenderer implements Renderer {
     function readRenderTargetPixels( renderTarget : WebGLRenderTarget, x : Int, y : Int, width : Int, height : Int, buffer : Dynamic, ?activeCubeFaceIndex : Int ) : Void;
 
     function copyFramebufferToTexture( position : Vector2, texture : Texture, ?level : Int ) : Void;
+
+    function initTexture( texture : Texture ) : Void;
 }
