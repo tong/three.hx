@@ -34,6 +34,7 @@ extern class Vector3 {
     function applyEuler( euler : Euler ) : Vector3;
     function applyAxisAngle( axis : Vector3, angle : Float ) : Vector3;
     function applyMatrix3( m : Matrix3 ) : Vector3;
+    function applyNormalMatrix( m : Matrix3 ) : Vector3;
     function applyMatrix4( m : Matrix4 ) : Vector3;
     function applyProjection( m : Matrix3 ) : Vector3;
     function applyQuaternion( q : Quaternion ) : Vector3;

@@ -13,21 +13,24 @@ extern class BufferGeometry {
 
     var	id : Int;
     var uuid : String;
+
     var name : String;
     var type : String;
+
     var index : Dynamic;
     var attributes : Dynamic; //TODO:
-    //var morphAttributes : Array<{name:String, vertices:Array<Vector3>}>; // "for compatibility"
-    var morphAttributes : Array<Dynamic>; // "for compatibility"
+
+    var morphAttributes : Array<Dynamic>; // Array<{name:String, vertices:Array<Vector3>}>;
+	var morphTargetsRelative : Bool;
+
     var groups : Array<Dynamic>;
+
     var boundingBox : Box3;
     var boundingSphere : Sphere; //{ radius:Float };
-    var drawRange : { start: Int, count: Int };
-    var userData : Dynamic;
 
-    // var dynamic : Bool; // false
-    //var offsets : Array<Float>; // or Array<Int> ?
-    //var hasTangents : Bool; // false
+    var drawRange : { start: Int, count: Int };
+
+    var userData : Dynamic;
 
     function new() : Void;
 
