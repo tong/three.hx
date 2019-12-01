@@ -17,4 +17,3 @@ install:
 script:
   - haxe haxedoc.hxml
   - haxe --cwd examples/basic build.hxml
-  - haxe --cwd examples/hello build.hxml
