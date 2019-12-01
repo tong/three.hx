@@ -54,6 +54,7 @@ class App {
 			renderer.setSize( window.innerWidth, window.innerHeight );
 
 			scene = new Scene();
+			scene.background = new Color( 0x171420 );
 
 			camera = new PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.01, 10000 );
 			camera.position.set( 0, 100, 300 );
