@@ -13,7 +13,7 @@ extern class Mesh extends Object3D {
 	var isMesh(default,null) : Bool;
     var geometry : EitherType<Geometry,BufferGeometry>;
     var material : EitherType<Material,Array<Material>>;
-    var drawMode : DrawMode;
+    //var drawMode : DrawMode;
 	var morphTargetInfluences : Array<Float>;
 	var morphTargetDictionary : Array<Float>;
     function new( geometry : EitherType<Geometry,BufferGeometry>, ?material : EitherType<Material,Array<Material>> ) : Void;

@@ -33,6 +33,7 @@ extern class Texture extends EventDispatcher {
 	var anisotropy : Int; // 1
 
 	var format : PixelFormat; // RGBAFormat
+	var internalFormat : PixelFormat;
 	var type : Int; // UnsignedByteType
 
 	var offset : Vector2; // (0,0)

@@ -7,6 +7,8 @@ import js.lib.ArrayBufferView;
 import js.html.ArrayBufferView;
 #end
 import three.math.Color;
+import three.math.Matrix3;
+import three.math.Matrix4;
 import three.math.Vector2;
 import three.math.Vector3;
 import three.math.Vector4;
@@ -37,6 +39,10 @@ extern class BufferAttribute {
 	function copyVector2sArray( vectors : Array<Vector2> ) : BufferAttribute;
 	function copyVector3sArray( vectors : Array<Vector3> ) : BufferAttribute;
 	function copyVector4sArray( vectors : Array<Vector4> ) : BufferAttribute;
+	function applyMatrix3( m : Matrix3 ) : BufferAttribute;
+	function applyMatrix4( m : Matrix4 ) : BufferAttribute;
+	function applyNormalMatrix( m : Matrix3 ) : BufferAttribute;
+	function transformDirection( m : Matrix4 ) : BufferAttribute;
 	function set( value : Dynamic ) : Void;
 	function getX( index : Int ) : Dynamic;
 	function setX( index : Int, x : Dynamic ) : Void;

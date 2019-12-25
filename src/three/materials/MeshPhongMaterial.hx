@@ -5,7 +5,6 @@ import three.Lib;
 import three.materials.Material;
 import three.math.Color;
 import three.math.Vector2;
-import three.math.Vector3;
 import three.textures.Texture;
 
 typedef MeshPhongMaterialParameters = {

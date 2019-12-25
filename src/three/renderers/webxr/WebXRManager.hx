@@ -3,6 +3,8 @@ package three.renderers.webvr;
 import three.cameras.Camera;
 import three.math.Matrix4;
 
+//TODO
+
 @:native("THREE.WebXRManager")
 extern class WebXRManager {
 

@@ -16,7 +16,6 @@ import three.renderers.webgl.WebGLCapabilities;
 import three.renderers.webgl.WebGLExtensions;
 import three.renderers.webgl.WebGLShadowMap;
 import three.renderers.webgl.WebGLState;
-import three.renderers.webvr.WebVRManager;
 import three.scenes.Fog;
 import three.scenes.Scene;
 import three.textures.Texture;
@@ -91,7 +90,8 @@ extern class WebGLRenderer implements Renderer {
 
 	var state : WebGLState;
 
-    var vr(default,null) : WebVRManager;
+	//TODO xr
+    //var vr(default,null) : WebVRManager;
 
     var info : RenderInfo;
 
