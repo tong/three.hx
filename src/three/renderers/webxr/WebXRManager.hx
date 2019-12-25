@@ -1,4 +1,4 @@
-package three.renderers.webvr;
+package three.renderers.webxr;
 
 import three.cameras.Camera;
 import three.math.Matrix4;
