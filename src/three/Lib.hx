@@ -8,15 +8,16 @@ using StringTools;
 #end
 
 class Lib {
+	
 	#if macro
 	static function build() {
-		if (Context.defined('threejs_include')) {
+		if( Context.defined( 'threejs_include' ) ) {
 			var classPaths = Context.getClassPath();
-			for (cp in classPaths) {
-				if (cp.endsWith('/three.hx/src/')) {
-					cp = cp.substr(0, cp.length - 5);
-					var ext = Context.defined('debug') ? 'js' : 'min.js';
-					Compiler.includeFile('$cp/lib/three.$ext');
+			for( cp in classPaths ) {
+				if( cp.endsWith( '/three.hx/src/' ) ) {
+					cp = cp.substr( 0, cp.length - 5 );
+					var ext = Context.defined( 'debug' ) ? 'js' : 'min.js';
+					Compiler.includeFile( '$cp/lib/three.$ext' );
 					break;
 				}
 			}

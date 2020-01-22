@@ -3,4 +3,4 @@
 -lib three.hx
 -dce full
 -debug
-#-D three_include_js
+-D threejs_include

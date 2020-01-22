@@ -1,15 +1,17 @@
 package;
 
+import js.Browser.*;
+import three.cameras.PerspectiveCamera;
+import three.geometries.BoxGeometry;
 import three.materials.MeshBasicMaterial;
 import three.objects.Mesh;
-import three.geometries.BoxGeometry;
 import three.renderers.WebGLRenderer;
-import three.cameras.PerspectiveCamera;
 import three.scenes.Scene;
-import js.Browser.*;
 
 class App {
-	function new() {
+
+	static public function main() {
+
 		trace("https://threejs.org/docs/index.html#manual/introduction/Creating-a-scene");
 
 		var scene = new Scene();
@@ -40,9 +42,5 @@ class App {
 		};
 
 		animate(0);
-	}
-
-	static public function main() {
-		var main = new App();
 	}
 }
