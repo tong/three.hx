@@ -1,9 +1,5 @@
 package three.loaders;
 
-//TODO
-//typedef OnLoadCallback = Dynamic->Void;
-//?onProgress : Dynamic->Void, ?onError : Dynamic->Void
-
 @:native("THREE.LoadingManager")
 extern class LoadingManager {
 
@@ -11,17 +7,21 @@ extern class LoadingManager {
 	var itemsLoaded(default,null) : Int;
 	var itemsTotal(default,null) : Int;
 	var urlModifier : String;
+	var handlers : Array<Dynamic>;
 
-	var onStart : String->Int->Int->Void;
+	var onStart : (url:String,itemsLoaded:Int,itemsTotal:Int)->Void;
 	var onLoad : Void->Void;
-	var onProgress : String->Int->Int->Void;
-	var onError : String->Void;
+	var onProgress : (url: String, loaded: Int, total: Int)->Void;
+	var onError : (url:String)->Void;
 
-	function new( ?onLoad : Dynamic->Void, ?onProgress : Dynamic->Void, ?onError : Dynamic->Void ) : Void;
+	function new( ?onLoad : Dynamic->Void, ?onProgress : (url: String, loaded: Int, total: Int)->Void, ?onError : String->Void ) : Void;
 
 	function itemStart( url : String ) : Void;
 	function itemEnd( url : String ) : Void;
 	function itemError( url : String ) : Void;
 	function resolveURL( url : String ) : Void;
-	function setURLModifier( transform : String ) : Void;
+	function setURLModifier( transform : String ) : LoadingManager;
+	function addHandler( regex : EReg, loader : Dynamic ) : LoadingManager;
+	function removeHandler( regex : EReg ) : LoadingManager;
+	function getHandler( file : String ) : Dynamic;
 }
