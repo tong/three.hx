@@ -2,7 +2,7 @@ package three.core;
 
 import haxe.extern.EitherType;
 import three.math.Box3;
-import three.math.Matrix3;
+import three.math.Matrix4;
 import three.math.Sphere;
 import three.math.Vector3;
 
@@ -43,7 +43,7 @@ extern class BufferGeometry {
     function addGroup( start : Int, count : Int, materialIndex : Int ) : Void;
     function clearGroups() : Void;
     function setDrawRange( start : Int, count : Int ) : Void;
-    function applyMatrix( matrix : Matrix3 ) : Void;
+    function applyMatrix4( matrix : Matrix4 ) : BufferGeometry;
     function rotateX( angle : Float ) : Void;
     function rotateY( angle : Float ) : Void;
     function rotateZ( angle : Float ) : Void;

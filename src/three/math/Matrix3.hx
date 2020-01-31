@@ -16,7 +16,6 @@ extern class Matrix3 {
 	function clone() : Matrix3;
     function copy( m : Matrix3 ) : Matrix3;
     function setFromMatrix4( m : Matrix4 ) : Matrix3;
-    function applyToBufferAttribute() : Dynamic; //TODO
     function multiply( m : Matrix3 ) : Matrix3;
     function premultiply( m : Matrix3 ) : Matrix3;
     function multiplyMatrices( a : Matrix3, b : Matrix3 ) : Matrix3;

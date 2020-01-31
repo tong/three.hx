@@ -74,6 +74,7 @@ extern class Vector3 {
     function setFromMatrixPosition( m : Matrix4 ) : Vector3;
     function setFromMatrixScale( m : Matrix4 ) : Vector3;
     function setFromMatrixColumn( m : Matrix4, i : Int ) : Vector3;
+    function setFromMatrix3Column( m : Matrix3, i : Int ) : Vector3;
     function equals( v : Vector3 ) : Bool;
     function fromArray( array : Array<Float>, ?offset : Int ) : Vector3;
     function toArray( ?array : Array<Float>, ?offset : Int ) : Array<Float>;
