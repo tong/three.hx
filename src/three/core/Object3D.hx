@@ -90,7 +90,7 @@ extern class Object3D extends EventDispatcher {
 	function traverseVisible( callback : Object3D->Void ) : Void;
 	function traverseAncestors( callback : Object3D->Void ) : Void;
 	function updateMatrix() : Void;
-	function updateMatrixWorld() : Void;
+	function updateMatrixWorld( ?force : Bool ) : Void;
 	//function toJSON( ?meta : Dynamic ) : Dynamic;
 	function toJSON<T>( ?meta : MetaObject ) : T;
 	function clone( ?recursive : Bool ) : Object3D;
