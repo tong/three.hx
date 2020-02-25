@@ -1,6 +1,8 @@
 package three.lights;
 
+import haxe.extern.EitherType;
 import three.core.Object3D;
+import three.math.Color;
 
 @:native("THREE.SpotLight")
 extern class SpotLight extends Light {
@@ -11,6 +13,8 @@ extern class SpotLight extends Light {
     var exponent : Float; // 10
     var decay : Float;
     var shadow : SpotLightShadow;
-    function new( hexColor : Int, ?intensity : Float, ?distance : Float, ?angle : Float, ?exponent : Float, ?decay : Float ) : Void;
-    //function copy( source : SpotLight ) : SpotLight;
+    var power : Float;
+    var penumbra : Float;
+    var isSpotLight(default,never) : Bool;
+    function new( hexColor : EitherType<Color,EitherType<String,Int>>, ?intensity : Float, ?distance : Float, ?angle : Float, ?penumbra : Float, ?decay : Float ) : Void;
 }
