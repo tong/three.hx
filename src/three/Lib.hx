@@ -8,22 +8,45 @@ using StringTools;
 #end
 
 class Lib {
-	
+
 	#if macro
+
+	static inline var INCLUDE_FLAG = "threejs_include";
+	static inline var INCLUDE_PATH = "lib";
+
 	static function build() {
-		if( Context.defined( 'threejs_include' ) ) {
-			var classPaths = Context.getClassPath();
-			for( cp in classPaths ) {
-				if( cp.endsWith( '/three.hx/src/' ) ) {
-					cp = cp.substr( 0, cp.length - 5 );
-					var ext = Context.defined( 'debug' ) ? 'js' : 'min.js';
-					Compiler.includeFile( '$cp/lib/three.$ext' );
-					break;
-				}
-			}
+		if( Context.defined( INCLUDE_FLAG ) ) {
+			var path : String = null;
+			var defValue = Context.definedValue( INCLUDE_FLAG );
+			path = (defValue != "1") ? defValue : findThreejsFile();
+			includeThreejs( path );
 		}
 	}
+
+	static function includeThreejs( ?path : String ) {
+		if( path == null )
+			path = findThreejsFile();
+		if( path == null )
+			throw 'three.js file not found';
+		Compiler.includeFile( path );
+	}
+
+	private static function findThreejsFile() : String {
+		for( cp in Context.getClassPath() ) {
+			if( cp.endsWith( '/three.hx/src/' ) ) {
+				cp = cp.substr( 0, cp.length - 5 );
+				return '$cp/$INCLUDE_PATH/three.'+(Context.defined( 'debug' ) ? 'js' : 'min.js');
+			}
+		}
+		return null;
+	}
+
 	#end
+
+	macro public static function include( ?path : String ) {
+		includeThreejs( path );
+		return macro null;
+	}
 }
 
 ////////////////////////////////////////////////////////////////////////////////
