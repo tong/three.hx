@@ -51,31 +51,23 @@ typedef MaterialParameters = {
 @:native("THREE.Material")
 extern class Material extends EventDispatcher {
 
-	//TODO:
-
-	var alphaTest : Float;
-	
 	var uuid(default,never) : Int;
-    //var id : Int;
 
     var name : String;
-    var type : String;
-
-	var color : Color;
-
-    var side : Side;
-    var flatShading : Bool;
+	var type : String;
 	
-	var vertexTangents : Bool;
-	var vertexColors : Colors;
-
-    var opacity : Float;
-    var transparent : Bool;
+    var fog : Bool;
 
     var blending : BlendMode;
+    var side : Side;
+    var flatShading : Bool;
+	var vertexColors : Bool;
 
-    var blendSrc : BlendingDestinationFactor; // SrcAlphaFactor
-    var blendDst : BlendingDestinationFactor; // OneMinusSrcAlphaFactor
+	var opacity : Float;
+    var transparent : Bool;
+
+    var blendSrc : BlendingDestinationFactor;
+    var blendDst : BlendingDestinationFactor;
     var blendSrcAlpha : BlendingDestinationFactor;
     var blendDstAlpha : BlendingDestinationFactor;
     var blendEquation : BlendingEquation;
@@ -84,6 +76,15 @@ extern class Material extends EventDispatcher {
     var depthFunc : DepthModes;
 	var depthTest : Bool;
 	var depthWrite : Bool;
+
+	var stencilWriteMask : Int;
+	var stencilFunc : StencilFunc;
+	var stencilRef : Int;
+	var stencilFuncMask : Int;
+	var stencilFail : StencilOp;
+	var stencilZFail : StencilOp;
+	var stencilZPass : StencilOp;
+	var stencilWrite : Bool;
 
 	var clippingPlanes : Bool;
 	var clipIntersection : Bool;
@@ -99,17 +100,23 @@ extern class Material extends EventDispatcher {
     var polygonOffsetFactor : Float;
     var polygonOffsetUnits : Float;
 
-    var visible : Float;
+	var dithering : Bool;
+
+	var alphaTest : Int;
+	var premultipliedAlpha : Bool;
+	
+	var visible : Float;
+	
+	var toneMapped : Bool;
 
     var userData : Dynamic;
 
-    var needsUpdate : Bool;
+    var version : Int;
 
     function onBeforeCompile() : Void;
     function setValues( values : Dynamic ) : Void;
     function toJSON( ?meta : Dynamic ) : Dynamic;
     function clone() : Material;
     function copy( source : Dynamic ) : Void;
-    //function update() : Void;
     function dispose() : Void;
 }
