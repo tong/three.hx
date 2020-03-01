@@ -30,7 +30,6 @@ extern class MeshDistanceMaterial extends Material {
     var displacementScale : Float;
     var displacementBias : Float;
 
-    var fog : Bool;
     var lights : Bool;
 
     function new( ?parameters : MeshDistanceMaterialParamaters ) : Void;

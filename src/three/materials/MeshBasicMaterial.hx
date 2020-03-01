@@ -39,7 +39,6 @@ extern class MeshBasicMaterial extends Material {
     var combine : Int;
     var reflectivity : Float;
     var refractionRatio : Float;
-    var fog : Bool;
     var shading : Int;
     var wireframe : Bool;
     var wireframeLinewidth : Float;

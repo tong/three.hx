@@ -29,7 +29,8 @@ extern class Raycaster {
     var ray : Ray;
     var near : Float;
     var far : Float;
-	var camera : Camera;
+    var camera : Camera;
+    var layers : Layers;
     var params : RaycasterParameters;
     var linePrecision : Float;
     function new( ?origin : Vector3, ?direction : Vector3, ?near : Float, ?far : Float ) : Void;

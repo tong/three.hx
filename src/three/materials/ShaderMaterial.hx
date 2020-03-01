@@ -35,7 +35,6 @@ extern class ShaderMaterial<T> extends Material {
 	var linewidth : Float;
 	var wireframe : Bool;
 	var wireframeLinewidth : Float;
-	var fog : Bool;
 	var lights : Bool;
 	var clipping : Bool;
 	var skinning : Bool;
