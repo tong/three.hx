@@ -32,6 +32,7 @@ extern class Quaternion {
     function slerp( qb : Quaternion, t : Float ) : Quaternion;
     function equals( q : Quaternion ) : Bool;
     function fromArray( array : Array<Float>, ?offset : Int ) : Quaternion;
+    function fromBufferAttribute( attribute : Dynamic, index : Int ) : Quaternion;
     function toArray( ?array : Array<Float>, ?offset : Int ) : Array<Float>;
     //function onChange( callback : Void->Void ) : Quaternion;
 }

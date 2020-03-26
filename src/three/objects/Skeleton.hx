@@ -14,4 +14,5 @@ extern class Skeleton {
 	function update() : Void;
 	function clone() : Skeleton;
 	function getBoneByName( name : String ) : Bone;
+	function dispose() : Void;
 }

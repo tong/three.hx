@@ -7,12 +7,15 @@ import three.math.Color;
 
 typedef MeshPhysicalMaterialParameters = {
 	> MeshStandardMaterialParameters,
-	?reflectivity : Float,
-	?clearCoat : Float,
-	?clearCoatRoughness : Float,
-	?sheen : Color,
+	?clearcoat : Float,
+	?clearcoatMap : Texture,
+	?clearcoatRoughness : Float,
+	?clearcoatRoughnessMap : Texture,
 	?clearcoatNormalScale : Vector2,
 	?clearcoatNormalMap : Texture,
+	?reflectivity : Float,
+	?sheen : Color,
+	?transparency : Float
 }
 
 @:native("THREE.MeshPhysicalMaterial")
