@@ -17,8 +17,8 @@ extern class Curve {
     function getLengths( divisions : Int ) : Array<Float>;
     function updateArcLengths() : Void;
     function getUtoTmapping(u:Float, ?distance:Float) : Float;
-    function getTangent( t : Float ) : Vector2;
-    function getTangentAt( u : Float ) : Vector2;
+    function getTangent<T>( t : Float, ?optionalTarget : T ) : Vector2;
+    function getTangentAt<T>( u : Float, ?optionalTarget : T ) : Vector2;
     function computeFrenetFrames( segments : Int, closed : Bool ) : Vector2;
     function clone() : Curve;
     function copy( source : Curve ) : Curve;

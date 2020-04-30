@@ -55,4 +55,5 @@ extern class Vector4 {
     function fromArray( array : Array<Float>, ?offset : Int ) : Vector4;
     function toArray( ?array : Array<Float>, ?offset : Int ) : Array<Float>;
     function fromBufferAttribute( attribute : BufferAttribute, index : Int, ?offset : Float ) : Vector4;
+    function random() : Vector4;
 }

@@ -60,4 +60,5 @@ extern class Vector2 {
     function toArray() : Array<Float>;
     function fromBufferAttribute( attribute : BufferAttribute, index : Int, ?offset : Float ) : Vector2;
     function rotateAround( center : Vector2, angle : Float ) : Vector2;
+    function random() : Vector2;
 }

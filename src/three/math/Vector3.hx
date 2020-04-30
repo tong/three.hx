@@ -85,4 +85,5 @@ extern class Vector3 {
     //function getScaleFromMatrix( m : Matrix4 ) : Vector3;
     //function getColumnFromMatrix(index:Int, matrix:Matrix4) : Vector3;
     //function setFromMatrixPosition( m : Matrix4 ) : Vector3;
+    function random() : Vector3;
 }

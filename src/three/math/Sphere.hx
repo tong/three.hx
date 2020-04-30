@@ -12,7 +12,8 @@ extern class Sphere {
     function setFromCenterAndPoints( center : Vector3, points : Array<Vector3> ) : Sphere; // this
 	function clone() : Sphere;
     function copy( sphere : Sphere ) : Sphere;
-    function empty() : Bool;
+    function isEmpty() : Bool;
+    function makeEmpty() : Sphere;
     function containsPoint( point : Vector3 ) : Bool;
     function distanceToPoint( point : Vector3 ) : Float;
     function intersectsSphere( sphere : Sphere ) : Bool;
