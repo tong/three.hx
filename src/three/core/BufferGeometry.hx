@@ -23,7 +23,7 @@ extern class BufferGeometry {
     var morphAttributes : Array<Dynamic>; // Array<{name:String, vertices:Array<Vector3>}>;
 	var morphTargetsRelative : Bool;
 
-    var groups : Array<Dynamic>;
+    var groups : Array<{ start: Float, count: Float, instances: Float }>;
 
     var boundingBox : Box3;
     var boundingSphere : Sphere; //{ radius:Float };

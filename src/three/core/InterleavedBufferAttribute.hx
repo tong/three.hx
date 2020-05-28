@@ -17,4 +17,6 @@ extern class InterleavedBufferAttribute {
 	function setXY( index : Int, x : Dynamic, y : Dynamic ) : Void;
 	function setXYZ( index : Int, x : Dynamic, y : Dynamic, z : Dynamic ) : Void;
 	function setXYZW( index : Int, x : Dynamic, y : Dynamic, z : Dynamic, w : Int ) : Void;
+	function toJSON() : Dynamic;
+	function clone() : BufferAttribute;
 }
