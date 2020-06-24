@@ -79,7 +79,6 @@ extern class WebGLRenderer implements Renderer {
 
 	var toneMapping : ToneMapping;
 	var toneMappingExposure : Float;
-	var toneMappingWhitePoint : Float;
 
     var maxMorphTargets : Int; // 8
     var maxMorphNormals : Int; // 4
@@ -141,7 +140,7 @@ extern class WebGLRenderer implements Renderer {
     function renderBufferImmediate( object : Object3D, program : Dynamic ) : Void;
     function renderBufferDirect( camera : Camera, scene : Scene, geometry : Geometry, material : Material, object : Object3D, group : Dynamic ) : Void;
    
-    function setAnimationLoop( callback : Void->Void ) : Void;
+    function setAnimationLoop( ?callback : Void->Void ) : Void;
 
     @:overload(function( scene:Scene, camera:Camera, ?renderTarget:WebGLRenderTarget, ?forceClear:Bool ):Void{})
     function render( scene : Scene, camera : Camera ) : Void;

@@ -139,9 +139,9 @@ enum abstract ToneMapping(Int) from Int to Int {
 	var NoToneMapping = 0;
 	var LinearToneMapping = 1;
 	var ReinhardToneMapping = 2;
-	var Uncharted2ToneMapping = 3;
-	var CineonToneMapping = 4;
-	var ACESFilmicToneMapping = 5;
+	var CineonToneMapping = 3;
+	var ACESFilmicToneMapping = 4;
+	var CustomToneMapping = 5;
 }
 
 enum abstract Mapping(Int) from Int to Int {
@@ -150,7 +150,6 @@ enum abstract Mapping(Int) from Int to Int {
 	var CubeRefractionMapping = 302;
 	var EquirectangularReflectionMapping = 303;
 	var EquirectangularRefractionMapping = 304;
-	var SphericalReflectionMapping = 305;
 	var CubeUVReflectionMapping = 306;
 	var CubeUVRefractionMapping = 307;
 }

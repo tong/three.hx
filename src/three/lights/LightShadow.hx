@@ -12,6 +12,8 @@ extern class LightShadow<T:Camera> {
     var mapSize : Vector2;
     var map : Dynamic;
     var matrix : Matrix4;
+    var autoUpdate : Bool;
+    var needsUpdate : Bool;
     function new( camera : T ) : Void;
     function copy( source : LightShadow<T> ) : Void;
     function clone( ?recursive : Bool ) : LightShadow<T>;

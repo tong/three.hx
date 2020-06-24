@@ -10,8 +10,6 @@ import three.math.Vector2;
 typedef MeshToonMaterialParamaters = {
 	> MaterialParameters,
 	?color: EitherType<Color,EitherType<Int,String>>,
-	?specular : Color,
-    ?shininess : Float,
 	?opacity : Float,
 	?gradientMap : Texture,
 	?map : Texture,
@@ -29,7 +27,6 @@ typedef MeshToonMaterialParamaters = {
     ?displacementMap : Texture,
     ?displacementScale : Float,
     ?displacementBias : Float,
-    ?specularMap : Texture,
     ?alphaMap : Texture,
     ?envMap : Texture,
     ?combine : Combine, // MultiplyOperation
