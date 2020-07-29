@@ -10,6 +10,7 @@ import js.html.ArrayBufferView;
 extern class InterleavedBuffer {
     var length(default,null) : Int;
     var count(default,null) : Int;
+    var needsUpdate(null,default) : Bool;
     function new( array : ArrayBufferView, stride : Int ) : Void;
     function setDynamic( value : Bool ) : InterleavedBuffer;
     function copy( source : InterleavedBuffer ) : Void;

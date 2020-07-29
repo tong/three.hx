@@ -14,6 +14,7 @@ extern class MathUtils {
 	static function randInt( low :Int, high : Int ) : Int;
 	static function randFloat( low :Float, high : Float ) : Float;
 	static function randFloatSpread( range : Float ) : Float;
+	static function seededRandom( s : Float ) : Float;
 	static function degToRad( degrees : Float ) : Float;
 	static function radToDeg( rad : Float ) : Float;
 	static function isPowerOfTwo( value : Float ) : Bool;
