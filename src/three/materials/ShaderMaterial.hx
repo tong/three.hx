@@ -47,7 +47,9 @@ extern class ShaderMaterial<T> extends Material {
 		shaderTextureLOD: Bool,
 	};
   	var defaultAttributeValues: Dynamic;
-  	var index0AttributeName: String;
+	var index0AttributeName: String;
+	var uniformsNeedUpdate : Bool;  
+	var glslVersion : GLSLVersion;  
 	function new( ?parameters : ShaderMaterialParameters<T> ) : Void;
 	function setValues( parameters : ShaderMaterialParameters<T> ) : Void;
 	//function toJSON() : ShaderMaterial<TUniforms>;

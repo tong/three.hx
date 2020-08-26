@@ -13,5 +13,4 @@ extern class Scene extends three.core.Object3D {
 	var autoUpdate : Bool;
 	function copy( source : Scene, ?recursive : Bool ) : Dynamic;
 	function toJSON( meta : Dynamic ) : Dynamic;
-	function dispose() : Void;
 }

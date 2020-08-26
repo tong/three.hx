@@ -305,3 +305,8 @@ enum abstract Usage(Int) from Int to Int {
 	var DynamicCopyUsage = 35050;
 	var StreamCopyUsage = 35042;	
 }
+
+enum abstract GLSLVersion(String) from String to String {
+	var GLSL1 = "100";
+	var GLSL3 = "300 es";
+}
