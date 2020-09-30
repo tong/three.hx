@@ -17,8 +17,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install haxe -y
           mkdir ~/haxelib && haxelib setup ~/haxelib
-          haxelib dev three.hx
+          haxelib dev three.hx .
       - name: Build haxedoc.xml
         run: |
           haxe haxedoc.hxml
+      - name: Build examples
+        run: |
+          haxe --cwd examples/basic build.hxml
 
