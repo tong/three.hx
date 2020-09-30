@@ -12,6 +12,7 @@ extern class Loader {
 	function new( ?manager : LoadingManager );
 	function loadAsync( url : String, ?onProgress : ProgressEvent->Void ) : Promise<Dynamic>;
 	function setCrossOrigin() : Loader;
+	function setWithCredentials( value : Dynamic ) : Loader;
 	function setPath( path : String ) : Loader;
 	function setResourcePath( resourcePath : String ) : Loader;
 }

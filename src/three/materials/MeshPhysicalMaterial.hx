@@ -14,6 +14,7 @@ typedef MeshPhysicalMaterialParameters = {
 	?clearcoatNormalScale : Vector2,
 	?clearcoatNormalMap : Texture,
 	?reflectivity : Float,
+	?ior : Float,
 	?sheen : Color,
 	?transparency : Float
 }

@@ -35,7 +35,7 @@ extern class BufferGeometry {
     function new() : Void;
 
     function getIndex() : Int;
-    function setIndex( index : Int ) : Void;
+    function setIndex( index : Int ) : BufferGeometry;
     function addAttribute( name : String, attribute : BufferAttribute ) : Void;
     function getAttribute( name : String ) : BufferAttribute;
     function setAttribute( name : String, attribute: EitherType<BufferAttribute,InterleavedBufferAttribute> ) : BufferAttribute;
