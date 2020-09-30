@@ -3,8 +3,7 @@
 
 [Haxe](https://haxe.org/)→[Threejs](https://threejs.org/) type definitions.
 
-[![Build Status](https://travis-ci.org/tong/three.hx.svg?branch=master)](https://travis-ci.org/tong/three.hx)
-
+[![Actions Status](https://github.com/tong/three.hx/workflows/CI/badge.svg)](https://github.com/tong/three.hx)
 
 ## Compiler Defines
 
