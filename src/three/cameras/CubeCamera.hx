@@ -10,5 +10,4 @@ extern class CubeCamera extends Object3D {
 	var renderTarget : WebGLRenderTargetCube;
 	function new( near : Float, far : Float, cubeResolution : Float, ?options : Dynamic ) : Void;
 	function update( renderer : Renderer, scene : Scene ) : Void;
-	function clear( renderer : Renderer, ?color : Bool, ?depth : Bool, ?stencil : Bool ) : Void;
 }

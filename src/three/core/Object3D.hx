@@ -76,6 +76,7 @@ extern class Object3D extends EventDispatcher {
 	function lookAt( v : Vector3 ) : Void;
 	function add( object : Object3D ) : Object3D;
 	function remove( object : Object3D ) : Object3D;
+	function clear() : Object3D;
 	function attach( object : Object3D ) : Object3D;
 	function getObjectById( id : String ) : Object3D;
 	function getObjectByName( name : String ) : Object3D;
