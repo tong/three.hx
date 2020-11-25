@@ -21,8 +21,10 @@ extern class Matrix3 {
     function multiplyMatrices( a : Matrix3, b : Matrix3 ) : Matrix3;
     function multiplyScalar( s : Float ) : Matrix3;
     function determinant() : Float;
+    @:deprecated("Use Matrix3.invert() instead")
     function getInverse( ?matrix : Matrix4, ?throwOnDegenerate : Bool ) : Matrix3;
     function transpose() : Matrix3;
+    function invert() : Matrix3;
     function getNormalMatrix( m : Matrix4 ) : Matrix3;
     function transposeIntoArray( dest : Array<Float> ) : Matrix3;
     function setUvTransform( tx : Float, ty : Float, sx : Float, sy : Float, rotation : Float, cx : Float, cy : Float ) : Matrix3;

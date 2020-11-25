@@ -40,6 +40,7 @@ extern class BufferGeometry {
     function getAttribute( name : String ) : BufferAttribute;
     function setAttribute( name : String, attribute: EitherType<BufferAttribute,InterleavedBufferAttribute> ) : BufferAttribute;
     function removeAttribute( name : String ) : Void;
+    function hasAttribute( name : String ) : Bool;
     function addGroup( start : Int, count : Int, materialIndex : Int ) : Void;
     function clearGroups() : Void;
     function setDrawRange( start : Int, count : Int ) : Void;

@@ -12,6 +12,8 @@ import three.textures.Texture;
 extern class ObjectLoader extends Loader {
 	function load( url : String, onLoad : Object3D->Void, ?onProgress : ProgressEvent->Void, ?onError: ErrorEvent->Void ) : Void;
 	function parse( json : Dynamic ) : Dynamic;
+	function parseShapes( json : Dynamic ) : Array<Dynamic>;
+	function parseSkeletons( json : Dynamic ) : Array<Dynamic>;
 	function parseGeometries( json : Dynamic ) : Array<Dynamic>;
 	function parseMaterials( json : Dynamic, textures : Array<Texture> ) : Array<Material>;
 	function parseAnimations( json : Dynamic ) : Array<AnimationClip>;

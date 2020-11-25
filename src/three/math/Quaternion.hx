@@ -4,7 +4,7 @@ package three.math;
 extern class Quaternion {
 
     var isQuaternion(default,null) : Bool;
-	
+
     var x : Float;
     var y : Float;
     var z : Float;
@@ -22,7 +22,7 @@ extern class Quaternion {
     function angleTo( q : Quaternion ) : Float;
     function rotateTowards( q : Quaternion, step : Float ) : Quaternion;
     function identity() : Quaternion;
-    function inverse() : Quaternion;
+    function invert() : Quaternion;
     function conjugate() : Quaternion;
     function dot( v : Vector3 ) : Float;
     function lengthSq() : Float;

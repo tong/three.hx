@@ -1,5 +1,6 @@
 package three.core;
 
+import three.animation.AnimationClip;
 import three.math.Euler;
 import three.math.Matrix4;
 import three.math.Quaternion;
@@ -49,6 +50,8 @@ extern class Object3D extends EventDispatcher {
 
 	var frustumCulled : Bool;
 	var renderOrder : Int;
+
+	var animations: Array<AnimationClip>;
 
 	var userData : Dynamic;
 
