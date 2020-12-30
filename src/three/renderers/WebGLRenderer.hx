@@ -118,7 +118,7 @@ extern class WebGLRenderer implements Renderer {
     function setScissorTest( enable : Bool ) : Void;
     function setOpaqueSort( method : Dynamic ) : Void;
     function setTransparentSort( method : Dynamic ) : Void;
-    function getClearColor() : Color;
+    function getClearColor( target : Color ) : Color;
     function setClearColor( color : EitherType<Color,EitherType<String,Float>>, ?alpha : Float ) : Void;
     function getClearAlpha() : Float;
     function setClearAlpha( alpha : Float ) : Void;

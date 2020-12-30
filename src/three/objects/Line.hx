@@ -12,7 +12,7 @@ extern class Line extends Object3D {
     var geometry : EitherType<Geometry,BufferGeometry>;
     var material : EitherType<Material,Array<Material>>;
     var isLine(default,null) : Bool;
-    function new( geometry : EitherType<Geometry,BufferGeometry>, ?material : EitherType<Material,Array<Material>>, ?mode : LineSegments ) : Void;
+    function new( geometry : EitherType<Geometry,BufferGeometry>, ?material : EitherType<Material,Array<Material>> ) : Void;
     function computeLineDistance() : Line;
     function raycast( raycaster : Raycaster, intersects : Array<Intersection> ) : Line;
 }

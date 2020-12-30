@@ -16,4 +16,5 @@ extern class InstancedMesh extends Mesh {
 	function getColorAt( index : Int, color : Color ) : Void;
 	function getMatrixAt( index : Int, matrix : Matrix4 ) : Void;
 	function setMatrixAt( index : Int, matrix : Matrix4 ) : Void;
+	function dispose() : Void;
 }

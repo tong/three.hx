@@ -1,6 +1,6 @@
 {
     "name": "three.hx",
-    "version": "123.0.0",
+    "version": "124.0.0",
     "description": "Threejs type definitions",
     "tags": ["threejs","three","webgl","js","gl","gpu","3d","graphics","shader","glsl"],
     "url": "https://github.com/tong/three.hx",
