@@ -24,7 +24,7 @@ extern class DirectGeometry {
     function new() : Void;
     function computeFaceNormals() : Void;
     function computeVertexNormals() : Void;
-    function computeGroups( geometry : Geometry ) : Void;
-    function fromGeometry( geometry : Geometry ) : DirectGeometry;
+    function computeGroups( geometry : BufferGeometry ) : Void;
+    function fromGeometry( geometry : BufferGeometry ) : DirectGeometry;
     function dispose() : Void;
 }

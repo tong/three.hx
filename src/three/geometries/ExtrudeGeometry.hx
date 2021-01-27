@@ -1,7 +1,7 @@
 package three.geometries;
 
 import haxe.extern.EitherType;
-import three.core.Geometry;
+import three.core.BufferGeometry;
 import three.extras.core.Shape;
 
 typedef ExtrudeGeometryOptions = {
@@ -20,7 +20,7 @@ typedef ExtrudeGeometryOptions = {
 	?amount:Float,}
 
 @:native("THREE.ExtrudeGeometry")
-extern class ExtrudeGeometry extends Geometry {
+extern class ExtrudeGeometry extends BufferGeometry {
 	function new( shapes : EitherType<Shape,Array<Shape>>, ?options : ExtrudeGeometryOptions ) : Void;
 	function addShapeList( shapes : Array<Shape>, ?options : ExtrudeGeometryOptions ) : Void;
 	function addShape( shape : Shape, ?options : ExtrudeGeometryOptions ) : Void;

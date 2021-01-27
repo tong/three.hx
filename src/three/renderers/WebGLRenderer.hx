@@ -5,8 +5,8 @@ import js.html.CanvasElement;
 import js.html.webgl.RenderingContext;
 import three.Lib;
 import three.cameras.Camera;
-import three.core.Geometry;
 import three.core.Object3D;
+import three.core.BufferGeometry;
 import three.materials.Material;
 import three.lights.Light;
 import three.math.Color;
@@ -138,14 +138,14 @@ extern class WebGLRenderer implements Renderer {
     //function createMeshBuffers(geometry:Geometry) : Void;
 
     function renderBufferImmediate( object : Object3D, program : Dynamic ) : Void;
-    function renderBufferDirect( camera : Camera, scene : Scene, geometry : Geometry, material : Material, object : Object3D, group : Dynamic ) : Void;
+    function renderBufferDirect( camera : Camera, scene : Scene, geometry : BufferGeometry, material : Material, object : Object3D, group : Dynamic ) : Void;
    
     function setAnimationLoop( ?callback : Void->Void ) : Void;
 
     @:overload(function( scene:Scene, camera:Camera, ?renderTarget:WebGLRenderTarget, ?forceClear:Bool ):Void{})
     function render( scene : Scene, camera : Camera ) : Void;
 //    function render( scene : Scene, camera : Camera, ?renderTarget : WebGLRenderTarget, ?forceClear : Bool ) : Void;
-    function renderImmediateObject(camera:Camera, lights:Array<Light>, fog:Fog, material:Material, geometry:Geometry, object:Object3D) : Void;
+    function renderImmediateObject(camera:Camera, lights:Array<Light>, fog:Fog, material:Material, geometry:BufferGeometry, object:Object3D) : Void;
 
     function initWebGLObjects(scene:Scene) : Void;
     //function initMaterial( material:Material, lights:Array<Light>, fog:IFog, ?object:Object3D ) : Void;

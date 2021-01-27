@@ -1,6 +1,5 @@
 package three.extras.core;
 
-import three.core.Geometry;
 import three.math.Vector2;
 import three.math.Vector3;
 

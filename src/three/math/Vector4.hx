@@ -28,6 +28,7 @@ extern class Vector4 {
     function addScaledVector( v : Vector4, s : Float ) : Vector4;
     function sub( v : Vector4 ) : Vector4;
     function subScalar( s : Float ) : Vector4;
+    function multiply( v : Vector4 ) : Vector4;
     function subVectors( a : Vector4, b : Vector4 ) : Vector4;
     function multiplyScalar( s : Float ) : Vector4;
     function applyMatrix4( m : Matrix4 ) : Vector4;

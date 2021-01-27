@@ -3,7 +3,6 @@ package three.loaders;
 import js.html.ErrorEvent;
 import js.html.ProgressEvent;
 import three.animation.AnimationClip;
-import three.core.Geometry;
 import three.core.Object3D;
 import three.materials.Material;
 import three.textures.Texture;

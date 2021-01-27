@@ -10,7 +10,7 @@ typedef BoxGeometryParameters = {
 }
 
 @:native("THREE.BoxGeometry")
-extern class BoxGeometry extends three.core.Geometry {
+extern class BoxGeometry extends three.core.BufferGeometry {
 	var parameters(default,null) : BoxGeometryParameters;
 	function new( width : Float, height : Float, depth : Float, ?widthSegments : Int, ?heightSegments : Int, ?depthSegments : Int ) : Void;
 }

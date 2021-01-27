@@ -18,6 +18,7 @@ extern class Matrix4 {
     function clone() : Matrix4;
     function copy( m : Matrix4 ) : Matrix4;
     function copyPosition( m : Matrix4 ) : Matrix4;
+    function setFromMatrix3( m : Matrix3 ) : Matrix4;
     function extractBasis( xAxis : Vector3, yAxis : Vector3, zAxis : Vector3 ) : Matrix4;
     function makeBasis( xAxis : Vector3, yAxis : Vector3, zAxis : Vector3 ) : Matrix4;
     function extractRotation( m : Matrix4 ) : Matrix4;

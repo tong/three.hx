@@ -21,7 +21,7 @@ typedef TubeGeomeetryParameters = {
 }
 
 @:native("THREE.TubeGeometry")
-extern class TubeGeometry extends three.core.Geometry {
+extern class TubeGeometry extends three.core.BufferGeometry {
 	var parameters : TubeGeomeetryParameters;
 	function new( path : Curve, ?tubularSegments : Int, ?radius : Float, ?radiusSegments : Int, ?closed : Bool ) : Void;
 }

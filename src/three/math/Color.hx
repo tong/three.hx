@@ -43,5 +43,6 @@ extern class Color {
 	function multiply( color : Color ) : Color;
 	function multiplyScalar( s : Float ) : Color;
 	function lerp( color : Color, alpha : Float ) : Color;
+	function lerpColors( color1 : Color, color2 : Color, alpha : Float ) : Color;
 	//TODO: static var NAMES(default,null) : Record<string, number>;
 }

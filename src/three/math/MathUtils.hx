@@ -19,6 +19,8 @@ extern class MathUtils {
 	static function radToDeg( rad : Float ) : Float;
 	static function isPowerOfTwo( value : Float ) : Bool;
 	static function lerp( x : Float, y : Float, t : Float ) : Float;
+	static function damp( x : Float, y : Float, lambda : Float, dt : Float ) : Float;
+	static function pingpong( x : Float, ?length : Float ) : Float;
 	static function nearestPowerOfTwo( value : Int ) : Float;
 	static function nextPowerOfTwo( value : Int ) : Float;
 	static function floorPowerOfTwo( value : Int ) : Float;

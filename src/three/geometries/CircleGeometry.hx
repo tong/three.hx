@@ -8,6 +8,6 @@ typedef CircleGeometryParameters = {
 }
 
 @:native("THREE.CircleGeometry")
-extern class CircleGeometry extends three.core.Geometry {
+extern class CircleGeometry extends three.core.BufferGeometry {
 	function new( ?radius : Float, ?segments : Int, ?thetaStart : Float, ?thetaLength : Float ) : Void;
 }

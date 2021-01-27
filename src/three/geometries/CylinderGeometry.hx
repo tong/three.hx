@@ -12,7 +12,7 @@ typedef CylinderGeometryParameters = {
 }
 
 @:native("THREE.CylinderGeometry")
-extern class CylinderGeometry extends three.core.Geometry {
+extern class CylinderGeometry extends three.core.BufferGeometry {
 	var parameters : CylinderGeometryParameters;
     function new( ?radiusTop : Float, ?radiusBottom : Float, ?height : Float, ?segmentsRadius : Float, ?segmentsHeight : Float, ?openEnded : Bool, ?thetaStart : Float, ?thetaLength : Float ) : Void;
 }

@@ -54,8 +54,8 @@ extern class BufferGeometry {
     function center() : Float;
     function setFromObject( object : Dynamic ) : BufferGeometry;
     function updateFromObject( object : Dynamic ) : BufferGeometry;
-    function fromGeometry( geometry : Geometry ) : BufferGeometry;
-    function fromDirectGeometry( geometry : Geometry ) : BufferGeometry;
+    //function fromGeometry( geometry : Geometry ) : BufferGeometry;
+    //function fromDirectGeometry( geometry : Geometry ) : BufferGeometry;
     function computeBoundingBox() : Void;
     function computeBoundingSphere() : Void;
     function computeFaceNormals() : Void;

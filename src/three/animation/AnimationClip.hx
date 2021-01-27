@@ -2,8 +2,13 @@ package three.animation;
 
 import haxe.extern.EitherType;
 import three.core.Object3D;
-import three.core.Geometry;
 import three.objects.Bone;
+import three.math.Vector3;
+
+typedef MorphTarget = {
+	var name : String;
+	var vertices : Array<Vector3>;
+}
 
 @:native("THREE.AnimationClip")
 extern class AnimationClip {
