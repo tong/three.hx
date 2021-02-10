@@ -2,7 +2,7 @@ package three.renderers.webgl;
 
 import js.html.webgl.RenderingContext;
 
-@:native("THREE.WebGLCapabilities")
+#if three_jsRequire @:jsRequire("three", "WebGLCapabilities") #else @:native("THREE.WebGLCapabilities") #end
 extern class WebGLCapabilities {
 	var precision : Dynamic;
 	var logarithmicDepthBuffer : Dynamic;

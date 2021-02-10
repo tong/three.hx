@@ -13,7 +13,7 @@ import three.math.Vector2;
 import three.math.Vector3;
 import three.math.Vector4;
 
-@:native("THREE.BufferAttribute")
+#if three_jsRequire @:jsRequire("three", "BufferAttribute") #else @:native("THREE.BufferAttribute") #end
 extern class BufferAttribute {
 
 	var uuid(default,null) : String;
@@ -60,47 +60,47 @@ extern class BufferAttribute {
 	function toJSON() : Dynamic;
 }
 
-@:native("THREE.Int8BufferAttribute")
+#if three_jsRequire @:jsRequire("three", "Int8BufferAttribute") #else @:native("THREE.Int8BufferAttribute") #end
 extern class Int8BufferAttribute extends BufferAttribute {
 	function new( array : ArrayBufferView, itemSize : Int, ?normalized : Bool ) : Void;
 }
 
-@:native("THREE.Uint8BufferAttribute")
+#if three_jsRequire @:jsRequire("three", "Uint8BufferAttribute") #else @:native("THREE.Uint8BufferAttribute") #end
 extern class Uint8BufferAttribute extends BufferAttribute {
 	function new( array : ArrayBufferView, itemSize : Int, ?normalized : Bool ) : Void;
 }
 
-@:native("THREE.Uint8ClampedBufferAttribute")
+#if three_jsRequire @:jsRequire("three", "Uint8ClampedBufferAttribute") #else @:native("THREE.Uint8ClampedBufferAttribute") #end
 extern class Uint8ClampedBufferAttribute extends BufferAttribute {
 	function new( array : ArrayBufferView, itemSize : Int, ?normalized : Bool ) : Void;
 }
 
-@:native("THREE.Int16BufferAttribute")
+#if three_jsRequire @:jsRequire("three", "Int16BufferAttribute") #else @:native("THREE.Int16BufferAttribute") #end
 extern class Int16BufferAttribute extends BufferAttribute {
 	function new( array : ArrayBufferView, itemSize : Int, ?normalized : Bool ) : Void;
 }
 
-@:native("THREE.Uint16BufferAttribute")
+#if three_jsRequire @:jsRequire("three", "Uint16BufferAttribute") #else @:native("THREE.Uint16BufferAttribute") #end
 extern class Uint16BufferAttribute extends BufferAttribute {
 	function new( array : ArrayBufferView, itemSize : Int, ?normalized : Bool ) : Void;
 }
 
-@:native("THREE.Int32BufferAttribute")
+#if three_jsRequire @:jsRequire("three", "Int32BufferAttribute") #else @:native("THREE.Int32BufferAttribute") #end
 extern class Int32BufferAttribute extends BufferAttribute {
 	function new( array : ArrayBufferView, itemSize : Int, ?normalized : Bool ) : Void;
 }
 
-@:native("THREE.Uint32BufferAttribute")
+#if three_jsRequire @:jsRequire("three", "Uint32BufferAttribute") #else @:native("THREE.Uint32BufferAttribute") #end
 extern class Uint32BufferAttribute extends BufferAttribute {
 	function new( array : ArrayBufferView, itemSize : Int, ?normalized : Bool ) : Void;
 }
 
-@:native("THREE.Float32BufferAttribute")
+#if three_jsRequire @:jsRequire("three", "Float32BufferAttribute") #else @:native("THREE.Float32BufferAttribute") #end
 extern class Float32BufferAttribute extends BufferAttribute {
 	function new( array : ArrayBufferView, itemSize : Int, ?normalized : Bool ) : Void;
 }
 
-@:native("THREE.Float64BufferAttribute")
+#if three_jsRequire @:jsRequire("three", "Float64BufferAttribute") #else @:native("THREE.Float64BufferAttribute") #end
 extern class Float64BufferAttribute extends BufferAttribute {
 	function new( array : ArrayBufferView, itemSize : Int, ?normalized : Bool ) : Void;
 }

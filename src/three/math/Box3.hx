@@ -2,7 +2,7 @@ package three.math;
 
 import three.core.Object3D;
 
-@:native("THREE.Box3")
+#if three_jsRequire @:jsRequire("three", "Box3") #else @:native("THREE.Box3") #end
 extern class Box3 {
 
     var min : Vector3;

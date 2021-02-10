@@ -6,7 +6,7 @@ import three.math.Matrix4;
 import three.math.Sphere;
 import three.math.Vector3;
 
-@:native("THREE.BufferGeometry")
+#if three_jsRequire @:jsRequire("three", "BufferGeometry") #else @:native("THREE.BufferGeometry") #end
 extern class BufferGeometry {
 
     static var MaxIndex(default,never) : Int;

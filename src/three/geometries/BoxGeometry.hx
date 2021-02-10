@@ -9,7 +9,7 @@ typedef BoxGeometryParameters = {
 	var depthSegments: Int;
 }
 
-@:native("THREE.BoxGeometry")
+#if three_jsRequire @:jsRequire("three", "BoxGeometry") #else @:native("THREE.BoxGeometry") #end
 extern class BoxGeometry extends three.core.BufferGeometry {
 	var parameters(default,null) : BoxGeometryParameters;
 	function new( width : Float, height : Float, depth : Float, ?widthSegments : Int, ?heightSegments : Int, ?depthSegments : Int ) : Void;

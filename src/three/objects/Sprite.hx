@@ -6,7 +6,7 @@ import three.core.Raycaster;
 import three.materials.SpriteMaterial;
 import three.math.Vector2;
 
-@:native("THREE.Sprite")
+#if three_jsRequire @:jsRequire("three", "Sprite") #else @:native("THREE.Sprite") #end
 extern class Sprite extends Object3D {
 	var isSprite(default,null) : Bool;
 	var geometry : BufferGeometry;

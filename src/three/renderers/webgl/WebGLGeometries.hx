@@ -4,7 +4,7 @@ import js.html.webgl.RenderingContext;
 import three.core.BufferGeometry;
 import three.core.Object3D;
 
-@:native("THREE.WebGLGeometries")
+#if three_jsRequire @:jsRequire("three", "WebGLGeometries") #else @:native("THREE.WebGLGeometries") #end
 extern class WebGLGeometries {
     function new( gl : RenderingContext, extensions : Dynamic,_infoRender : Dynamic ) : Void;
     function get( object : Object3D ) : Dynamic;

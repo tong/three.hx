@@ -1,6 +1,6 @@
 package three.lights;
 
-@:native("THREE.PointLight")
+#if three_jsRequire @:jsRequire("three", "PointLight") #else @:native("THREE.PointLight") #end
 extern class PointLight extends Light {
 
 	var isPointLight(default,null) : Bool;

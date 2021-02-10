@@ -1,6 +1,6 @@
 package three.math;
 
-@:native("THREE.Cylindrical")
+#if three_jsRequire @:jsRequire("three", "Cylindrical") #else @:native("THREE.Cylindrical") #end
 extern class Cylindrical {
 	var radius : Float;
 	var theta : Float;

@@ -15,7 +15,7 @@ typedef PointsMaterialParameters = {
 	?sizeAttenuation : Bool
 };
 
-@:native("THREE.PointsMaterial")
+#if three_jsRequire @:jsRequire("three", "PointsMaterial") #else @:native("THREE.PointsMaterial") #end
 extern class PointsMaterial extends Material {
 	var map : Texture;
 	var alphaMap : Texture;

@@ -3,7 +3,7 @@ package three.objects;
 import js.lib.Float32Array;
 import three.math.Matrix4;
 
-@:native("THREE.Skeleton")
+#if three_jsRequire @:jsRequire("three", "Skeleton") #else @:native("THREE.Skeleton") #end
 extern class Skeleton {
 	var bones : Array<Bone>;
 	var boneMatrices : Float32Array;

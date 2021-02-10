@@ -2,7 +2,7 @@ package three.helpers;
 
 import three.cameras.Camera;
 
-@:native("THREE.CameraHelper")
+#if three_jsRequire @:jsRequire("three", "CameraHelper") #else @:native("THREE.CameraHelper") #end
 extern class CameraHelper extends three.objects.LineSegments {
 	var pointMap : Dynamic;
 	var camera : Camera;

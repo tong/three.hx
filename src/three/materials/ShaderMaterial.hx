@@ -25,7 +25,7 @@ typedef ShaderMaterialParameters<T> = {
 }
 
 //@:deprecated
-@:native("THREE.ShaderMaterial")
+#if three_jsRequire @:jsRequire("three", "ShaderMaterial") #else @:native("THREE.ShaderMaterial") #end
 extern class ShaderMaterial<T> extends Material {
 	var uniforms : T;
 	var vertexShader : String;

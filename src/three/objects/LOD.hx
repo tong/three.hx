@@ -4,7 +4,7 @@ import three.cameras.Camera;
 import three.core.Object3D;
 import three.core.Raycaster;
 
-@:native("THREE.LOD")
+#if three_jsRequire @:jsRequire("three", "LOD") #else @:native("THREE.LOD") #end
 extern class LOD extends Object3D {
 	var autoUpdate : Bool;
 	var isLOD(default,null) : Bool;

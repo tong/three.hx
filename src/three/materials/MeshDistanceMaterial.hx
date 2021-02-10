@@ -12,7 +12,7 @@ typedef MeshDistanceMaterialParamaters = {
 	?displacementBias : Float,
 }
 
-@:native("THREE.MeshDistanceMaterial")
+#if three_jsRequire @:jsRequire("three", "MeshDistanceMaterial") #else @:native("THREE.MeshDistanceMaterial") #end
 extern class MeshDistanceMaterial extends Material {
 
     var referencePosition : Vector3;

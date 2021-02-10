@@ -2,7 +2,7 @@ package three.animation;
 
 import three.core.Object3D;
 
-@:native("THREE.AnimationUtils")
+#if three_jsRequire @:jsRequire("three", "AnimationUtils") #else @:native("THREE.AnimationUtils") #end
 extern class AnimationUtils {
 	static function arraySlice<T>( array : Array<T>, from : Int, ?to : Int ) : Array<T>;
 	static function convertArray<T>( array : Array<T>, type : Dynamic, ?forceClone : Bool ) : Array<T>;

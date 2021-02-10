@@ -2,7 +2,7 @@ package three.math;
 
 import three.core.BufferAttribute;
 
-@:native("THREE.Vector4")
+#if three_jsRequire @:jsRequire("three", "Vector4") #else @:native("THREE.Vector4") #end
 extern class Vector4 {
 
     var x : Float;

@@ -3,7 +3,7 @@ package three.extras.core;
 import three.math.Vector2;
 import three.extras.core.Shape;
 
-@:native("THREE.ShapePath")
+#if three_jsRequire @:jsRequire("three", "ShapePath") #else @:native("THREE.ShapePath") #end
 extern class ShapePath {
 	var subPaths:Array<Dynamic>;
 	var currentPath:Dynamic;

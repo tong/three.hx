@@ -3,7 +3,7 @@ package three.textures;
 import three.Lib;
 import three.textures.Texture;
 
-@:native("THREE.DataTexture")
+#if three_jsRequire @:jsRequire("three", "DataTexture") #else @:native("THREE.DataTexture") #end
 extern class DataTexture extends Texture {
 	function new( data : Dynamic,
 				  width : Int, height : Int,

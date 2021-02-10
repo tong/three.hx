@@ -2,7 +2,7 @@ package three.objects;
 
 import three.core.Object3D;
 
-@:native("THREE.Bone")
+#if three_jsRequire @:jsRequire("three", "Bone") #else @:native("THREE.Bone") #end
 extern class Bone extends Object3D {
 	var skin : SkinnedMesh;
 	var isBone : Bool;

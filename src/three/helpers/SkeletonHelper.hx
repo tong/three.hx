@@ -5,7 +5,7 @@ import three.objects.Bone;
 import three.objects.Mesh;
 import three.objects.Line;
 
-@:native("THREE.SkeletonHelper")
+#if three_jsRequire @:jsRequire("three", "SkeletonHelper") #else @:native("THREE.SkeletonHelper") #end
 extern class SkeletonHelper extends Line {
 	var bones : Array<Bone>;
 	function new( object : Mesh, ?hex : Int ) : Void;

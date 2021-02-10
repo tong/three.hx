@@ -3,7 +3,7 @@ package three.textures;
 import three.Lib;
 import three.textures.Texture;
 
-@:native("THREE.DepthTexture")
+#if three_jsRequire @:jsRequire("three", "DepthTexture") #else @:native("THREE.DepthTexture") #end
 extern class DepthTexture extends Texture {
 	//var minFilter : Filter;
 	var maxFilter : TextureFilter;

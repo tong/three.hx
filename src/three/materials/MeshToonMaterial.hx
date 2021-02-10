@@ -41,7 +41,7 @@ typedef MeshToonMaterialParamaters = {
     ?morphNormals : Bool,
 }
 
-@:native("THREE.MeshToonMaterial")
+#if three_jsRequire @:jsRequire("three", "MeshToonMaterial") #else @:native("THREE.MeshToonMaterial") #end
 extern class MeshToonMaterial extends Material {
 	var gradientMap : Texture;
     function new( ?parameters : MeshToonMaterialParamaters ) : Void;

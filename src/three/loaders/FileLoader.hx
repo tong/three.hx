@@ -5,7 +5,7 @@ import js.html.ErrorEvent;
 import js.html.ProgressEvent;
 import js.lib.ArrayBuffer;
 
-@:native("THREE.FileLoader")
+#if three_jsRequire @:jsRequire("three", "FileLoader") #else @:native("THREE.FileLoader") #end
 extern class FileLoader extends Loader {
 	var mimeType : String;
 	var responseType : String;

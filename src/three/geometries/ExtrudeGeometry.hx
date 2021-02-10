@@ -19,7 +19,7 @@ typedef ExtrudeGeometryOptions = {
 	// ???
 	?amount:Float,}
 
-@:native("THREE.ExtrudeGeometry")
+#if three_jsRequire @:jsRequire("three", "ExtrudeGeometry") #else @:native("THREE.ExtrudeGeometry") #end
 extern class ExtrudeGeometry extends BufferGeometry {
 	function new( shapes : EitherType<Shape,Array<Shape>>, ?options : ExtrudeGeometryOptions ) : Void;
 	function addShapeList( shapes : Array<Shape>, ?options : ExtrudeGeometryOptions ) : Void;

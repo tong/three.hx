@@ -6,7 +6,7 @@ import three.core.EventDispatcher;
 import three.math.Matrix3;
 import three.math.Vector2;
 
-@:native("THREE.Texture")
+#if three_jsRequire @:jsRequire("three", "Texture") #else @:native("THREE.Texture") #end
 extern class Texture extends EventDispatcher {
 
 	static var DEFAULT_IMAGE(default,never) : Dynamic;

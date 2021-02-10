@@ -2,7 +2,7 @@ package three.renderers.webgl;
 
 import js.html.webgl.RenderingContext;
 
-@:native("THREE.WebGLIndexedBufferRenderer")
+#if three_jsRequire @:jsRequire("three", "WebGLIndexedBufferRenderer") #else @:native("THREE.WebGLIndexedBufferRenderer") #end
 extern class WebGLIndexedBufferRenderer {
     function new( gl : RenderingContext, properties : Dynamic, infoRender : Dynamic ) : Void;
     function setMode( value : Dynamic ) : Void;

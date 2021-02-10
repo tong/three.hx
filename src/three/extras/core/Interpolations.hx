@@ -1,6 +1,6 @@
 package three.extras.core;
 
-@:native("THREE.Interpolations")
+#if three_jsRequire @:jsRequire("three", "Interpolations") #else @:native("THREE.Interpolations") #end
 extern class Interpolations {
     static function CatmullRom( t : Float, p0 : Float, p1 : Float, p2 : Float, p3 : Float ) : Float;
     static function QuadraticBezierP0( t : Float, p : Float ) : Float;

@@ -30,7 +30,7 @@ typedef MeshBasicMaterialParameters = {
 	?transparent:Bool,
 }
 
-@:native("THREE.MeshBasicMaterial")
+#if three_jsRequire @:jsRequire("three", "MeshBasicMaterial") #else @:native("THREE.MeshBasicMaterial") #end
 extern class MeshBasicMaterial extends Material {
     var map : Texture;
     var lightMap : Texture;

@@ -3,7 +3,7 @@ package three.lights;
 import haxe.extern.EitherType;
 import three.math.Color;
 
-@:native("THREE.HemisphereLight")
+#if three_jsRequire @:jsRequire("three", "HemisphereLight") #else @:native("THREE.HemisphereLight") #end
 extern class HemisphereLight extends Light {
     var skyColor : Color;
     var groundColor : Color;

@@ -3,7 +3,7 @@ package three.renderers.webgl.plugins;
 import three.cameras.Camera;
 import three.scenes.Scene;
 
-@:native("THREE.SpritePlugin")
+#if three_jsRequire @:jsRequire("three", "SpritePlugin") #else @:native("THREE.SpritePlugin") #end
 extern class SpritePlugin {
     function new() : Void;
     function init( renderer : Renderer ) : Void;

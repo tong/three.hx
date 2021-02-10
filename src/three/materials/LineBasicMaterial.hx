@@ -27,7 +27,7 @@ typedef LineBasicMaterialParameters = {
 	?linejoin : LineJoin,
 }
 
-@:native("THREE.LineBasicMaterial")
+#if three_jsRequire @:jsRequire("three", "LineBasicMaterial") #else @:native("THREE.LineBasicMaterial") #end
 extern class LineBasicMaterial extends Material {
 	var isLineBasicMaterial(default,null) : Bool;
     var linewidth : Float;

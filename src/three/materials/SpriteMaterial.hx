@@ -14,7 +14,7 @@ typedef SpriteMaterialParamaters = {
 	?rotation : Float
 }
 
-@:native("THREE.SpriteMaterial")
+#if three_jsRequire @:jsRequire("three", "SpriteMaterial") #else @:native("THREE.SpriteMaterial") #end
 extern class SpriteMaterial extends Material {
 	var map : Texture;
 	var alphaMap : Texture;

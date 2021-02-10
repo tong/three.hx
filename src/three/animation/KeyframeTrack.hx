@@ -11,7 +11,7 @@ import three.math.interpolants.CubicInterpolant;
 import three.math.interpolants.DiscreteInterpolant;
 import three.math.interpolants.LinearInterpolant;
 
-@:native("THREE.KeyframeTrack")
+#if three_jsRequire @:jsRequire("three", "KeyframeTrack") #else @:native("THREE.KeyframeTrack") #end
 extern class KeyframeTrack {
 
 	var name : String;

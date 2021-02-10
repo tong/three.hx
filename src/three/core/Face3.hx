@@ -3,7 +3,7 @@ package three.core;
 import three.math.Color;
 import three.math.Vector3;
 
-@:native("THREE.Face3")
+#if three_jsRequire @:jsRequire("three", "Face3") #else @:native("THREE.Face3") #end
 //extern class Face3 implements Face {
 extern class Face3 {
 

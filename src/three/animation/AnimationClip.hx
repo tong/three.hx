@@ -10,7 +10,7 @@ typedef MorphTarget = {
 	var vertices : Array<Vector3>;
 }
 
-@:native("THREE.AnimationClip")
+#if three_jsRequire @:jsRequire("three", "AnimationClip") #else @:native("THREE.AnimationClip") #end
 extern class AnimationClip {
 
 	var name : String;

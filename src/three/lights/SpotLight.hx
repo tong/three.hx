@@ -4,7 +4,7 @@ import haxe.extern.EitherType;
 import three.core.Object3D;
 import three.math.Color;
 
-@:native("THREE.SpotLight")
+#if three_jsRequire @:jsRequire("three", "SpotLight") #else @:native("THREE.SpotLight") #end
 extern class SpotLight extends Light {
     var target : Object3D;
     var intensity : Float; // 1

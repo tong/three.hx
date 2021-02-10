@@ -5,7 +5,7 @@ import js.html.ProgressEvent;
 import three.materials.Material;
 import three.textures.Texture;
 
-@:native("THREE.MaterialLoader")
+#if three_jsRequire @:jsRequire("three", "MaterialLoader") #else @:native("THREE.MaterialLoader") #end
 extern class MaterialLoader extends Loader {
 	var textures : Dynamic;
 	function new( ?manager : LoadingManager ) : Void;

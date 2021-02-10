@@ -19,7 +19,7 @@ typedef MeshPhysicalMaterialParameters = {
 	?transparency : Float
 }
 
-@:native("THREE.MeshPhysicalMaterial")
+#if three_jsRequire @:jsRequire("three", "MeshPhysicalMaterial") #else @:native("THREE.MeshPhysicalMaterial") #end
 extern class MeshPhysicalMaterial extends MeshStandardMaterial {
 	var defines : Dynamic;
     var reflectivity : Float;

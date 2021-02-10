@@ -10,7 +10,7 @@ import three.core.InterleavedBufferAttribute;
 //TODO:
 typedef GLenum = Dynamic;
 
-@:native("THREE.WebGLAttributes")
+#if three_jsRequire @:jsRequire("three", "WebGLAttributes") #else @:native("THREE.WebGLAttributes") #end
 extern class WebGLAttributes {
 
 	function new( value : EitherType<RenderingContext,WebGL2RenderingContext> ) : Void;

@@ -20,7 +20,7 @@ typedef TubeGeomeetryParameters = {
 	closed : Bool
 }
 
-@:native("THREE.TubeGeometry")
+#if three_jsRequire @:jsRequire("three", "TubeGeometry") #else @:native("THREE.TubeGeometry") #end
 extern class TubeGeometry extends three.core.BufferGeometry {
 	var parameters : TubeGeomeetryParameters;
 	function new( path : Curve, ?tubularSegments : Int, ?radius : Float, ?radiusSegments : Int, ?closed : Bool ) : Void;

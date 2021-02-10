@@ -55,7 +55,7 @@ typedef WebGLRendererParameters = {
 	?failIfMajorPerformanceCaveat : Bool
 }
 
-@:native("THREE.WebGLRenderer")
+#if three_jsRequire @:jsRequire("three", "WebGLRenderer") #else @:native("THREE.WebGLRenderer") #end
 extern class WebGLRenderer implements Renderer {
 
     var domElement : CanvasElement;

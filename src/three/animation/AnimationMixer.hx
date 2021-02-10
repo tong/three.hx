@@ -2,7 +2,7 @@ package three.animation;
 
 import three.core.Object3D;
 
-@:native("THREE.AnimationMixer")
+#if three_jsRequire @:jsRequire("three", "AnimationMixer") #else @:native("THREE.AnimationMixer") #end
 extern class AnimationMixer extends three.core.EventDispatcher {
 	var time : Float;
 	var timeScale : Float;

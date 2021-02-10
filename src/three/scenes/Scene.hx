@@ -4,7 +4,7 @@ import three.materials.Material;
 import three.math.Color;
 import three.textures.Texture;
 
-@:native("THREE.Scene")
+#if three_jsRequire @:jsRequire("three", "Scene") #else @:native("THREE.Scene") #end
 extern class Scene extends three.core.Object3D {
 	var background : Color;
 	var environment : Texture;

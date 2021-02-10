@@ -13,7 +13,7 @@ typedef MetaObject = {
 	images : Dynamic
 }
 
-@:native("THREE.Object3D")
+#if three_jsRequire @:jsRequire("three", "Object3D") #else @:native("THREE.Object3D") #end
 extern class Object3D extends EventDispatcher {
 
 	static var DefaultUp(default,never) : Vector3;

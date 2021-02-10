@@ -6,7 +6,7 @@ import three.materials.Material;
 import three.math.Vector3;
 import three.scenes.Scene;
 
-@:native("THREE.WebGLShadowMap")
+#if three_jsRequire @:jsRequire("three", "WebGLShadowMap") #else @:native("THREE.WebGLShadowMap") #end
 extern class WebGLShadowMap {
 
     var enabled : Bool;

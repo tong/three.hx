@@ -1,6 +1,6 @@
 package three.math;
 
-@:native("THREE.Color")
+#if three_jsRequire @:jsRequire("three", "Color") #else @:native("THREE.Color") #end
 extern class Color {
 
 	var isColor(default,null) : Bool;

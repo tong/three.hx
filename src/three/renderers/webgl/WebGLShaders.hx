@@ -1,6 +1,6 @@
 package three.renderers.webgl;
 
-@:native("THREE.ShaderChunk")
+#if three_jsRequire @:jsRequire("three", "ShaderChunk") #else @:native("THREE.ShaderChunk") #end
 extern class WebGLShaders {
 
     // FOG
@@ -68,14 +68,14 @@ extern class WebGLShaders {
 }
 
 /*
-@:native("THREE.UniformsUtils")
+#if three_jsRequire @:jsRequire("three", "UniformsUtils") #else @:native("THREE.UniformsUtils") #end
 extern class UniformsUtils {
     static function merge(a:Array<UniformsUtils>) : Dynamic ;
     static function clone(a:Dynamic) : Dynamic;
 }
 */
 
-@:native("THREE.UniformsLib")
+#if three_jsRequire @:jsRequire("three", "UniformsLib") #else @:native("THREE.UniformsLib") #end
 extern class UniformsLib {
     static var common : Dynamic;
     static var fog : Dynamic;
@@ -84,7 +84,7 @@ extern class UniformsLib {
     static var shadowmap : Dynamic;
 }
 
-@:native("THREE.ShaderLib")
+#if three_jsRequire @:jsRequire("three", "ShaderLib") #else @:native("THREE.ShaderLib") #end
 extern class ShaderLib {
     static var sprite : { vertexShader:String, fragmentShader:String };
     static var depth : { uniforms:Dynamic, vertexShader:String, fragmentShader:String };

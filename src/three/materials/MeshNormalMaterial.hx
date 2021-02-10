@@ -24,7 +24,7 @@ typedef MeshNormalMaterialParamaters = {
 	?morphNormals : Bool,
 }
 
-@:native("THREE.MeshNormalMaterial")
+#if three_jsRequire @:jsRequire("three", "MeshNormalMaterial") #else @:native("THREE.MeshNormalMaterial") #end
 extern class MeshNormalMaterial extends Material {
   	var bumpMap : Texture;
 	var bumpScale : Float;

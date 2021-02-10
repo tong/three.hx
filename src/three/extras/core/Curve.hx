@@ -2,7 +2,7 @@ package three.extras.core;
 
 import three.math.Vector2;
 
-@:native("THREE.Curve")
+#if three_jsRequire @:jsRequire("three", "Curve") #else @:native("THREE.Curve") #end
 extern class Curve {
 
     var arcLengthDivisions : Float;

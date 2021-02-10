@@ -3,7 +3,7 @@ package three.loaders;
 import js.html.ProgressEvent;
 import js.lib.Promise;
 
-@:native("THREE.Loader")
+#if three_jsRequire @:jsRequire("three", "Loader") #else @:native("THREE.Loader") #end
 extern class Loader {
 	var crossOrigin : String;
 	var path : String;

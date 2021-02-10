@@ -1,6 +1,6 @@
 package three.core;
 
-@:native("THREE.EventDispatcher")
+#if three_jsRequire @:jsRequire("three", "EventDispatcher") #else @:native("THREE.EventDispatcher") #end
 extern class EventDispatcher {
 
     function new() : Void;

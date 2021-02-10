@@ -1,6 +1,6 @@
 package three.math;
 
-@:native("THREE.Matrix4")
+#if three_jsRequire @:jsRequire("three", "Matrix4") #else @:native("THREE.Matrix4") #end
 extern class Matrix4 {
 
     var elements : Array<Float>;

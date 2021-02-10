@@ -5,7 +5,7 @@ import three.core.BufferGeometry;
 import three.materials.Material;
 import three.math.Matrix4;
 
-@:native("THREE.SkinnedMesh")
+#if three_jsRequire @:jsRequire("three", "SkinnedMesh") #else @:native("THREE.SkinnedMesh") #end
 extern class SkinnedMesh extends Mesh {
 	var isSkinnedMesh(default,null) : Bool;
     var bindMode : String;

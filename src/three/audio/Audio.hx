@@ -9,7 +9,7 @@ import js.html.audio.AudioBufferSourceNode;
 import js.html.audio.GainNode;
 import three.core.Object3D;
 
-@:native("THREE.Audio")
+#if three_jsRequire @:jsRequire("three", "Audio") #else @:native("THREE.Audio") #end
 extern class Audio extends Object3D {
 	var context : AudioContext;
 	var gain : GainNode;
@@ -54,7 +54,7 @@ extern class Audio extends Object3D {
 }
 
 /*
-@:native("THREE.AudioBuffer")
+#if three_jsRequire @:jsRequire("three", "AudioBuffer") #else @:native("THREE.AudioBuffer") #end
 extern class AudioBuffer {
 }
 */

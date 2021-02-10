@@ -38,7 +38,7 @@ typedef MeshStandardMaterialParameters = {
 	?morphNormals : Bool,
 }
 
-@:native("THREE.MeshStandardMaterial")
+#if three_jsRequire @:jsRequire("three", "MeshStandardMaterial") #else @:native("THREE.MeshStandardMaterial") #end
 extern class MeshStandardMaterial extends Material {
 
     var roughness : Float;

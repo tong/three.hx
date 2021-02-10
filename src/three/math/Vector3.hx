@@ -3,7 +3,7 @@ package three.math;
 import three.cameras.Camera;
 import three.core.BufferAttribute;
 
-@:native("THREE.Vector3")
+#if three_jsRequire @:jsRequire("three", "Vector3") #else @:native("THREE.Vector3") #end
 extern class Vector3 {
 
     var x : Float;

@@ -1,6 +1,6 @@
 package three.loaders;
 
-@:native("THREE.Cache")
+#if three_jsRequire @:jsRequire("three", "Cache") #else @:native("THREE.Cache") #end
 extern class Cache  {
     var enabled : Bool;
     var files(default,null) : Dynamic;

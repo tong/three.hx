@@ -6,7 +6,7 @@ import three.core.Object3D;
 import three.core.Raycaster;
 import three.materials.Material;
 
-@:native("THREE.Line")
+#if three_jsRequire @:jsRequire("three", "Line") #else @:native("THREE.Line") #end
 extern class Line extends Object3D {
     var geometry : BufferGeometry;
     var material : EitherType<Material,Array<Material>>;

@@ -1,6 +1,6 @@
 package three.math;
 
-@:native("THREE.Box2")
+#if three_jsRequire @:jsRequire("three", "Box2") #else @:native("THREE.Box2") #end
 extern class Box2 {
     var min : Vector2;
     var max : Vector2;

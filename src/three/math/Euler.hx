@@ -9,7 +9,7 @@ package three.math;
 	var ZYX = 'ZYX';
 }
 
-@:native("THREE.Euler")
+#if three_jsRequire @:jsRequire("three", "Euler") #else @:native("THREE.Euler") #end
 extern class Euler {
 
 	var x : Float;

@@ -2,7 +2,7 @@ package three.renderers.webgl;
 
 import three.cameras.Camera;
 
-@:native("THREE.WebGLClipping")
+#if three_jsRequire @:jsRequire("three", "WebGLClipping") #else @:native("THREE.WebGLClipping") #end
 extern class WebGLClipping {
 	var uniform: { value : Dynamic, needsUpdate : Bool };
 	var numPlanes : Int;

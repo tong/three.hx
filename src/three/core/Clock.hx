@@ -1,6 +1,6 @@
 package three.core;
 
-@:native("THREE.Clock")
+#if three_jsRequire @:jsRequire("three", "Clock") #else @:native("THREE.Clock") #end
 extern class Clock {
 
 	var autoStart : Bool;

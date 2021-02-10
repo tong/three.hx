@@ -2,7 +2,7 @@ package three.extras;
 
 import three.math.Vector2;
 
-@:native("THREE.ShapeUtils")
+#if three_jsRequire @:jsRequire("three", "ShapeUtils") #else @:native("THREE.ShapeUtils") #end
 extern class ShapeUtils {
     static function area( contour : Array<Vector2> ) : Float;
     static function triangulate( contour : Array<Vector2>, indices : Array<Array<Float>> ) : Float;

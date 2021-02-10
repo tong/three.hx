@@ -5,7 +5,7 @@ import js.html.audio.AudioContext;
 import js.html.audio.PannerNode;
 import js.html.Uint8Array;
 
-@:native("THREE.PositionalAudio")
+#if three_jsRequire @:jsRequire("three", "PositionalAudio") #else @:native("THREE.PositionalAudio") #end
 extern class PositionalAudio extends Audio {
 
 	function new( listener : AudioListener ) : Void;
@@ -28,7 +28,7 @@ extern class PositionalAudio extends Audio {
 }
 
 
-@:native("THREE.PositionalAudio")
+#if three_jsRequire @:jsRequire("three", "PositionalAudio") #else @:native("THREE.PositionalAudio") #end
 extern class AudioBuffer extends Audio {
 	var ready : Bool;
 	var readyCallbacks : Array<Dynamic>;

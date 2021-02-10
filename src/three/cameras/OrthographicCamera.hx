@@ -1,6 +1,6 @@
 package three.cameras;
 
-@:native("THREE.OrthographicCamera")
+#if three_jsRequire @:jsRequire("three", "OrthographicCamera") #else @:native("THREE.OrthographicCamera") #end
 extern class OrthographicCamera extends Camera {
 	var zoom : Float;
     var left : Float;

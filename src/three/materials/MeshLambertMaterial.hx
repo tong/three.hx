@@ -32,7 +32,7 @@ typedef MeshLambertMaterialParamaters = {
 	?morphNormals : Bool,
 }
 
-@:native("THREE.MeshLambertMaterial")
+#if three_jsRequire @:jsRequire("three", "MeshLambertMaterial") #else @:native("THREE.MeshLambertMaterial") #end
 extern class MeshLambertMaterial extends Material {
     var emissive : Color;
 	var emissiveIntensity : Float;

@@ -13,7 +13,7 @@ import three.math.Color;
 }
 */
 
-@:native("THREE.Light")
+#if three_jsRequire @:jsRequire("three", "Light") #else @:native("THREE.Light") #end
 extern class Light extends Object3D {
 
 	var color : Color;

@@ -5,7 +5,7 @@ import three.cameras.ArrayCamera;
 import three.cameras.Camera;
 import three.objects.Group;
 
-@:native("THREE.WebXRManager")
+#if three_jsRequire @:jsRequire("three", "WebXRManager") #else @:native("THREE.WebXRManager") #end
 extern class WebXRManager {
     var enabled : Bool;
     var isPresenting : Bool;

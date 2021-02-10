@@ -2,7 +2,7 @@ package three.renderers.webgl;
 
 import three.Lib;
 
-@:native("THREE.WebGLPrograms")
+#if three_jsRequire @:jsRequire("three", "WebGLPrograms") #else @:native("THREE.WebGLPrograms") #end
 extern class WebGLPrograms {
     var programs : Array<WebGLProgram>;
     var shaderIDs : Dynamic;

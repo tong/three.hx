@@ -3,7 +3,7 @@ package three.renderers.webgl;
 import three.core.BufferGeometry;
 import three.core.Object3D;
 
-@:native("THREE.WebGLExtensions")
+#if three_jsRequire @:jsRequire("three", "WebGLExtensions") #else @:native("THREE.WebGLExtensions") #end
 extern class WebGLObjects {
     function new( gl : Dynamic, properties : Dynamic, info : Dynamic ) : Void;
     function update( object : Object3D ) : BufferGeometry;

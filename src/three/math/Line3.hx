@@ -1,6 +1,6 @@
 package three.math;
 
-@:native("THREE.Line3")
+#if three_jsRequire @:jsRequire("three", "Line3") #else @:native("THREE.Line3") #end
 extern class Line3 {
 
     var start : Vector3;
