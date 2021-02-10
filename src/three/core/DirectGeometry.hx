@@ -1,6 +1,6 @@
 package three.core;
 
-@:native("THREE.DirectGeometry")
+#if three_jsRequire @:jsRequire("three", "DirectGeometry") #else @:native("THREE.DirectGeometry") #end
 extern class DirectGeometry {
     var uuid : String;
     var name : String;

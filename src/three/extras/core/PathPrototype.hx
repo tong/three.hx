@@ -2,7 +2,7 @@ package three.extras.core;
 
 import three.math.Vector2;
 
-@:native("THREE.PathPrototype")
+#if three_jsRequire @:jsRequire("three", "PathPrototype") #else @:native("THREE.PathPrototype") #end
 extern class PathPrototype extends CurvePath {
     function fromPoints( vectors : Array<Vector2> ) : Void;
     function moveTo( x : Float, y : Float ) : Void;

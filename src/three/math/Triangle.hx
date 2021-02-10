@@ -1,6 +1,6 @@
 package three.math;
 
-@:native("THREE.Triangle")
+#if three_jsRequire @:jsRequire("three", "Triangle") #else @:native("THREE.Triangle") #end
 extern class Triangle {
     var a : Vector3;
     var b : Vector3;

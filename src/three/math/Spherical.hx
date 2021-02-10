@@ -1,6 +1,6 @@
 package three.math;
 
-@:native("THREE.Spherical")
+#if three_jsRequire @:jsRequire("three", "Spherical") #else @:native("THREE.Spherical") #end
 extern class Spherical {
     function new( ?radius : Float, ?phi : Float, ?theta : Float ) : Void;
     function set( ?radius : Float, ?phi : Float, ?theta : Float ) : Spherical;

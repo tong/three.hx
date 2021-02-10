@@ -9,7 +9,7 @@ import js.html.Uint8Array;
 #end
 import js.html.audio.AnalyserNode;
 
-@:native("THREE.AudioAnalyser")
+#if three_jsRequire @:jsRequire("three", "AudioAnalyser") #else @:native("THREE.AudioAnalyser") #end
 extern class AudioAnalyser {
 	var analyser : Dynamic;
 	var data(default,null) : Uint8Array;

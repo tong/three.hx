@@ -5,7 +5,7 @@ import three.core.Object3D;
 import three.math.Color;
 import three.math.Vector3;
 
-@:native("THREE.DirectionalLight")
+#if three_jsRequire @:jsRequire("three", "DirectionalLight") #else @:native("THREE.DirectionalLight") #end
 extern class DirectionalLight extends Light {
 
     var target : Object3D;

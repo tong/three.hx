@@ -5,7 +5,7 @@ import three.math.Color;
 import three.objects.Mesh;
 import three.lights.HemisphereLight;
 
-@:native("THREE.HemisphereLightHelper")
+#if three_jsRequire @:jsRequire("three", "HemisphereLightHelper") #else @:native("THREE.HemisphereLightHelper") #end
 extern class HemisphereLightHelper extends Object3D {
 	var lightSphere : Mesh;
 	var light : HemisphereLight;

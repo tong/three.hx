@@ -1,6 +1,6 @@
 package three.renderers.webgl;
 
-@:native("THREE.WebGLProgram")
+#if three_jsRequire @:jsRequire("three", "WebGLProgram") #else @:native("THREE.WebGLProgram") #end
 extern class WebGLProgram {
     static function generateDefines( defines : Array<Dynamic> ) : String;
     static function fetchUniformLocations( gl : Dynamic, program : Dynamic, identifiers : Dynamic ) : Dynamic;

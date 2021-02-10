@@ -3,7 +3,7 @@ package three.extras.core;
 import three.math.Vector2;
 import three.math.Vector3;
 
-@:native("THREE.CurvePath")
+#if three_jsRequire @:jsRequire("three", "CurvePath") #else @:native("THREE.CurvePath") #end
 extern class CurvePath extends Curve {
 
     var type(default,null) : String;

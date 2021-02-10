@@ -1,6 +1,6 @@
 package three.animation;
 
-@:native("THREE.PropertyMixer")
+#if three_jsRequire @:jsRequire("three", "PropertyMixer") #else @:native("THREE.PropertyMixer") #end
 extern class PropertyMixer {
     var binding : Dynamic;
     var valueSize : Float;

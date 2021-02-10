@@ -7,7 +7,7 @@ import three.core.Object3D;
 import three.materials.Material;
 import three.textures.Texture;
 
-@:native("THREE.ObjectLoader")
+#if three_jsRequire @:jsRequire("three", "ObjectLoader") #else @:native("THREE.ObjectLoader") #end
 extern class ObjectLoader extends Loader {
 	function load( url : String, onLoad : Object3D->Void, ?onProgress : ProgressEvent->Void, ?onError: ErrorEvent->Void ) : Void;
 	function parse( json : Dynamic ) : Dynamic;

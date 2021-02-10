@@ -14,7 +14,7 @@ typedef MeshDepthMaterialParamaters = {
 	?wireframeLinewidth : Float,
 }
 
-@:native("THREE.MeshDepthMaterial")
+#if three_jsRequire @:jsRequire("three", "MeshDepthMaterial") #else @:native("THREE.MeshDepthMaterial") #end
 extern class MeshDepthMaterial extends Material {
 	var depthPacking : DepthPacking;
 	var displacementMap : Texture;

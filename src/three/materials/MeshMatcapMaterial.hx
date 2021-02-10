@@ -26,7 +26,7 @@ typedef MeshMatcapMaterialParameters = {
 	?morphNormals : Bool,
 }
 
-@:native("THREE.MeshMatcapMaterial")
+#if three_jsRequire @:jsRequire("three", "MeshMatcapMaterial") #else @:native("THREE.MeshMatcapMaterial") #end
 extern class MeshMatcapMaterial extends Material {
     function new( ?parameters : MeshMatcapMaterialParameters ) : Void;
 }

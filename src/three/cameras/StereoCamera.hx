@@ -1,6 +1,6 @@
 package three.cameras;
 
-@:native("THREE.StereoCamera")
+#if three_jsRequire @:jsRequire("three", "StereoCamera") #else @:native("THREE.StereoCamera") #end
 extern class StereoCamera extends Camera {
 
     var aspect : Float;

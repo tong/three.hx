@@ -1,6 +1,6 @@
 package three.core;
 
-@:native("THREE.InstancedBufferGeometry")
+#if three_jsRequire @:jsRequire("three", "InstancedBufferGeometry") #else @:native("THREE.InstancedBufferGeometry") #end
 extern class InstancedBufferGeometry extends BufferGeometry {
     var instanceCount : Int;
     function new() : Void;

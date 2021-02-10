@@ -2,7 +2,7 @@ package three.renderers;
 
 import three.textures.Texture;
 
-@:native("THREE.WebGLCubeRenderTarget")
+#if three_jsRequire @:jsRequire("three", "WebGLCubeRenderTarget") #else @:native("THREE.WebGLCubeRenderTarget") #end
 extern class WebGLCubeRenderTarget extends WebGLRenderTarget {
     var activeCubeFace : Int;
     function new( size : Float, ?options : Dynamic ) : Void;

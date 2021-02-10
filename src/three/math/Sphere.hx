@@ -1,6 +1,6 @@
 package three.math;
 
-@:native("THREE.Sphere")
+#if three_jsRequire @:jsRequire("three", "Sphere") #else @:native("THREE.Sphere") #end
 extern class Sphere {
 
     var center : Vector3;

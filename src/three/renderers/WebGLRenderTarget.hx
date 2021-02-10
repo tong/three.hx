@@ -18,7 +18,7 @@ typedef WebGLRenderTargetOptions = {
     ?shareDepthFrom : WebGLRenderTarget
 }
 
-@:native("THREE.WebGLRenderTarget")
+#if three_jsRequire @:jsRequire("three", "WebGLRenderTarget") #else @:native("THREE.WebGLRenderTarget") #end
 extern class WebGLRenderTarget extends EventDispatcher {
 
     //var uuid : String;

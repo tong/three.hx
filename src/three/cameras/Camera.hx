@@ -4,7 +4,7 @@ import three.core.Object3D;
 import three.math.Matrix4;
 import three.math.Vector3;
 
-@:native("THREE.Camera")
+#if three_jsRequire @:jsRequire("three", "Camera") #else @:native("THREE.Camera") #end
 extern class Camera extends Object3D {
 
 	var matrixWorldInverse : Matrix4;

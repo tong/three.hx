@@ -6,7 +6,7 @@ import js.lib.ArrayBufferView;
 import js.html.ArrayBufferView;
 #end
 
-@:native("THREE.InstancedBufferAttribute")
+#if three_jsRequire @:jsRequire("three", "InstancedBufferAttribute") #else @:native("THREE.InstancedBufferAttribute") #end
 extern class InstancedBufferAttribute extends BufferAttribute {
     function new( array : ArrayBufferView, itemSize : Int, ?meshPerAttribute : Int ) : Void;
 }

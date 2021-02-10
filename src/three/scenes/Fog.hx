@@ -2,7 +2,7 @@ package three.scenes;
 
 import three.math.Color;
 
-@:native("THREE.Fog")
+#if three_jsRequire @:jsRequire("three", "Fog") #else @:native("THREE.Fog") #end
 extern class Fog implements IFog {
     var name : String;
     var color : Color;

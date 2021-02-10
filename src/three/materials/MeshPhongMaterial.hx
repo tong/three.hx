@@ -42,7 +42,7 @@ typedef MeshPhongMaterialParameters = {
     ?morphNormals : Bool,
 }
 
-@:native("THREE.MeshPhongMaterial")
+#if three_jsRequire @:jsRequire("three", "MeshPhongMaterial") #else @:native("THREE.MeshPhongMaterial") #end
 extern class MeshPhongMaterial extends Material {
     //var color : Color;
     var specular : Color;

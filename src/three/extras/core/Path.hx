@@ -3,7 +3,7 @@ package three.extras.core;
 import three.math.Vector2;
 import three.extras.core.Shape;
 
-@:native("THREE.Path")
+#if three_jsRequire @:jsRequire("three", "Path") #else @:native("THREE.Path") #end
 extern class Path extends CurvePath {
 
     function new( ?points : Array<Vector2> ) : Void;

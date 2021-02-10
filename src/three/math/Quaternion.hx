@@ -1,6 +1,6 @@
 package three.math;
 
-@:native("THREE.Quaternion")
+#if three_jsRequire @:jsRequire("three", "Quaternion") #else @:native("THREE.Quaternion") #end
 extern class Quaternion {
 
     var isQuaternion(default,null) : Bool;

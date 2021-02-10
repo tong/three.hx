@@ -7,7 +7,7 @@ typedef CircleGeometryParameters = {
 	var thetaLength : Float;
 }
 
-@:native("THREE.CircleGeometry")
+#if three_jsRequire @:jsRequire("three", "CircleGeometry") #else @:native("THREE.CircleGeometry") #end
 extern class CircleGeometry extends three.core.BufferGeometry {
 	function new( ?radius : Float, ?segments : Int, ?thetaStart : Float, ?thetaLength : Float ) : Void;
 }

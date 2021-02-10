@@ -48,7 +48,7 @@ typedef MaterialParameters = {
 	?stencilZPass : StencilOp,
 };
 
-@:native("THREE.Material")
+#if three_jsRequire @:jsRequire("three", "Material") #else @:native("THREE.Material") #end
 extern class Material extends EventDispatcher {
 
 	var uuid(default,never) : Int;

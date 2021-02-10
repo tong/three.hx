@@ -4,7 +4,7 @@ import haxe.Constraints.Function;
 import three.Lib;
 import three.core.Object3D;
 
-@:native("THREE.AnimationAction")
+#if three_jsRequire @:jsRequire("three", "AnimationAction") #else @:native("THREE.AnimationAction") #end
 extern class AnimationAction {
 	var loop(default,null) : Bool;
 	var time : Float;

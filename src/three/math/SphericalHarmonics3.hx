@@ -1,6 +1,6 @@
 package three.math;
 
-@:native("THREE.SphericalHarmonics3")
+#if three_jsRequire @:jsRequire("three", "SphericalHarmonics3") #else @:native("THREE.SphericalHarmonics3") #end
 extern class SphericalHarmonics3 {
 	var isSphericalHarmonics3(default,null) : Bool;
     function new() : Void;

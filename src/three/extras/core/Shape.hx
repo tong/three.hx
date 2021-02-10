@@ -5,7 +5,7 @@ import three.geometries.ExtrudeGeometry;
 import three.geometries.ShapeGeometry;
 import three.extras.core.Shape;
 
-@:native("THREE.Shape")
+#if three_jsRequire @:jsRequire("three", "Shape") #else @:native("THREE.Shape") #end
 extern class Shape extends three.extras.core.Path {
 
     var holes : Array<Dynamic>;

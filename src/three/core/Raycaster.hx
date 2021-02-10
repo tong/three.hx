@@ -24,7 +24,7 @@ typedef RaycasterParameters = {
 	?Sprite : Dynamic
 };
 
-@:native("THREE.Raycaster")
+#if three_jsRequire @:jsRequire("three", "Raycaster") #else @:native("THREE.Raycaster") #end
 extern class Raycaster {
     var ray : Ray;
     var near : Float;

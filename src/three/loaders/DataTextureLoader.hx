@@ -4,7 +4,7 @@ import js.html.ErrorEvent;
 import js.html.ProgressEvent;
 import three.textures.DataTexture;
 
-@:native("THREE.DataTextureLoader")
+#if three_jsRequire @:jsRequire("three", "DataTextureLoader") #else @:native("THREE.DataTextureLoader") #end
 extern class DataTextureLoader extends Loader {
 	function load( url : String, onLoad : DataTexture->Void, ?onProgress : ProgressEvent->Void, ?onError : ErrorEvent->Void ) : Void;
 }

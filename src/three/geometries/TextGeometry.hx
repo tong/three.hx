@@ -13,7 +13,7 @@ typedef TextGeometryParameters = {
 	bevelSegments: Float
 }
 
-@:native("THREE.TextGeometry")
+#if three_jsRequire @:jsRequire("three", "TextGeometry") #else @:native("THREE.TextGeometry") #end
 extern class TextGeometry extends ExtrudeGeometry {
 	var parameters : TextGeometryParameters;
 	function new( text : String, ?parameters : TextGeometryParameters ) : Void;

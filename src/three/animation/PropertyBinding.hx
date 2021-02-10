@@ -2,7 +2,7 @@ package three.animation;
 
 import haxe.extern.EitherType;
 
-@:native("THREE.PropertyBinding")
+#if three_jsRequire @:jsRequire("three", "PropertyBinding") #else @:native("THREE.PropertyBinding") #end
 extern class PropertyBinding {
 
     var path : String;

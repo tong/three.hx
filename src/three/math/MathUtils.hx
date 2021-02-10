@@ -1,6 +1,6 @@
 package three.math;
 
-@:native("THREE.MathUtils")
+#if three_jsRequire @:jsRequire("three", "MathUtils") #else @:native("THREE.MathUtils") #end
 extern class MathUtils {
 	static var DEG2RAD : Float;
 	static var RAD2DEG : Float;

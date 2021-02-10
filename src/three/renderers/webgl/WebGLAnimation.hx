@@ -4,7 +4,7 @@ import haxe.extern.EitherType;
 import js.html.webgl.RenderingContext;
 import js.html.webgl.WebGL2RenderingContext;
 
-@:native("THREE.WebGLAnimation")
+#if three_jsRequire @:jsRequire("three", "WebGLAnimation") #else @:native("THREE.WebGLAnimation") #end
 extern class WebGLAnimation {
     function new() : Void;
     function start() : Void;

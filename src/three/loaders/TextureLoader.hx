@@ -4,7 +4,7 @@ import js.html.ErrorEvent;
 import js.html.ProgressEvent;
 import three.textures.Texture;
 
-@:native("THREE.TextureLoader")
+#if three_jsRequire @:jsRequire("three", "TextureLoader") #else @:native("THREE.TextureLoader") #end
 extern class TextureLoader extends Loader  {
     function load( url : String, ?onLoad : Texture->Void, ?onProgress : ProgressEvent->Void, ?onError : ErrorEvent->Void ) : Texture;
 }

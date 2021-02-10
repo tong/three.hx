@@ -5,7 +5,7 @@ import three.math.Color;
 import three.math.Vector3;
 import three.textures.Texture;
 
-@:native("THREE.LensFlare")
+#if three_jsRequire @:jsRequire("three", "LensFlare") #else @:native("THREE.LensFlare") #end
 extern class LensFlare extends Object3D {
     var lensFlares : Array<Dynamic>;
     var positionScreen : Vector3;

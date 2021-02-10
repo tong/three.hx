@@ -1,6 +1,6 @@
 package three.math;
 
-@:native("THREE.Ray")
+#if three_jsRequire @:jsRequire("three", "Ray") #else @:native("THREE.Ray") #end
 extern class Ray {
     var origin : Vector3;
     var direction : Vector3;

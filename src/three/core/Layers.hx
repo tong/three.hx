@@ -1,6 +1,6 @@
 package three.core;
 
-@:native("THREE.Layers")
+#if three_jsRequire @:jsRequire("three", "Layers") #else @:native("THREE.Layers") #end
 extern class Layers {
 	var mask : Int;
 	function new() : Void;

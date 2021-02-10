@@ -11,7 +11,7 @@ typedef CylinderGeometryParameters = {
 	var thetaLength: Bool;
 }
 
-@:native("THREE.CylinderGeometry")
+#if three_jsRequire @:jsRequire("three", "CylinderGeometry") #else @:native("THREE.CylinderGeometry") #end
 extern class CylinderGeometry extends three.core.BufferGeometry {
 	var parameters : CylinderGeometryParameters;
     function new( ?radiusTop : Float, ?radiusBottom : Float, ?height : Float, ?segmentsRadius : Float, ?segmentsHeight : Float, ?openEnded : Bool, ?thetaStart : Float, ?thetaLength : Float ) : Void;

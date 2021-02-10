@@ -3,7 +3,7 @@ package three.scenes;
 import haxe.extern.EitherType;
 import three.math.Color;
 
-@:native("THREE.FogExp2")
+#if three_jsRequire @:jsRequire("three", "FogExp2") #else @:native("THREE.FogExp2") #end
 extern class FogExp2 implements IFog {
 	var name : String;
 	var color : Color;

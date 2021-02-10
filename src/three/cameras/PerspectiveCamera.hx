@@ -1,6 +1,6 @@
 package three.cameras;
 
-@:native("THREE.PerspectiveCamera")
+#if three_jsRequire @:jsRequire("three", "PerspectiveCamera") #else @:native("THREE.PerspectiveCamera") #end
 extern class PerspectiveCamera extends Camera {
 
     var fov : Float;

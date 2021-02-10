@@ -1,6 +1,6 @@
 package three.animation;
 
-@:native("THREE.AnimationObjectGroup")
+#if three_jsRequire @:jsRequire("three", "AnimationObjectGroup") #else @:native("THREE.AnimationObjectGroup") #end
 extern class AnimationObjectGroup {
 	var uuid : String;
 	var stats : { bindingsPerObject : Int, objects : { total : Int, inUse : Int } };

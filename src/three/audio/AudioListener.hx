@@ -10,7 +10,7 @@ import js.html.Uint8Array;
 #end
 import three.core.Object3D;
 
-@:native("THREE.AudioListener")
+#if three_jsRequire @:jsRequire("three", "AudioListener") #else @:native("THREE.AudioListener") #end
 extern class AudioListener extends Object3D {
 	var context : AudioContext;
 	var gain : GainNode;

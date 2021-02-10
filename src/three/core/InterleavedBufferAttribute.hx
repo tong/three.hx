@@ -1,6 +1,6 @@
 package three.core;
 
-@:native("THREE.InterleavedBufferAttribute")
+#if three_jsRequire @:jsRequire("three", "InterleavedBufferAttribute") #else @:native("THREE.InterleavedBufferAttribute") #end
 extern class InterleavedBufferAttribute {
 	var length(default,null) : Int;
 	var count(default,null) : Int;

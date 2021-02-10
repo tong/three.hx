@@ -2,7 +2,7 @@ package three.extras.curves;
 
 import three.extras.core.Curve;
 
-@:native("THREE.EllipseCurve")
+#if three_jsRequire @:jsRequire("three", "EllipseCurve") #else @:native("THREE.EllipseCurve") #end
 extern class EllipseCurve extends Curve {
     var aX : Float;
     var aY : Float;

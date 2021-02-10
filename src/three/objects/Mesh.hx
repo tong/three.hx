@@ -7,7 +7,7 @@ import three.core.Object3D;
 import three.core.Raycaster;
 import three.materials.Material;
 
-@:native("THREE.Mesh")
+#if three_jsRequire @:jsRequire("three", "Mesh") #else @:native("THREE.Mesh") #end
 extern class Mesh extends Object3D {
 	var isMesh(default,null) : Bool;
     var geometry : BufferGeometry;

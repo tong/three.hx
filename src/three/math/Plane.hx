@@ -1,6 +1,6 @@
 package three.math;
 
-@:native("THREE.Plane")
+#if three_jsRequire @:jsRequire("three", "Plane") #else @:native("THREE.Plane") #end
 extern class Plane {
 
     var normal : Vector3;

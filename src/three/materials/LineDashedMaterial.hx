@@ -13,7 +13,7 @@ typedef LineDashedMaterialParameters = {
 	?gapSize : Float,
 }
 
-@:native("THREE.LineDashedMaterial")
+#if three_jsRequire @:jsRequire("three", "LineDashedMaterial") #else @:native("THREE.LineDashedMaterial") #end
 extern class LineDashedMaterial extends Material {
 	var isLineDashedMaterial(default,null) : Bool;
     var linewidth : Float;

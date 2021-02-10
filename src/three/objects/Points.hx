@@ -7,7 +7,7 @@ import three.core.Object3D;
 import three.core.Raycaster;
 import three.materials.Material;
 
-@:native("THREE.Points")
+#if three_jsRequire @:jsRequire("three", "Points") #else @:native("THREE.Points") #end
 extern class Points extends Object3D {
 	var isPoints(default,null) : Bool;
 	var geometry : BufferGeometry;

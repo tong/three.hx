@@ -1,6 +1,6 @@
 package three.loaders;
 
-@:native("THREE.LoadingManager")
+#if three_jsRequire @:jsRequire("three", "LoadingManager") #else @:native("THREE.LoadingManager") #end
 extern class LoadingManager {
 
 	var isLoading(default,null) : Bool;

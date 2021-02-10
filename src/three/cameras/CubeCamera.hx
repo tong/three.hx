@@ -5,7 +5,7 @@ import three.renderers.Renderer;
 import three.renderers.webgl.WebGLRenderTargetCube;
 import three.scenes.Scene;
 
-@:native("THREE.CubeCamera")
+#if three_jsRequire @:jsRequire("three", "CubeCamera") #else @:native("THREE.CubeCamera") #end
 extern class CubeCamera extends Object3D {
 	var renderTarget : WebGLRenderTargetCube;
 	function new( near : Float, far : Float, cubeResolution : Float, ?options : Dynamic ) : Void;

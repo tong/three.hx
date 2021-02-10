@@ -5,7 +5,7 @@ import three.scenes.Scene;
 
 //TODO
 
-@:native("THREE.WebGLRenderState")
+#if three_jsRequire @:jsRequire("three", "WebGLRenderState") #else @:native("THREE.WebGLRenderState") #end
 extern class WebGLRenderState {
 	var state : {
 		lightsArray : Array<Dynamic>,
@@ -19,7 +19,7 @@ extern class WebGLRenderState {
 	function pushShadow( shadowLight : Dynamic ) : Void;
 }
 
-@:native("THREE.WebGLRenderStates")
+#if three_jsRequire @:jsRequire("three", "WebGLRenderStates") #else @:native("THREE.WebGLRenderStates") #end
 extern class WebGLRenderStates {
 	function new() : Void;
 	function get( scene : Scene, camera : Camera ) : WebGLRenderState;
