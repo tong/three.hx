@@ -60,7 +60,7 @@ extern class Material extends EventDispatcher {
 
     var blending : BlendMode;
     var side : Side;
-    var flatShading : Bool;
+    //var flatShading : Bool;
 	var vertexColors : Bool;
 
 	var opacity : Float;

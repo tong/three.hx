@@ -76,6 +76,7 @@ extern class MeshPhongMaterial extends Material {
 	var skinning : Bool;
     var morphTargets : Bool;
     var morphNormals : Bool;
+    var flatShading : Bool;
     function new( ?parameters : MeshPhongMaterialParameters ) : Void;
     override function clone() : MeshPhongMaterial;
 }

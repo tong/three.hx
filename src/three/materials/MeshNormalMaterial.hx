@@ -39,6 +39,7 @@ extern class MeshNormalMaterial extends Material {
 	var skinning : Bool;
 	var morphTargets : Bool;
 	var morphNormals : Bool;
+	var flatShading : Bool;
     function new( ?parameters : MeshNormalMaterialParamaters ) : Void;
     function setValues( parameters : MeshNormalMaterialParamaters ) : Void;
 }

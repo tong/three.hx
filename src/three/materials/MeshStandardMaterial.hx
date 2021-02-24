@@ -86,6 +86,8 @@ extern class MeshStandardMaterial extends Material {
     var morphTargets : Bool;
     var morphNormals : Bool;
 
+    var flatShading : Bool;
+
     function new( ?parameters : MeshStandardMaterialParameters ) : Void;
 	function setValues( parameters : MeshStandardMaterialParameters ) : Void;
 }

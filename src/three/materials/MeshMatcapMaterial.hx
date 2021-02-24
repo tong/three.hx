@@ -28,5 +28,6 @@ typedef MeshMatcapMaterialParameters = {
 
 #if three_jsRequire @:jsRequire("three", "MeshMatcapMaterial") #else @:native("THREE.MeshMatcapMaterial") #end
 extern class MeshMatcapMaterial extends Material {
+	var flatShading : Bool;
     function new( ?parameters : MeshMatcapMaterialParameters ) : Void;
 }
