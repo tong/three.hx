@@ -10,7 +10,7 @@ typedef Intersection = {
     ?distanceToRay : Float,
     point : Vector3,
     ?index : Int,
-    ?face : Null<Face3>,
+    //?face : Null<Face3>,
     ?faceIndex : Int,
     object : Object3D,
     ?uv : Vector2
