@@ -20,6 +20,7 @@ extern class Sphere {
     function clampPoint( point : Vector3, ?optionalTarget : Vector3 ) : Vector3;
     function getBoundingbox( ?optionalTarget : Box3 ) : Box3;
     function applyMatrix4( matrix : Matrix4 ) : Sphere;
+    function expandByPoint( point : Vector3 ) : Sphere;
     function translate( offset : Vector3 ) : Sphere;
     function equals( sphere : Sphere ) : Bool;
 }

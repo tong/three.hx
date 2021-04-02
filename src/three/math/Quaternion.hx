@@ -31,6 +31,7 @@ extern class Quaternion {
     function multiply( q : Quaternion ) : Quaternion;
     function multiplyQuaternion( a : Quaternion, b : Quaternion ) : Quaternion;
     function slerp( qb : Quaternion, t : Float ) : Quaternion;
+    function slerpQuaternions( qa : Quaternion, qb : Quaternion, t : Float ) : Void;
     function equals( q : Quaternion ) : Bool;
     function fromArray( array : Array<Float>, ?offset : Int ) : Quaternion;
     function fromBufferAttribute( attribute : Dynamic, index : Int ) : Quaternion;

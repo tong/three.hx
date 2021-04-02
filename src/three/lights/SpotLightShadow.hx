@@ -10,4 +10,5 @@ extern class SpotLightShadow extends LightShadow<PerspectiveCamera> {
 	var focus : Float;
     function new() : Void;
     function update( light : Light ) : Void;
+    function copy( source : SpotLightShadow ) : SpotLightShadow;
 }

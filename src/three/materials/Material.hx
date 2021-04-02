@@ -103,6 +103,7 @@ extern class Material extends EventDispatcher {
 	var dithering : Bool;
 
 	var alphaTest : Int;
+	var alphaToCoverage : Float;
 	var premultipliedAlpha : Bool;
 	
 	var visible : Float;
