@@ -31,6 +31,6 @@ extern class Light extends Object3D {
 	var shadowMapHeight : Float;
 
 	function new( color : Int, ?intensity : Float ) : Void;
-
+	function dispose() : Void;
 	//function toJSON<T>( ?meta : MetaObject ) : T;
 }

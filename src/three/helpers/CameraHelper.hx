@@ -8,4 +8,5 @@ extern class CameraHelper extends three.objects.LineSegments {
 	var camera : Camera;
 	function new( camera : Camera ) : Void;
 	function update() : Void;
+	function dispose() : Void;
 }

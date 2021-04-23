@@ -17,5 +17,6 @@ extern class LightShadow<T:Camera> {
     function new( camera : T ) : Void;
     function copy( source : LightShadow<T> ) : Void;
     function clone( ?recursive : Bool ) : LightShadow<T>;
+    function dispose() : Void;
     function toJSON() : Dynamic;
 }

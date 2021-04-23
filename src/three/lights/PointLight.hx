@@ -10,6 +10,6 @@ extern class PointLight extends Light {
 	var decay : Float;
 
 	function new( hex : Int, ?intensity : Float, ?distance : Float, ?decay : Float ) : Void;
-
+	function dispose() : Void;
 	// override function clone() : PointLight;
 }

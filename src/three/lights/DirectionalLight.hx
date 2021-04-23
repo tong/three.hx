@@ -46,4 +46,6 @@ extern class DirectionalLight extends Light {
     function new( ?color : EitherType<Color,EitherType<Int,String>>, ?intensity : Float ) : Void;
 
     // override function clone() : DirectionalLight;
+
+    function dispose() : Void;
 }

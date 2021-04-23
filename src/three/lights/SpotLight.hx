@@ -17,4 +17,5 @@ extern class SpotLight extends Light {
     var penumbra : Float;
     var isSpotLight(default,never) : Bool;
     function new( hexColor : EitherType<Color,EitherType<String,Int>>, ?intensity : Float, ?distance : Float, ?angle : Float, ?penumbra : Float, ?decay : Float ) : Void;
+    function dispose() : Void;
 }
