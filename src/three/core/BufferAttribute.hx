@@ -25,8 +25,8 @@ extern class BufferAttribute {
 	var normalized : Bool;
 	var needsUpdate : Bool;
 	var count(default,null) : Int;
-
 	var length(default,null) : Int;
+	var onUploadCallback : Void->Void;
 
 	function new( array : ArrayBufferView, itemSize : Int, ?normalized : Bool ) : Void;
 

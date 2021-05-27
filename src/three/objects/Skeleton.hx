@@ -13,6 +13,7 @@ extern class Skeleton {
 	function pose() : Void;
 	function update() : Void;
 	function clone() : Skeleton;
+	function computeBoneTexture() : Skeleton;
 	function getBoneByName( name : String ) : Bone;
 	function dispose() : Void;
 }

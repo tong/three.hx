@@ -42,6 +42,7 @@ extern class Matrix4 {
     function makeRotationZ( theta : Float ) : Matrix4;
     function makeRotationAxis( axis : Vector3, angle : Float ) : Matrix4;
     function makeScale( x : Float, y : Float, z : Float ) : Matrix4;
+    function makeShear( xy : Float, xz : Float, yx : Float, yz : Float, zx : Float, zy : Float ) : Matrix4;
     function compose( position : Vector3, quaternion : Quaternion, scale : Vector3 ) : Matrix4;
     function decompose( ?position : Vector3, ?quaternion : Quaternion, ?scale : Vector3 ) : Array<Dynamic>; // [translation, rotation, scale]
     function makeFrustum( left : Float, right : Float, bottom : Float, top : Float, near : Float, far : Float ) : Matrix4;

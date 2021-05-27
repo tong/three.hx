@@ -5,6 +5,7 @@ import three.math.Matrix4;
 extern class InterleavedBufferAttribute {
 	var length(default,null) : Int;
 	var count(default,null) : Int;
+	var onUploadCallback : Void->Void;
 	function new( interleavedBuffer : InterleavedBuffer, itemSize : Int ) : Void;
 	function applyMatr( m : Matrix4 ) : Matrix4;
 	function applyNormapplyNorm( m : Matrix4 ) : Matrix4;

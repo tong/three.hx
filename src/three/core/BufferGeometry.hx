@@ -1,5 +1,6 @@
 package three.core;
 
+import three.math.Quaternion;
 import haxe.extern.EitherType;
 import three.math.Box3;
 import three.math.Matrix4;
@@ -45,6 +46,7 @@ extern class BufferGeometry {
     function clearGroups() : Void;
     function setDrawRange( start : Int, count : Int ) : Void;
     function applyMatrix4( matrix : Matrix4 ) : BufferGeometry;
+    function applyQuaternion( q : Quaternion ) : BufferGeometry;
     function rotateX( angle : Float ) : Void;
     function rotateY( angle : Float ) : Void;
     function rotateZ( angle : Float ) : Void;
