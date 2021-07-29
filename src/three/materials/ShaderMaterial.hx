@@ -19,8 +19,6 @@ typedef ShaderMaterialParameters<T> = {
 	//?vertexColors : Colors,
 	?clipping : Bool,
 	?skinning : Bool,
-	?morphTargets : Bool,
-	?morphNormals : Bool,
 	//?fog : Bool
 }
 
@@ -38,8 +36,6 @@ extern class ShaderMaterial<T> extends Material {
 	var lights : Bool;
 	var clipping : Bool;
 	var skinning : Bool;
-	var morphTargets : Bool;
-	var morphNormals : Bool;
 	var extensions : {
 		derivatives: Bool,
 		fragDepth: Bool,

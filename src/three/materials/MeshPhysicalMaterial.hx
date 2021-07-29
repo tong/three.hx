@@ -16,7 +16,17 @@ typedef MeshPhysicalMaterialParameters = {
 	?reflectivity : Float,
 	?ior : Float,
 	?sheen : Color,
-	?transparency : Float
+	?transparency : Float,
+	?transmission: Float,
+	?transmissionMap: Texture,
+	?thickness: Float,
+	?thicknessMap: Texture,
+	?attenuationDistance: Float,
+	?attenuationTint: Color,
+	?specularIntensity: Float,
+	?specularIntensityMap: Texture,
+	?specularTint: Color,
+	?specularTintMap: Texture,
 }
 
 #if three_jsRequire @:jsRequire("three", "MeshPhysicalMaterial") #else @:native("THREE.MeshPhysicalMaterial") #end

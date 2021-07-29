@@ -28,8 +28,6 @@ typedef MeshLambertMaterialParamaters = {
 	?wireframeLinecap : String,
 	?wireframeLinejoin : String,
 	?skinning : Bool,
-	?morphTargets : Bool,
-	?morphNormals : Bool,
 }
 
 #if three_jsRequire @:jsRequire("three", "MeshLambertMaterial") #else @:native("THREE.MeshLambertMaterial") #end
@@ -53,7 +51,5 @@ extern class MeshLambertMaterial extends Material {
 	var wireframeLinecap : String;
 	var wireframeLinejoin : String;
 	var skinning : Bool;
-	var morphTargets : Bool;
-	var morphNormals : Bool;
     function new( ?parameters : Dynamic ) : Void;
 }

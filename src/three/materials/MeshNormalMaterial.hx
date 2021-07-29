@@ -20,8 +20,6 @@ typedef MeshNormalMaterialParamaters = {
 	?wireframe : Bool,
 	?wireframeLinewidth : Float,
 	?skinning : Bool,
-	?morphTargets : Bool,
-	?morphNormals : Bool,
 }
 
 #if three_jsRequire @:jsRequire("three", "MeshNormalMaterial") #else @:native("THREE.MeshNormalMaterial") #end
@@ -37,8 +35,6 @@ extern class MeshNormalMaterial extends Material {
 	var wireframe : Bool;
 	var wireframeLinewidth : Float;
 	var skinning : Bool;
-	var morphTargets : Bool;
-	var morphNormals : Bool;
 	var flatShading : Bool;
     function new( ?parameters : MeshNormalMaterialParamaters ) : Void;
     function setValues( parameters : MeshNormalMaterialParamaters ) : Void;

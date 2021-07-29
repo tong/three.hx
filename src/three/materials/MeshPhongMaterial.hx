@@ -38,8 +38,6 @@ typedef MeshPhongMaterialParameters = {
 	?wireframeLinecap : String,
 	?wireframeLinejoin : String,
 	?skinning : Bool,
-    ?morphTargets : Bool,
-    ?morphNormals : Bool,
 }
 
 #if three_jsRequire @:jsRequire("three", "MeshPhongMaterial") #else @:native("THREE.MeshPhongMaterial") #end
@@ -74,8 +72,6 @@ extern class MeshPhongMaterial extends Material {
 	var wireframeLinecap : String;
 	var wireframeLinejoin : String;
 	var skinning : Bool;
-    var morphTargets : Bool;
-    var morphNormals : Bool;
     var flatShading : Bool;
     function new( ?parameters : MeshPhongMaterialParameters ) : Void;
     override function clone() : MeshPhongMaterial;

@@ -37,8 +37,6 @@ typedef MeshToonMaterialParamaters = {
 	?wireframeLinecap : String,
 	?wireframeLinejoin : String,
 	?skinning : Bool,
-    ?morphTargets : Bool,
-    ?morphNormals : Bool,
 }
 
 #if three_jsRequire @:jsRequire("three", "MeshToonMaterial") #else @:native("THREE.MeshToonMaterial") #end

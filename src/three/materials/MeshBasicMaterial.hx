@@ -25,7 +25,6 @@ typedef MeshBasicMaterialParameters = {
     ?wireframeLinecap: String,
     ?wireframeLinejoin: String,
     ?skinning: Bool,
-    ?morphTargets: Bool,
 	?side:Side,
 	?transparent:Bool,
 }
@@ -46,7 +45,6 @@ extern class MeshBasicMaterial extends Material {
     var wireframeLinejoin : String;
     //var vertexColors : Int;
     var skinning : Bool;
-    var morphTargets : Bool;
     function new( ?parameters : MeshBasicMaterialParameters ) : Void;
     function setValues( parameters : MeshBasicMaterialParameters ) : Void;
 }

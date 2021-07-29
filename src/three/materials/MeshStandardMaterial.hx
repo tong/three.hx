@@ -34,8 +34,6 @@ typedef MeshStandardMaterialParameters = {
 	?wireframe : Bool,
 	?wireframeLinewidth : Float,
 	?skinning : Bool,
-	?morphTargets : Bool,
-	?morphNormals : Bool,
 }
 
 #if three_jsRequire @:jsRequire("three", "MeshStandardMaterial") #else @:native("THREE.MeshStandardMaterial") #end
@@ -83,8 +81,6 @@ extern class MeshStandardMaterial extends Material {
     var wireframeLinejoin : String;
 
     var skinning : Bool;
-    var morphTargets : Bool;
-    var morphNormals : Bool;
 
     var flatShading : Bool;
 

@@ -20,7 +20,6 @@ extern class MeshDistanceMaterial extends Material {
     var farDistance : Float;
 
     var skinning : Bool;
-    var morphTargets : Bool;
 
     var map : Texture;
 

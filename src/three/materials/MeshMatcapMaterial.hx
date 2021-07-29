@@ -22,8 +22,6 @@ typedef MeshMatcapMaterialParameters = {
 	?displacementBias : Float,
 	?alphaMap : Texture,
 	?skinning : Bool,
-	?morphTargets : Bool,
-	?morphNormals : Bool,
 }
 
 #if three_jsRequire @:jsRequire("three", "MeshMatcapMaterial") #else @:native("THREE.MeshMatcapMaterial") #end
