@@ -60,7 +60,7 @@ extern class BufferGeometry {
     //function fromDirectGeometry( geometry : Geometry ) : BufferGeometry;
     function computeBoundingBox() : Void;
     function computeBoundingSphere() : Void;
-    function computeFaceNormals() : Void;
+    // function computeFaceNormals() : Void;
     function computeVertexNormals() : Void;
     function merge( geometry : BufferGeometry, ?offset : Float ) : Void;
     function normalizeNormals() : Void;
